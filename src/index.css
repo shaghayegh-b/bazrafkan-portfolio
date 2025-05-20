@@ -1,0 +1,73 @@
+
+@import "tailwindcss";
+body {
+  background-color: rgb(183, 185, 187);
+  font-size: 100%;
+  color: black;
+}
+
+div.mycontainer {
+  margin:.5rem auto;
+  text-align: center;
+}
+
+section {
+  box-shadow: 0 0 0.2rem black;
+  background-color: rgb(205, 210, 214);
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Right {
+  align-self: end;
+  width: 60%;
+}
+.Profile {
+
+  width: 35%;
+}
+.section4{
+    width: 95%;
+    margin: auto;
+}
+@media (max-width: 768px) {
+  div.mycontainer {
+    margin: .3rem;
+  }
+  .head {
+    flex-direction: column;
+  }
+  .Right {
+    width: 100%;
+  }
+  .Profile {
+    width: 100%;
+  }
+  .section4{
+    width: 100%;}
+    .Myproject .mcontainer img{height: (var(--spacing) * 40);}
+  .section1 {
+    display: flex;
+  }
+  .Profile .section1 .part2 {
+    border-left: 1.5px solid black;
+  }
+  .section1 .part1 {
+    padding: 1rem;
+  }
+  .section1 .part1 h2 {
+    font-size: 140% !important;
+  }
+
+}
+@media (max-width: 500px) {
+    .section1 {
+        flex-direction: column;
+    }
+    .Profile .section1 .part2 {
+        border-left: none;
+      }
+}
