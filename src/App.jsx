@@ -5,8 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Myproject from "./components/Myproject/Myproject";
-import { projects } from "./components/Myproject/data";
+import { projects } from "../data";
 export default function App() {
+
   return (
     <div className="mycontainer">
       <div className="head">
