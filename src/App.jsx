@@ -14,7 +14,15 @@ export default function App() {
         <Profile></Profile>
         <Right></Right>
       </div>
-      <section className=" section4 p-3 pb-7">
+      <section data-aos="fade-up"
+                  data-aos-offset="200"
+                  data-aos-delay="0"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top-center"
+       className=" section4 p-3 pb-7">
         <h2 className="text-start font-700 text-2xl p-3 pb-5">projects</h2>
        <div className="shadow-2xl">
        <Swiper
