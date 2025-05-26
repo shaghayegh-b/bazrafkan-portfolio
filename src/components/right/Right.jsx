@@ -8,7 +8,10 @@ function Right() {
         AOS.init()
     },[])
   return (
-    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className="Right">
+    <div data-aos="fade-left"
+    data-aos-delay="100"
+    data-aos-duration="2100"
+    className="Right">
       <section className="section2">
         <h2 className="part1">
           <i className=" fas fa-link icon"></i>

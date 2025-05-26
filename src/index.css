@@ -1,14 +1,13 @@
-
 @import "tailwindcss";
-body {
-    background-color: rgb(183, 185, 187);
-  font-size: 100%;
-  color: black;
+*{
+    box-sizing: border-box;
 }
-/* code */
+body {
+  background-color: rgb(183, 185, 187);
+  font-size: 100%;
+}
 div.mycontainer {
-  margin:.5rem auto;
-  text-align: center;
+  margin: 0.5rem auto;
 }
 
 section {
@@ -26,16 +25,16 @@ section {
   width: 60%;
 }
 .Profile {
-
   width: 35%;
+  z-index: 3;
 }
-.section4{
-    width: 95%;
-    margin: auto;
+.section4 {
+  width: 95%;
+  margin: auto;
 }
 @media (max-width: 768px) {
   div.mycontainer {
-    margin: .3rem;
+    margin: 0.3rem;
   }
   .head {
     flex-direction: column;
@@ -46,9 +45,12 @@ section {
   .Profile {
     width: 100%;
   }
-  .section4{
-    width: 100%;}
-    .Myproject .mcontainer img{height: (var(--spacing) * 40);}
+  .section4 {
+    width: 100%;
+  }
+  .Myproject .mcontainer img {
+    height: (var(--spacing) * 40);
+  }
   .section1 {
     display: flex;
   }
@@ -61,13 +63,12 @@ section {
   .section1 .part1 h2 {
     font-size: 140% !important;
   }
-
 }
 @media (max-width: 500px) {
-    .section1 {
-        flex-direction: column;
-    }
-    .Profile .section1 .part2 {
-        border-left: none;
-      }
+  .section1 {
+    flex-direction: column;
+  }
+  .Profile .section1 .part2 {
+    border-left: none;
+  }
 }
