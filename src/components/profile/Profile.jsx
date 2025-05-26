@@ -21,6 +21,7 @@ function Profile() {
          data-aos="fade-up"
     data-aos-delay="40"
     data-aos-duration="2100"
+    data-aos-once="true"
     className="part2">
           <ul className="break-words">
             <li className="tracking-tight ">

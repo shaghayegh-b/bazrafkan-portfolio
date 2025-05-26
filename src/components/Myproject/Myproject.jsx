@@ -11,7 +11,7 @@ function Myproject({ img, title, text, mylink }) {
   return (
     <div className="Myproject">
       <div className="mcontainer bg-gray-300 flex flex-col justify-start items-center shadow-md p-2">
-        <img src={img} className="w-100% h-38" alt="" />
+        <img src={img} className="w-100% h-38" alt="hi friends" />
         <div className="px-4 py-3 grid  grid-row-3 justify-items-start h-71">
           <h2 className="text-start text-3xl font-800 ">{title}</h2>
           <p className="text-start p-1">{text}</p>
