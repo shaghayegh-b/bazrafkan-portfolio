@@ -9,8 +9,8 @@ function Buttonswiper() {
         </h2>
 
         <div>
-        <button className="px-3 py-[3px] rounded-2xl bg-[#6d6d6d86] m-2" onClick={() => {swiper.slidePrev()}}>previous</button>
-        <button className="px-3 py-[3px] rounded-2xl bg-[#6d6d6d86] m-2" onClick={() =>{ swiper.slideNext()}}>next</button>
+        <button className="px-[8px] pb-[3px] font-bold rounded-full bg-[#6d6d6d86] m-1" onClick={() => {swiper.slidePrev()}}>&lt;</button>
+        <button className="px-[8px] pb-[3px] font-bold rounded-full bg-[#6d6d6d86] m-1" onClick={() =>{ swiper.slideNext()}}>&gt;</button>
         </div>
       </div>
     )

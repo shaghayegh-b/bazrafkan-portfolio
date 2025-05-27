@@ -64,7 +64,7 @@ section {
   .section1 {
     display: flex;
   }
-  .Profile .section1 .part2 {
+  .Profile .section1 .information {
     border-left: 1.5px solid black;
   }
   .section1 .part1 {
@@ -78,7 +78,7 @@ section {
   .section1 {
     flex-direction: column;
   }
-  .Profile .section1 .part2 {
+  .Profile .section1 .information {
     border-left: none;
   }
 }

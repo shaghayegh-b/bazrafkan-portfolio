@@ -1,7 +1,7 @@
 export const projects=[
     {
         "id":1,
-        "img":"./src/assets/imag/18.webp",
+        "img":"https://raw.githubusercontent.com/shaghayegh-b/bazrafkan-portfolio/refs/heads/main/src/assets/imag/18.webp",
       "title": "portfolio project",
       "text": "In a portfolio page, the goal is to showcase your skills, projects, experiences, and contact information in a way that allows visitors—such as potential employers or clients—to quickly gain a clear understanding of your abilities.",
       "skils":"React TailwindCSS Vite Git Github ",
