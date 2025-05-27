@@ -17,16 +17,17 @@ function Profile() {
           <h2  className="tracking-tight">Shaghayegh Bazrafkan</h2>
         </div>
         <hr className=" text-[#6d50505c] mx-9 " />
+        <h3 className="p-3 px-8 "><i className="fa fa-briefcase icon"></i>programes <b>|</b> Junior Front-End Developer</h3>
+        <hr className=" text-[#6d50505c] mx-9 " />
+
         <div
          data-aos="fade-up"
     data-aos-delay="40"
     data-aos-duration="2100"
     data-aos-once="true"
     className="part2">
+        <h3 className="text-xl font-medium">Contact me</h3>
           <ul className="break-words">
-            <li className="tracking-tight ">
-              <i className="fa fa-briefcase icon"></i>programes <b>|</b> Junior Front-End Developer
-            </li>
             <li>
               <a
                 href="https://www.google.com/maps?q=Khuzestan,+Iran"
@@ -36,7 +37,7 @@ function Profile() {
               </a>
             </li>
             <li>
-              <a href={`mail:${"bazrafkannjad.sh@gmail.com"}`} target="-blank">
+              <a href={`mailto:${"bazrafkannjad.sh@gmail.com"}`} target="-blank">
                 <i className="fa fa-at icon"></i>bazrafkannjad.sh@gmail.com
               </a>
             </li>
@@ -45,11 +46,17 @@ function Profile() {
                 <i className="fa fa-phone icon"></i>09399619640
               </a>
             </li>
+            <li>
+              <a href="https://github.com/shaghayegh-b" target="-blank">
+                <i className="fa-brands fa-github icon"></i>shaghayegh-b
+              </a>
+            </li>
           </ul>
-          <span>
+          <hr className=" text-[#6d50505c] mx-9 " />
+          <div className="py-2 text-[114%] font-medium">
             <i className="fas fa-stamp icon"></i>
             skills
-          </span>
+          </div>
           <div>
             <p>
               html ,css <span>| Basic</span>
@@ -71,6 +78,12 @@ function Profile() {
             </p>
             <p>
               sass <span>| Basic</span>
+            </p>
+            <p>
+              git <span>| Basic</span>
+            </p>
+            <p>
+              github <span>| Basic</span>
             </p>
           </div>
         </div>

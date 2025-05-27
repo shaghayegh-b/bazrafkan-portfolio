@@ -3,7 +3,6 @@
     text-align: justify;
   }
   .section2 h2.part1 {
-    font-size: 148%;
   }
   .section2 h2.part1 i {
     color: rgb(173, 121, 121);
@@ -24,7 +23,7 @@
     padding: 1.3rem;
   }
   .section3 h2.part1 {
-    font-size: 129%;
+
     margin-bottom: 1.5rem;
   }
   .section3 h2.part1 i {

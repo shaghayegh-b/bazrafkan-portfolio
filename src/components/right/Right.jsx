@@ -13,7 +13,7 @@ function Right() {
     data-aos-duration="2100"
     className="Right">
       <section className="section2">
-        <h2 className="part1">
+        <h2 className="part1 text-xl font-medium">
           <i className=" fas fa-link icon"></i>
           ABOUT ME
         </h2>
@@ -33,12 +33,12 @@ function Right() {
         </p>
       </section>
       <section className="section3">
-        <h2 className="part1">
+        <h2 className="part1 text-xl font-medium">
           <i className="fas fa-archive icon"></i>
           Work Experince
         </h2>
         <Experince></Experince>
-        <hr />
+        <hr className=" text-[#6d50505c] mx-9 "/>
         <Experince></Experince>
       </section>
     </div>

@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-function Myproject({ img, title, text, mylink }) {
+function Myproject({ img, title, text, mylink,skils }) {
   const btnhandler = () => {
     if (!mylink) {
       alert(
@@ -13,8 +13,9 @@ function Myproject({ img, title, text, mylink }) {
       <div className="mcontainer bg-gray-300 flex flex-col justify-start items-center shadow-md p-2">
         <img src={img} className="w-100% h-38" alt="hi friends" />
         <div className="px-4 py-3 grid  grid-row-3 justify-items-start h-71">
-          <h2 className="text-start text-3xl font-800 ">{title}</h2>
-          <p className="text-start p-1">{text}</p>
+          <h2 className="text-start text-[1.4rem] font-800 ">{title}</h2>
+          <p className="text-start">{text}</p>
+          <span className={`${!skils?"hidden":"tracking-tight text-center p-[.1rem] px-[1rem] my-[.3rem] rounded-[.3rem] bg-[#76757583]" }`}>{skils}</span>
           <button
             onClick={btnhandler}
             type="button"
@@ -23,7 +24,7 @@ function Myproject({ img, title, text, mylink }) {
             }`}
           >
             <a href={mylink} target="-blank">
-              click
+              visit website
             </a>
           </button>
         </div>

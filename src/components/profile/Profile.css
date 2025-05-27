@@ -39,22 +39,20 @@
   }
 
   .section1 .part2 ul {
-    margin: .6rem;
-
+    margin: 0 .6rem ;
   }
   .section1 .part2 ul li {
     text-align: justify;
     list-style-type: none;
     padding: 0.6rem 0.2rem;
     font-size: 114%;
-
-
   }
   .section1 .part2 ul li a {
     color: black;
     text-decoration: none;
+    cursor: pointer !important;
   }
-  .section1 .part2 ul li  i.icon {
+  .section1 i.icon {
     color: rgb(173, 121, 121);
     margin-right: 0.4rem;
     font-size:109%;

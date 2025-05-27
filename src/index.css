@@ -27,14 +27,20 @@ section {
 .Right {
   align-self: end;
   width: 60%;
+  z-index: -2;
 }
 .Profile {
   width: 35%;
-  z-index: 3;
+  z-index: -1;
 }
 .section4 {
   width: 95%;
   margin: auto;
+}
+.mySwiper{
+    display: flex !important;
+    flex-direction: column-reverse !important;
+
 }
 @media (max-width: 768px) {
   div.mycontainer {
