@@ -53,13 +53,12 @@ function Profile() {
                 <li>
                   <a
                     href={`mailto:${"bazrafkannjad.sh@gmail.com"}`}
-                    target="-blank"
                   >
                     <i className="fa fa-at icon"></i>bazrafkannjad.sh@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a href={`tel:${+989399619640}`} target="-blank">
+                  <a href={`tel:${+989399619640}`}>
                     <i className="fa fa-phone icon"></i>09399619640
                   </a>
                 </li>
