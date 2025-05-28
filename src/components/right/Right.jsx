@@ -8,7 +8,7 @@ function Right() {
         AOS.init()
     },[])
   return (
-    <div data-aos="fade-left"
+    <div data-aos="fade-up"
     data-aos-delay="100"
     data-aos-duration="2100"
     className="Right">

@@ -17,6 +17,7 @@ div.mycontainer {
 section {
   box-shadow: 0 0 0.2rem black;
   background-color: rgb(205, 210, 214);
+  z-index: 3;
 }
 
 .head {
@@ -27,11 +28,11 @@ section {
 .Right {
   align-self: end;
   width: 60%;
-  z-index: -2;
+  z-index: 1;
 }
 .Profile {
   width: 35%;
-  z-index: -1;
+  z-index: 2;
 }
 .section4 {
   width: 95%;

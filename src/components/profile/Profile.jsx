@@ -13,7 +13,7 @@ function Profile() {
         <div className="part1">
           <div
             data-aos="zoom-in"
-            data-aos-offset="100"
+            data-aos-offset="150"
             data-aos-delay="0"
             className="w-full"
           >
@@ -28,10 +28,10 @@ function Profile() {
         </div>
         <div className="information">
           <div
-            data-aos="fade-up"
-            data-aos-delay="40"
-            data-aos-duration="2100"
-            data-aos-once="true"
+            // data-aos="fade-up"
+            // data-aos-delay="40"
+            // data-aos-duration="2100"
+            // data-aos-once="true"
           >
             <hr className=" text-[#6d50505c] mx-9 " />
             <h3 className="p-3 px-8 ">
