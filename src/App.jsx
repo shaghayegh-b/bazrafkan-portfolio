@@ -1,11 +1,13 @@
 import Profile from "./components/profile/Profile";
 import Right from "./components/right/Right";
 import { Swiper, SwiperSlide } from "swiper/react";
+import './i18next.jsx'
 import "swiper/css";
 import "swiper/css/navigation";
 import Myproject from "./components/Myproject/Myproject";
 import { projects } from "../data";
 import Buttonswiper from "./components/buttonswiper/buttonswiper";
+import MyComponent from "./components/translete/trans";
 export default function App() {
   return (
     <div className="mycontainer">
@@ -43,6 +45,9 @@ export default function App() {
           </Swiper>
         </div>
       </section>
+      <div>
+        <MyComponent></MyComponent>
+      </div>
     </div>
   );
 }
