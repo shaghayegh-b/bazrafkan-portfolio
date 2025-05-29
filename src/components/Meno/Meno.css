@@ -1,0 +1,54 @@
+
+.meno .btn {
+    list-style: none;
+  margin: 0.2rem;
+  background-color: #8080806d;
+  padding: 0.2rem 1rem;
+  font-weight: 700;
+  font-size: x-large;
+  cursor: pointer;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  text-align: center;
+  position: relative;
+}
+.meno .btn span{
+    font-size: medium;
+    position: absolute;
+    right: 89%;
+    top: 50%;
+    padding: 0rem .4rem;
+    border-radius: 3rem;
+    margin-right: .3rem;
+    background-color: #07070712;
+    color: black;
+    font-weight: 400;
+    width: max-content;
+}
+.meno .btn div{
+    position: absolute;
+    font-size: medium;
+    right: 89%;
+    top: 50%;
+    padding: 0.2rem .6rem;
+    border-radius: 1rem;
+    margin-right: .3rem;
+    background-color: #07070712;
+    color: black;
+    font-weight: 400;
+    width: max-content;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.meno .btn div button{
+    padding:0 1.3rem;
+}
+.meno .btn div button:hover{
+    background-color:#07070755 ;
+    color: rgb(221, 220, 220);
+}

@@ -7,10 +7,13 @@ import "swiper/css/navigation";
 import Myproject from "./components/Myproject/Myproject";
 import { projects } from "../data";
 import Buttonswiper from "./components/buttonswiper/buttonswiper";
-import MyComponent from "./components/translete/trans";
+import Meno from "./components/Meno/Meno.jsx";
 export default function App() {
   return (
-    <div className="mycontainer">
+    <div className="mycontainer relative">
+        <div className="absolute top-6 right-16">
+        <Meno ></Meno>
+        </div>
       <div className="head">
         <Profile></Profile>
         <Right></Right>
@@ -45,9 +48,6 @@ export default function App() {
           </Swiper>
         </div>
       </section>
-      <div>
-        <MyComponent></MyComponent>
-      </div>
     </div>
   );
 }
