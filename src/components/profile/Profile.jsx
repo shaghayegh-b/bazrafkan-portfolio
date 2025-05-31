@@ -3,7 +3,9 @@ import imgporofile from "../../assets/imag/17.webp";
 import "./Profile.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 function Profile() {
+    const {t}=useTranslation()
   useEffect(() => {
     AOS.init();
   }, []);
@@ -24,7 +26,7 @@ function Profile() {
               className=" w-full h-auto"
             />
           </div>
-          <h2 className="tracking-tight">Shaghayegh Bazrafkan</h2>
+          <h2 className="tracking-tight">{t('name')}</h2>
         </div>
         <div className="information">
           <div
@@ -35,12 +37,11 @@ function Profile() {
           >
             <hr className=" text-[#6d50505c] mx-9 " />
             <h3 className="p-3 px-8 ">
-              <i className="fa fa-briefcase icon"></i>programes <b>|</b> Junior
-              Front-End Developer
+              <i className="fa fa-briefcase icon"></i>{t('job')}
             </h3>
             <hr className=" text-[#6d50505c] mx-9 " />
             <div className="part2">
-              <h3 className="text-xl font-medium">Contact me</h3>
+              <h3 className="text-xl font-medium">{t('Contact')}</h3>
               <ul className="break-words">
                 <li>
                   <a
@@ -71,7 +72,7 @@ function Profile() {
               <hr className=" text-[#6d50505c] mx-9 " />
               <div className="py-2 text-[114%] font-medium">
                 <i className="fas fa-stamp icon"></i>
-                skills
+                {t('skills')}
               </div>
               <div>
                 <p>

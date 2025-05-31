@@ -2,8 +2,10 @@ import { memo, useEffect } from "react";
 import "./Right.css";
 import AOS from "aos";
 import 'aos/dist/aos.css'
+import { useTranslation } from "react-i18next";
 import Experince from "./Experince";
 function Right() {
+    const {t}=useTranslation()
     useEffect(()=>{
         AOS.init()
     },[])
@@ -15,27 +17,14 @@ function Right() {
       <section className="section2">
         <h2 className="part1 text-xl font-medium">
           <i className=" fas fa-link icon"></i>
-          ABOUT ME
+          {t('ABOUT')}
         </h2>
-        <p className="part3">
-          I'm Shaghayegh Bazrafkan, a motivated front-end developer with a
-          strong passion for creating modern and responsive user interfaces.
-          Over the past year, I’ve been deeply focused on learning and
-          practicing web development, gaining solid experience with technologies
-          such as HTML, CSS, JavaScript, React.js, Tailwind CSS, Sass, jQuery,
-          Git, and GitHub. I'm also familiar with API integration concepts using
-          Fetch, Axios, Context API, and React Query, and have completed various
-          practice projects in these areas. Currently, I'm working on personal
-          projects to further enhance my practical skills, with the goal of
-          becoming a freelance web designer and gaining real-world experience.
-          I’m always eager to learn and grow, and I’m committed to developing
-          into a skilled and professional front-end developer.
-        </p>
+        <p className="part3">{t('about')}</p>
       </section>
       <section className="section3">
         <h2 className="part1 text-xl font-medium">
           <i className="fas fa-archive icon"></i>
-          Work Experince
+          {t("Work Experince")}
         </h2>
         <Experince></Experince>
         <hr className=" text-[#6d50505c] mx-9 "/>

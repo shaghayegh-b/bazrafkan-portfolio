@@ -1,11 +1,13 @@
 import { memo } from 'react';
 import { useSwiper } from 'swiper/react';
+import { useTranslation } from 'react-i18next';
 function Buttonswiper() {
     const swiper = useSwiper();
+    const {t}=useTranslation()
     return(
         <div className="flex w-full justify-between items-center ">
         <h2 className="text-start text-[1.7rem] font-medium p-3 pb-5">
-          projects
+          {t('projects')}
         </h2>
 
         <div>

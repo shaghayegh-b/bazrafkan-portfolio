@@ -4,12 +4,11 @@
 }
 html,body{
     overflow-x: hidden;
-
 }
 body {
   background-color: rgb(183, 185, 187);
   font-size: 100%;
-}
+  }
 div.mycontainer {
   margin: 0.5rem auto;
 }
@@ -41,8 +40,8 @@ section {
 .mySwiper{
     display: flex !important;
     flex-direction: column-reverse !important;
-
 }
+
 @media (max-width: 768px) {
   div.mycontainer {
     margin: 0.3rem;

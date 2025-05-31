@@ -8,10 +8,18 @@ import Myproject from "./components/Myproject/Myproject";
 import { projects } from "../data";
 import Buttonswiper from "./components/buttonswiper/buttonswiper";
 import Meno from "./components/Meno/Meno.jsx";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 export default function App() {
+    const{ i18n}=useTranslation()
+    useEffect(()=>{
+        const dir=i18n.language === 'fa'? 'rtl':'ltr'
+        document.documentElement.dir=dir
+        document.body.classList.toggle('rtl',dir==='rtl')
+    },[i18n.language])
   return (
     <div className="mycontainer relative">
-        <div className="absolute top-6 right-16">
+        <div className={`absolute top-6  ${i18n.language === 'fa'?"left-16":"right-16"}`}>
         <Meno ></Meno>
         </div>
       <div className="head">

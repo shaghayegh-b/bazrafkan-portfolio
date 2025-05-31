@@ -1,6 +1,7 @@
 import { memo } from "react";
-
+import { useTranslation } from "react-i18next";
 function Experince() {
+    const {t}=useTranslation()
   return (
     <div className="Experince" style={{ margin: "1.5rem 0" }}>
       <div className="part3">
@@ -8,9 +9,9 @@ function Experince() {
         <h5 className="style">march2024-</h5>
         <h5 className="style h52">curent</h5>
       </div>
-      <p className="part2">intern web designer/imen ertebat varan</p>
+      <p className="part2">{t('companyname')}</p>
 
-      <p className="part4">1 year and 2 months iran kermanshah</p>
+      <p className="part4">{t("fromdate")}</p>
     </div>
   );
 }
