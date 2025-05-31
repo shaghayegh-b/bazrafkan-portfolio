@@ -63,9 +63,17 @@ div.mycontainer {
     margin: 0.3rem;
   }
   .parentmeno {
-    position: absolute;
     top: -1.75rem;
     right: -1rem;
+  }
+  body.rtl .parentmeno {
+    top: -1.75rem;
+    right:unset;
+    left: -1rem;
+  }
+  .meno .btn span, .meno .btn div{
+    right: 90% !important;
+    top:38% !important;
   }
   .meno,
   .meno ul {
@@ -92,6 +100,11 @@ div.mycontainer {
   .Profile .section1 .information {
     border-left: 1.5px solid black;
   }
+  body.rtl .Profile .section1 .information {
+    border-right: 1.5px solid black;
+    border-left:unset;
+
+  }
   .section1 .part1 {
     padding: 1rem;
   }
@@ -100,15 +113,36 @@ div.mycontainer {
   }
 }
 @media (max-width: 500px) {
-  .parentmeno {
-    position: relative;
-    margin: 0.5rem;
-    top: -1rem;
-    right: -7rem;
+    .section1 {
+        border-radius: 0rem 0rem 0 0 !important;
+        -webkit-border-radius: 0rem 0rem 0 0 !important;
+        -moz-border-radius: 0rem 0rem 0 0 !important;
+        -ms-border-radius: 0rem 0rem 0 0 !important;
+        -o-border-radius: 0rem 0rem 0 0 !important;
+}
+    .parentmeno{
+        top: -8px !important;
+        right: -85px;
+        }
+      body.rtl .parentmeno{
+    left:-85px;
+    right:unset ;
   }
-  .meno,
-  .meno ul {
+  .meno ,.meno ul{
     flex-direction: row;
+    opacity: 1;
+  }
+  .Profile .section1{
+    padding-top: 3rem;
+  }
+    .meno .btn span, .meno .btn div{
+    left:unset !important;
+    right: 50% !important;
+    top: 103% !important;
+  }
+    body.rtl .meno .btn span,body.rtl .meno .btn div{
+    right:unset !important;
+    left: 50% !important;
   }
   .section1 {
     flex-direction: column;

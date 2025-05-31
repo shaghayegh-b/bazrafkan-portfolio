@@ -8,7 +8,7 @@ function Meno() {
   return (
     <div className="">
       <div className="">
-        <div className="meno flex  items-center">
+        <div className={`meno flex  items-center`}>
           <button
             onClick={() => setMyClick((prev) => !prev)}
             type="button"
