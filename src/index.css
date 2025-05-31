@@ -1,4 +1,12 @@
 @import "tailwindcss";
+@font-face {
+    font-family: 'vazir';
+    src: url('./assets/font/Lalezar-Regular.ttf');
+}
+@font-face {
+    font-family: 'yekan';
+    src: url('./assets/font/Yekan.ttf');
+}
 *{
   box-sizing: border-box;
 }
@@ -8,7 +16,9 @@ html,body{
 body {
   background-color: rgb(183, 185, 187);
   font-size: 100%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
+  body.rtl{  font-family: 'Gill Sans'}
 div.mycontainer {
   margin: 0.5rem auto;
 }
