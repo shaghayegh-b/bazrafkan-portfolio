@@ -19,10 +19,10 @@ export default function App() {
     },[i18n.language])
   return (
     <div className="mycontainer relative">
-        <div className={`absolute top-6  ${i18n.language === 'fa'?"left-16":"right-16"}`}>
+        <div className={`parentmeno fixed top-[-.75rem] scale-[.5] ${i18n.language === 'fa'?"left-[-4rem]":"right-[-4rem]"}`}>
         <Meno ></Meno>
         </div>
-      <div className="head">
+      <div className="head ">
         <Profile></Profile>
         <Right></Right>
       </div>

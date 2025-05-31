@@ -1,26 +1,27 @@
 @import "tailwindcss";
 @font-face {
-    font-family: 'vazir';
-    src: url('./assets/font/Lalezar-Regular.ttf');
+  font-family: "vazir";
+  src: url("./assets/font/Lalezar-Regular.ttf");
 }
 @font-face {
-    font-family: 'yekan';
-    src: url('./assets/font/Yekan.ttf');
+  font-family: "yekan";
+  src: url("./assets/font/Yekan.ttf");
 }
-*{
+* {
   box-sizing: border-box;
 }
-html,body{
-    overflow-x: hidden;
+html,
+body {
+  overflow-x: hidden;
 }
 body {
   background-color: rgb(183, 185, 187);
   font-size: 100%;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-  body.rtl{  font-family: 'Gill Sans'}
-div.mycontainer {
-  margin: 0.5rem auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body.rtl {
+  font-family: "Gill Sans";
 }
 
 section {
@@ -28,7 +29,12 @@ section {
   background-color: rgb(205, 210, 214);
   z-index: 3;
 }
-
+div.mycontainer {
+  margin: 0.5rem auto;
+}
+.parentmeno {
+  z-index: 4;
+}
 .head {
   display: flex;
   justify-content: center;
@@ -47,14 +53,23 @@ section {
   width: 95%;
   margin: auto;
 }
-.mySwiper{
-    display: flex !important;
-    flex-direction: column-reverse !important;
+.mySwiper {
+  display: flex !important;
+  flex-direction: column-reverse !important;
 }
 
 @media (max-width: 768px) {
   div.mycontainer {
     margin: 0.3rem;
+  }
+  .parentmeno {
+    position: absolute;
+    top: -1.75rem;
+    right: -1rem;
+  }
+  .meno,
+  .meno ul {
+    flex-direction: column;
   }
   .head {
     flex-direction: column;
@@ -85,6 +100,16 @@ section {
   }
 }
 @media (max-width: 500px) {
+  .parentmeno {
+    position: relative;
+    margin: 0.5rem;
+    top: -1rem;
+    right: -7rem;
+  }
+  .meno,
+  .meno ul {
+    flex-direction: row;
+  }
   .section1 {
     flex-direction: column;
   }

@@ -6,9 +6,9 @@ function Meno() {
   const [myClick, setMyClick] = useState(false);
   const [dd, setdd] = useState(false);
   return (
-    <div className="w-40">
-      <div className="w-23">
-        <div className="meno flex flex-col items-center">
+    <div className="">
+      <div className="">
+        <div className="meno flex  items-center">
           <button
             onClick={() => setMyClick((prev) => !prev)}
             type="button"
@@ -17,7 +17,7 @@ function Meno() {
             <i className=" fas fa-bars"></i>
           </button>
           <ul
-            className={` flex flex-col items-center transition-all duration-900 transform origin-top  ${
+            className={` flex  items-center transition-all duration-900 transform origin-top  ${
               myClick ? "opasity-100" : "  opacity-0  pointer-event-none"
             } `}
           >
