@@ -11,5 +11,14 @@
   "projects":"projects",
   "lang":"lang",
   "createporto":"create a portfolio",
-  "print":"print"
+  "print":"print",
+  "touchtitle":"Let’s stay in touch",
+  "touch":"Whether you have a project in mind, looking for a fresh collaboration, or just feel like saying hi—I’d love to hear fro  you. I’m always up for new experiences and gre conversations. Drop me a message, I’m all ears!",
+  "nameuser":"Name",
+  "emailuser":"Email",
+  "massageuser":"Massage",
+  "send":"send",
+  "placeholdername":"Your Name",
+  "placeholder massage":"I'd love to hear from you — whether it's an idea, a project, or just a quick hello."
+
 }

@@ -1,7 +1,7 @@
 import Profile from "./components/profile/Profile";
 import Right from "./components/right/Right";
 import { Swiper, SwiperSlide } from "swiper/react";
-import './i18next.jsx'
+import "./i18next.jsx";
 import "swiper/css";
 import "swiper/css/navigation";
 import Myproject from "./components/Myproject/Myproject";
@@ -10,18 +10,23 @@ import Buttonswiper from "./components/buttonswiper/buttonswiper";
 import Meno from "./components/Meno/Meno.jsx";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import Comment from "./components/Comment/Comment.jsx";
 export default function App() {
-    const{ i18n}=useTranslation()
-    useEffect(()=>{
-        const dir=i18n.language === 'fa'? 'rtl':'ltr'
-        document.documentElement.dir=dir
-        document.body.classList.toggle('rtl',dir==='rtl')
-    },[i18n.language])
+  const { i18n } = useTranslation();
+  useEffect(() => {
+    const dir = i18n.language === "fa" ? "rtl" : "ltr";
+    document.documentElement.dir = dir;
+    document.body.classList.toggle("rtl", dir === "rtl");
+  }, [i18n.language]);
   return (
     <div className="mycontainer relative">
-        <div className={`parentmeno fixed top-[-.75rem] scale-[.5] ${i18n.language === 'fa'?"left-[-4rem]":"right-[-4rem]"}`}>
-        <Meno ></Meno>
-        </div>
+      <div
+        className={`parentmeno fixed top-[-.75rem] scale-[.5] ${
+          i18n.language === "fa" ? "left-[-4rem]" : "right-[-4rem]"
+        }`}
+      >
+        <Meno></Meno>
+      </div>
       <div className="head ">
         <Profile></Profile>
         <Right></Right>
@@ -46,7 +51,7 @@ export default function App() {
               0: { slidesPerView: 1 },
             }}
           >
-          <Buttonswiper></Buttonswiper>
+            <Buttonswiper></Buttonswiper>
 
             {projects.map((project) => (
               <SwiperSlide>
@@ -55,6 +60,9 @@ export default function App() {
             ))}
           </Swiper>
         </div>
+      </section>
+      <section className="section4 ">
+        <Comment></Comment>
       </section>
     </div>
   );
