@@ -66,7 +66,7 @@ export default function App() {
       </section>
       <footer className=" mt-3 bg-gray-400 px-4 py-10">
         <div className="flex flex-col items-center justify-between">
-          <p className="p-1 ">{t("footerp1")}</p>
+          <p className="p-1 text-center ">{t("footerp1")}</p>
          <div className="p-1  text-.9rem text-center">
          <p className=" text-[.8rem]">
             {t("footerp2")}
@@ -79,10 +79,9 @@ export default function App() {
             </a>
             .
           </p>
-          <p className=" text-[.8rem]">{t("footerp3")}</p>
-
+          <p className=" text-[.8rem] ">{t("footerp3")}</p>
          </div>
-          <p className="p-1">{t("footerp4")}</p>
+          <p className="p-1 text-center">{t("footerp4")}</p>
           <div className="p-2 flex justify-center items-center   text-gray-600 text-xl">
             <a
               href="https://www.google.com/maps?q=Khuzestan,+Iran"
