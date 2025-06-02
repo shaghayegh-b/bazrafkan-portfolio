@@ -63,6 +63,10 @@ div.mycontainer {
   div.mycontainer {
     margin: 0.3rem;
   }
+  footer{
+    margin-top: 0rem;
+    box-shadow: 0 0 0.2rem black;
+  }
   .parentmeno {
     top: -1.75rem;
     right: -1rem;
