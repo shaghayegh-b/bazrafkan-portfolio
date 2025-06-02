@@ -5,6 +5,7 @@
   .section2 h2.part1 {
   }
   .section2 h2.part1 i {
+    margin: .4rem;
     color: rgb(173, 121, 121);
   }
   .section2 h4.part2 {
@@ -28,6 +29,7 @@
   }
   .section3 h2.part1 i {
     font-size: 1.4rem;
+    margin: .4rem;
     color: rgb(173, 121, 121);
   }
   .section3 p.part2 {
@@ -35,6 +37,7 @@
   }
   .section3 div.part3 i {
     font-size: 1rem;
+    margin: .4rem;
     color: rgb(173, 121, 121);
   }
   .section3 div.part3 h5.style {

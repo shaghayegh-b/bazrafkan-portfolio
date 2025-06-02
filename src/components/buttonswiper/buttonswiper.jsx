@@ -10,7 +10,7 @@ function Buttonswiper() {
           {t('titleprojects')}
         </h2>
 
-        <div>
+        <div className='Buttonswiper'>
         <button className="px-[8px] pb-[3px] font-bold rounded-full bg-[#6d6d6d86] m-1" onClick={() => {swiper.slidePrev()}}>&lt;</button>
         <button className="px-[8px] pb-[3px] font-bold rounded-full bg-[#6d6d6d86] m-1" onClick={() =>{ swiper.slideNext()}}>&gt;</button>
         </div>

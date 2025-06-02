@@ -19,7 +19,7 @@ function Comment() {
       <div className=" border-2 border-solid border-[#464646c9] rounded-2xl p-6 shadow-xl">
         {/* Name */}
         <form>
-          <div>
+          <div className="p-2">
             <label
               htmlFor="nameuser"
               className="block  font-medium text-sm mb-1"
@@ -37,7 +37,7 @@ function Comment() {
             />
           </div>
           {/* email */}
-          <div>
+          <div className="p-2">
             <label
               htmlFor="emailuser"
               className="block  font-medium text-sm mb-1"
@@ -55,7 +55,7 @@ function Comment() {
             />
           </div>
           {/* massage */}
-          <div>
+          <div className="p-2">
             <label htmlFor="" className="block  font-medium text-sm mb-1">
               {t("massageuser")}
               <span className="text-red-500">*</span>

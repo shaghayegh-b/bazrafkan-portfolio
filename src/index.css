@@ -54,8 +54,18 @@ div.mycontainer {
   width: 95%;
   margin: auto;
 }
-body.rtl .section4{
+body.rtl .swiper-wrapper{
     direction: ltr;
+}
+body.rtl .Myproject div div{
+    direction: rtl;
+}
+body.rtl .Buttonswiper{
+    direction: ltr;
+}
+.section5{
+    width: 95%;
+    margin: auto;
 }
 .mySwiper {
   display: flex !important;

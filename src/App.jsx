@@ -61,11 +61,11 @@ export default function App() {
           </Swiper>
         </div>
       </section>
-      <section className="section4 ">
+      <section className="section5 ">
         <Comment></Comment>
       </section>
       <footer className=" mt-3 bg-gray-400 px-4 py-10">
-        <div className="flex flex-col items-center justify-between">
+        <div className="flex flex-col gap-[.5rem] items-center justify-between">
           <p className="p-1 text-center ">{t("footerp1")}</p>
          <div className="p-1  text-.9rem text-center">
          <p className=" text-[.8rem]">
