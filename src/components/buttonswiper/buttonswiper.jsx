@@ -7,7 +7,7 @@ function Buttonswiper() {
     return(
         <div className="flex w-full justify-between items-center ">
         <h2 className="text-start text-[1.7rem] font-medium p-3 pb-5">
-          {t('projects')}
+          {t('titleprojects')}
         </h2>
 
         <div>

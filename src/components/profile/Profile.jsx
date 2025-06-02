@@ -48,7 +48,7 @@ function Profile() {
                     href="https://www.google.com/maps?q=Khuzestan,+Iran"
                     target="-blank"
                   >
-                    <i className="fa fa-home icon"></i>iran khozestan
+                    <i className="fa-solid  fa-map-location-dot icon"></i>iran khozestan
                   </a>
                 </li>
                 <li>

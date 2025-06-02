@@ -57,7 +57,9 @@
     margin-right: 0.4rem;
     font-size:109%;
   }
-
+  .section1 i.fa-github {
+    font-size: 138%;
+  }
   .section1 .part2 span {
     color: black;
     font-size: 114%;
