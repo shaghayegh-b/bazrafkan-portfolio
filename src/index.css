@@ -31,6 +31,7 @@ section {
 }
 div.mycontainer {
   margin: 0.5rem auto;
+  margin-bottom: 0;
 }
 .parentmeno {
   z-index: 4;

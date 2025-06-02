@@ -64,7 +64,7 @@ export default function App() {
       <section className="section4 ">
         <Comment></Comment>
       </section>
-      <footer className=" my-3 bg-gray-400 px-4 py-10">
+      <footer className=" mt-3 bg-gray-400 px-4 py-10">
         <div className="flex flex-col items-center justify-between">
           <p className="p-1 ">{t("footerp1")}</p>
          <div className="p-1  text-.9rem text-center">
