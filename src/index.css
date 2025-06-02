@@ -54,6 +54,9 @@ div.mycontainer {
   width: 95%;
   margin: auto;
 }
+body.rtl .section4{
+    direction: ltr;
+}
 .mySwiper {
   display: flex !important;
   flex-direction: column-reverse !important;
