@@ -16,7 +16,7 @@ function Myproject({ img,id, mylink,skils }) {
         <div className="px-4 my-3 grid  grid-row-3 justify-items-start h-71">
           <h2 className="text-start text-[1.4rem] font-800 ">{t(`projects.${id}.title`)}</h2>
           <p className="text-start tracking-tight" >{t(`projects.${id}.des`)}</p>
-          <span className={`${!skils?"hidden":"tracking-tight text-center p-[.1rem] px-[.3rem] my-[.3rem] rounded-[.3rem] bg-[#76757583]" }`}>{skils}</span>
+          <span className={`h-[fit-content] ${!skils?"hidden":"tracking-tight text-center p-[.1rem] px-[.3rem] my-[.3rem] rounded-[.3rem] bg-[#76757583]" }`}>{skils}</span>
           <button
             onClick={btnhandler}
             type="button"

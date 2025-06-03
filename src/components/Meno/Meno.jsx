@@ -1,6 +1,7 @@
 import { memo, useState } from "react";
 import "./Meno.css";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 function Meno() {
   const { t, i18n } = useTranslation();
   const [myClick, setMyClick] = useState(false);
@@ -18,7 +19,7 @@ function Meno() {
           </button>
           <ul
             className={` flex  items-center transition-all duration-900 transform origin-top  ${
-              myClick ? "opasity-100" : "  opacity-0  pointer-event-none"
+              myClick ? "opacity-100" : "  opacity-0  pointer-events-none "
             } `}
           >
             <li
@@ -39,12 +40,13 @@ function Meno() {
               </div>
             </li>
             <li className="btn w-[6rem]  group font-bold">
-              +
-              <span className="group-hover:block hidden">
-                {t("createporto")}
-              </span>
+              <NavLink to="/bazrafkan-portfolio/CreatePortfolio" className="nav-link">+
+                <span className="group-hover:block hidden">
+                  {t("createporto")}
+                </span>
+              </NavLink>
             </li>
-            <li className="btn w-[6rem] group ">
+            <li className="btn w-[6rem] group " onClick={()=>window.print()}>
               p<span className="group-hover:block hidden">{t("print")}</span>
             </li>
           </ul>

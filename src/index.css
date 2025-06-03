@@ -71,7 +71,11 @@ body.rtl .Buttonswiper{
   display: flex !important;
   flex-direction: column-reverse !important;
 }
-
+@media print {
+    .parentmeno{
+        display:none !important;
+    }
+}
 @media (max-width: 768px) {
   div.mycontainer {
     margin: 0.3rem;
@@ -106,7 +110,7 @@ body.rtl .Buttonswiper{
   .Profile {
     width: 100%;
   }
-  .section4 {
+  .section4 , .section5{
     width: 100%;
   }
   .Myproject .mcontainer img {
