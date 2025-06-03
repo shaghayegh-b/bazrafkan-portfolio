@@ -20,7 +20,7 @@ function Myproject({ img,id, mylink,skils }) {
           <button
             onClick={btnhandler}
             type="button"
-            className={`bg-blue-700 text-white font-700 px-5 py-1 rounded self-end ${
+            className={`bg-[#945555] text-white font-700 px-5 py-1 rounded self-end ${
                 !mylink?" cursor-not-allowed bg-gray-500":''
             }`}
           >

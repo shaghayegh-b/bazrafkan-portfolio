@@ -10,7 +10,7 @@ function Comment() {
       <div>
         <h3 className="font-medium text-[1.7rem] mb-4">
           {t("touchtitle")}
-          <span className="text-blue-600">!</span>
+          <span className="text-[#af4b4b]">!</span>
         </h3>
         <p className="text-[87%] mb-8 text-gray-800 leading-relaxed">
           {t("touch")}

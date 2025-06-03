@@ -22,7 +22,7 @@ export default function MyHome() {
     <div className="mycontainer relative">
       <div
         className={`parentmeno fixed top-[-.75rem] scale-[.5] ${
-          i18n.language === "fa" ? "left-[-4rem]" : "right-[-4rem]"
+          i18n.language === "fa" ? "left-[-3rem]" : "right-[-3rem]"
         }`}
       >
         <Meno></Meno>
