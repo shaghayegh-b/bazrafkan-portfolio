@@ -8,7 +8,7 @@ body .meno{
     width: 4rem;
   list-style: none;
   margin: 0.1rem;
-  margin-top: 0;
+  margin-bottom: 0;
   background-color: #8080806d;
   padding: 0.3rem .3rem;
   font-weight: 600;
