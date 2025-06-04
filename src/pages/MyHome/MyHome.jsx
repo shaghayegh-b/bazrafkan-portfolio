@@ -44,8 +44,8 @@ export default function MyHome() {
             className="mySwiper flex flex-col-reverse"
             spaceBetween={9}
             breakpoints={{
-              1230: { slidesPerView: 4 },
-              961: { slidesPerView: 3 },
+              1335: { slidesPerView: 4 },
+              1005: { slidesPerView: 3 },
               768: { slidesPerView: 2 },
               673: { slidesPerView: 2 },
               0: { slidesPerView: 1 },
