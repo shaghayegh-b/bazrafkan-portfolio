@@ -1,81 +1,67 @@
 import { useTranslation } from "react-i18next";
 import MainLocation from "./Location/MainLocation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import Meno from "../../components/Meno/Meno";
 export default function CreatePortfolio() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [Selectaddress, setSelectaddress] = useState(false);
+  useEffect(() => {
+    const dir = i18n.language === "fa" ? "rtl" : "ltr";
+    document.documentElement.dir = dir;
+    document.body.classList.toggle("rtl", dir === "rtl");
+  }, [i18n.language]);
   console.log(location);
   return (
     <>
-      <section className="my-2 m-auto w-[85%] p-9 ">
+      <section className="my-2 m-auto w-[85%] p-9 relative">
+        <div
+          className={`parentmeno fixed top-[0]
+            ${i18n.language === "fa" ? "left-[1.2rem]" : "right-[1.2rem]"}
+        `}
+        >
+          <Meno></Meno>
+        </div>
         <form>
-          {/*  Last Name */}
-          <div className="p-2">
-            <label
-              htmlFor="lnameuser"
-              className="block mb-1 font-[600]"
-            >
-              Last Name
-              <span className="text-red-500">*</span>
-            </label>
-            <input
-              required
-              placeholder={t("placeholdername")}
-              className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
-              id="lnameuser"
-              name="lnameuser"
-              type="text"
-            />
-          </div>
           {/* first name */}
           <div className="p-2">
-            <label
-              htmlFor="fnameuser"
-              className="block mb-1 font-[600]"
-            >
-              First Name
+            <label htmlFor="fnameuser" className="block mb-1 font-[600]">
+              {t("First Name")}
               <span className="text-red-500">*</span>
             </label>
             <input
               required
-              placeholder="First Name"
+              placeholder={t("shaghayegh")}
               className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
               id="fnameuser"
               name="fnameuser"
               type="text"
             />
           </div>
-          {/*  Job */}
+          {/*  Last Name */}
           <div className="p-2">
-            <label
-              htmlFor="job"
-              className="block mb-1 font-[600]"
-            >
-              Job
+            <label htmlFor="lnameuser" className="block mb-1 font-[600]">
+              {t("Last Name")}
               <span className="text-red-500">*</span>
             </label>
             <input
               required
-              placeholder="programes"
+              placeholder={t("bazrafkan")}
               className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
-              id="job"
-              name="job"
+              id="lnameuser"
+              name="lnameuser"
               type="text"
             />
           </div>
-          {/*  Level Job */}
+          {/*  Job Title */}
           <div className="p-2">
-            <label
-              htmlFor="Leveljob"
-              className="block mb-1 font-[600]"
-            >
-              Level Job
+            <label htmlFor="Leveljob" className="block mb-1 font-[600]">
+              {t("Job Title")}
               <span className="text-red-500">*</span>
             </label>
             <input
               required
-              placeholder="Junior Front-End Developer"
+              placeholder={t("job")}
               className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
               id="Leveljob"
               name="Leveljob"
@@ -84,11 +70,8 @@ export default function CreatePortfolio() {
           </div>
           {/* email */}
           <div className="p-2">
-            <label
-              htmlFor="emailuser"
-              className="block mb-1 font-[600]"
-            >
-              Email
+            <label htmlFor="emailuser" className="block mb-1 font-[600]">
+              {t("Email")}
               <span className="text-red-500">*</span>
             </label>
             <input
@@ -102,16 +85,13 @@ export default function CreatePortfolio() {
           </div>
           {/* git hub */}
           <div className="p-2">
-            <label
-              htmlFor="githubuser"
-              className="block mb-1 font-[600]"
-            >
-              Link Github
+            <label htmlFor="githubuser" className="block mb-1 font-[600]">
+              {t("Link Github")}
               <span className="text-red-500">*</span>
             </label>
             <input
               required
-              placeholder="Link Github"
+              placeholder="http://github.com/shaghayegh-b/bazrafkan-portfolio"
               className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
               id="githubuser"
               name="githubuser"
@@ -120,11 +100,8 @@ export default function CreatePortfolio() {
           </div>
           {/* Phone Number */}
           <div className="p-2">
-            <label
-              htmlFor="phoneNumberuser"
-              className="block mb-1 font-[600]"
-            >
-              Phone Number
+            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600]">
+              {t("Phone Number")}
               <span className="text-red-500">*</span>
             </label>
             <input
@@ -139,61 +116,40 @@ export default function CreatePortfolio() {
           {/* location */}
           <div className="p-2 ">
             <h2 className="block mb-1 font-[600]">
-              Location <span className="text-red-500">*</span>
+              {t("Address")} <span className="text-red-500">*</span>
             </h2>
             <div className="flex flex-col gap-2 mt-1">
               <div className="">
-              <NavLink
-                to="/bazrafkan-portfolio/SelectLocation"
-                onClick={() => setSelectaddress(true)}
-                type="button"
-                 className="h-[fit-content] tracking-tight text-center p-2 inline-block hover:bg-gray-500 bg-gray-400 rounded-lg  "
-              >
-                Select address from map
-              </NavLink>
+                <NavLink
+                  to="/bazrafkan-portfolio/SelectLocation"
+                  onClick={() => setSelectaddress(true)}
+                  type="button"
+                  className="h-[fit-content] tracking-tight text-center p-2 inline-block hover:bg-gray-500 bg-gray-400 rounded-lg  "
+                >
+                  {t("SelectLocation")}
+                </NavLink>
               </div>
               <div className=" flex flex-col ">
-                <label
-                  htmlFor="Country"
-                  className="block text-sm mb-1"
-                >
-                  Country
+                <label htmlFor="Country" className="block text-sm mb-1">
+                  {t("Country")}
                 </label>
                 <input
                   required
-                  placeholder="Country"
+                  placeholder={t("iran")}
                   className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
                   id="Country"
                   name="Country"
                   type="text"
                 />
               </div>
+
               <div className=" flex flex-col">
-                <label
-                  htmlFor="Province"
-                  className="block text-sm mb-1 "
-                >
-                  Province (or State)
+                <label htmlFor="City" className="block   text-sm mb-1">
+                  {t("City")}
                 </label>
                 <input
                   required
-                  placeholder="Province"
-                  className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
-                  id="Province"
-                  name="Province"
-                  type="text"
-                />
-              </div>
-              <div className=" flex flex-col">
-                <label
-                  htmlFor="City"
-                  className="block   text-sm mb-1"
-                >
-                  City
-                </label>
-                <input
-                  required
-                  placeholder="City"
+                  placeholder={t("ahvaz")}
                   className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
                   id="City"
                   name="City"
@@ -204,16 +160,12 @@ export default function CreatePortfolio() {
           </div>
           {/* About Me */}
           <div className="p-2">
-            <label
-              htmlFor="phoneNumberuser"
-              className="block mb-1 font-[600]"
-            >
-              About Me
+            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600]">
+              {t("Describe Yourself")}
               <span className="text-red-500">*</span>
             </label>
             <textarea
               required
-              placeholder="write asummary about yourself"
               className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
               id="phoneNumberuser"
               name="phoneNumberuser"
@@ -222,14 +174,10 @@ export default function CreatePortfolio() {
           </div>
           {/* Work Experince */}
           <div className="p-2">
-            <label
-              htmlFor="phoneNumberuser"
-              className="block mb-1 font-[600]"
-            >
-              Work Experince
+            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600]">
+              {t("Work Experince")}
             </label>
             <input
-              placeholder="write about your experiences"
               className="w-full rounded-lg px-4 py-2  border border-gray-600 text-gray-700 placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-800"
               id="phoneNumberuser"
               name="phoneNumberuser"

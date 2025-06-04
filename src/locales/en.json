@@ -52,6 +52,21 @@
   "footerp1":"My portfolio is a reflection of my growth journey in the world of programming and design.",
   "footerp2":"Built with React and Tailwind CSS, powered by Vite, and deployed via ",
   "footerp3":"Designed and developed with a focus on speed, simplicity, and responsiveness using modern web technologies.",
-  "footerp4":"Every line of this site is a piece of my learning path — crafted with love and passion :)"
-
+  "footerp4":"Every line of this site is a piece of my learning path — crafted with love and passion :)",
+ "First Name":"First Name",
+  "Last Name":"Last Name",
+  "Job Title":"Job Title",
+  "Email":"Email",
+  "Link Github":"Link Github",
+  "Phone Number":"Phone Number",
+  "Address":"Address",
+  "Describe Yourself":"Describe Yourself",
+"shaghayegh":"shaghayegh",
+"bazrafkan":"bazrafkan",
+"SelectLocation":"Select address from map",
+"Country":"Country",
+"iran":"iran",
+"khozestan":"khozestan",
+"City":"City",
+"ahvaz":"dezful"
 }
