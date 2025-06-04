@@ -35,14 +35,14 @@ body .meno{
   width: max-content;
   border-start-start-radius: 0;
 }
-/* body.rtl .meno{
+body.rtl .meno{
     direction: ltr;
 }
 body.rtl .meno .btn span,
 body.rtl .meno .btn div {
   left: 96%;
   right: unset;
-} */
+}
 
 .meno .btn div button {
   padding: 0 1.3rem;
@@ -103,7 +103,14 @@ body.rtl .meno .btn div {
 .meno .btn div button:hover {
     background-color: #77777778;
   }
-
+  body.rtl .meno{
+    direction: rtl;
+}
+body.rtl .meno .btn span,
+body.rtl .meno .btn div {
+  left: unset;
+  right: -3%;
+}
 
 }
 @media (max-width: 320px) {
