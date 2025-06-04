@@ -1,17 +1,18 @@
 
 body .meno{
     direction: rtl;
+    font-size: 50%;
 }
-body.rtl .meno{
-    direction: ltr;
-}
+
 .meno .btn {
+    width: 4rem;
   list-style: none;
-  margin: 0.2rem;
+  margin: 0.1rem;
+  margin-top: 0;
   background-color: #8080806d;
-  padding: 0.2rem 1rem;
+  padding: 0.3rem .3rem;
   font-weight: 600;
-  font-size:2rem;
+  font-size:170%;
   cursor: pointer;
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
@@ -22,11 +23,10 @@ body.rtl .meno{
   position: relative;
 }
 .meno .btn span ,.meno .btn div {
-  font-size:1.5rem;
   position: absolute;
   right: 50%;
   top: 103%;
-  padding: 0.5rem 0.4rem;
+  padding: 0.2rem 0.4rem;
   border-radius: 3rem;
   margin-right: 0.3rem;
   background-color: #5a5a5a38;
@@ -35,11 +35,14 @@ body.rtl .meno{
   width: max-content;
   border-start-start-radius: 0;
 }
+/* body.rtl .meno{
+    direction: ltr;
+}
 body.rtl .meno .btn span,
 body.rtl .meno .btn div {
   left: 96%;
   right: unset;
-}
+} */
 
 .meno .btn div button {
   padding: 0 1.3rem;
@@ -47,4 +50,64 @@ body.rtl .meno .btn div {
 .meno .btn div button:hover {
   background-color: #07070755;
   color: rgb(221, 220, 220);
+}
+@media (max-width: 721px) {
+
+    .parentmeno{
+        bottom:0px;
+        top: unset;
+        right: 0%;
+        width: 100%;
+        }
+
+    .meno,
+.meno ul {
+  flex-direction: row;
+}
+    .meno ul{
+        width: 72.8%;
+    }
+    .meno .btn {
+        width: 25%;
+    border-radius: unset;
+    -webkit-border-radius: unset;
+    -moz-border-radius: unset;
+    -ms-border-radius: unset;
+    -o-border-radius: unset;
+    text-align: center;
+    color: white;
+    background-color: #000000d6;
+}
+.meno ul .btn{
+    width: 33.33%;
+}
+
+.meno .btn span, .meno .btn div {
+    color: white;
+    background-color: #000000d6;
+    width: 100%;
+    /*  */
+    right: -3%;
+    /*  */
+    top: -99%;
+    border-radius: unset;
+    -webkit-border-radius: unset;
+    -moz-border-radius: unset;
+    -ms-border-radius: unset;
+    -o-border-radius: unset;
+}
+/*  */
+.meno .btn div{top: -164%;}
+.meno .btn div b{display: none;}
+/*  */
+.meno .btn div button:hover {
+    background-color: #77777778;
+  }
+
+
+}
+@media (max-width: 320px) {
+    .meno .btn div{
+        padding: 0.2rem 0rem;
+    }
 }

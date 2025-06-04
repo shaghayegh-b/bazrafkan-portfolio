@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 function Meno() {
   const { t, i18n } = useTranslation();
-  const [myClick, setMyClick] = useState(false);
+  const [myClick, setMyClick] = useState(true);
   const [dd, setdd] = useState(false);
   return (
     <div className="">
@@ -23,7 +23,7 @@ function Meno() {
             } `}
           >
             <li
-              className="btn w-[6rem]  group "
+              className="btn group "
               onClick={() => {
                 setdd((prev) => !prev);
               }}
@@ -39,14 +39,14 @@ function Meno() {
                 </button>
               </div>
             </li>
-            <li className="btn w-[6rem]  group font-bold">
+            <li className="btn group font-bold">
               <NavLink to="/bazrafkan-portfolio/CreatePortfolio" className="nav-link">+
                 <span className="group-hover:block hidden">
                   {t("createporto")}
                 </span>
               </NavLink>
             </li>
-            <li className="btn w-[6rem] group " onClick={()=>window.print()}>
+            <li className="btn group " onClick={()=>window.print()}>
               p<span className="group-hover:block hidden">{t("print")}</span>
             </li>
           </ul>
