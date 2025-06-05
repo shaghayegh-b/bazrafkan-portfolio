@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import MainLocation from "./Location/MainLocation";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Meno from "../../components/Meno/Meno";
+import Menocreate from "./Menocreate/Menocreate";
 export default function CreatePortfolio() {
   const { t, i18n } = useTranslation();
   const [Selectaddress, setSelectaddress] = useState(false);
@@ -20,12 +20,12 @@ export default function CreatePortfolio() {
             ${i18n.language === "fa" ? "left-[1.2rem]" : "right-[1.2rem]"}
         `}
         >
-          <Meno></Meno>
+          <Menocreate></Menocreate>
         </div>
         <form>
           {/* first name */}
           <div className="p-2">
-            <label htmlFor="fnameuser" className="block mb-1 font-[600]">
+            <label htmlFor="fnameuser" className="block mb-1 font-[600] text-gray-900">
               {t("First Name")}
               <span className="text-red-500">*</span>
             </label>
@@ -40,7 +40,7 @@ export default function CreatePortfolio() {
           </div>
           {/*  Last Name */}
           <div className="p-2">
-            <label htmlFor="lnameuser" className="block mb-1 font-[600]">
+            <label htmlFor="lnameuser" className="block mb-1 font-[600] text-gray-900">
               {t("Last Name")}
               <span className="text-red-500">*</span>
             </label>
@@ -55,7 +55,7 @@ export default function CreatePortfolio() {
           </div>
           {/*  Job Title */}
           <div className="p-2">
-            <label htmlFor="Leveljob" className="block mb-1 font-[600]">
+            <label htmlFor="Leveljob" className="block mb-1 font-[600] text-gray-900">
               {t("Job Title")}
               <span className="text-red-500">*</span>
             </label>
@@ -70,7 +70,7 @@ export default function CreatePortfolio() {
           </div>
           {/* email */}
           <div className="p-2">
-            <label htmlFor="emailuser" className="block mb-1 font-[600]">
+            <label htmlFor="emailuser" className="block mb-1 font-[600] text-gray-900">
               {t("Email")}
               <span className="text-red-500">*</span>
             </label>
@@ -85,7 +85,7 @@ export default function CreatePortfolio() {
           </div>
           {/* git hub */}
           <div className="p-2">
-            <label htmlFor="githubuser" className="block mb-1 font-[600]">
+            <label htmlFor="githubuser" className="block mb-1 font-[600] text-gray-900">
               {t("Link Github")}
               <span className="text-red-500">*</span>
             </label>
@@ -100,7 +100,7 @@ export default function CreatePortfolio() {
           </div>
           {/* Phone Number */}
           <div className="p-2">
-            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600]">
+            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600] text-gray-900">
               {t("Phone Number")}
               <span className="text-red-500">*</span>
             </label>
@@ -115,7 +115,7 @@ export default function CreatePortfolio() {
           </div>
           {/* location */}
           <div className="p-2 ">
-            <h2 className="block mb-1 font-[600]">
+            <h2 className="block mb-1 font-[600] text-gray-900">
               {t("Address")} <span className="text-red-500">*</span>
             </h2>
             <div className="flex flex-col gap-2 mt-1">
@@ -160,7 +160,7 @@ export default function CreatePortfolio() {
           </div>
           {/* About Me */}
           <div className="p-2">
-            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600]">
+            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600] text-gray-900">
               {t("Describe Yourself")}
               <span className="text-red-500">*</span>
             </label>
@@ -174,7 +174,7 @@ export default function CreatePortfolio() {
           </div>
           {/* Work Experince */}
           <div className="p-2">
-            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600]">
+            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600] text-gray-900">
               {t("Work Experince")}
             </label>
             <input

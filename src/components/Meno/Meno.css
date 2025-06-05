@@ -7,8 +7,6 @@ body .meno{
 .meno .btn {
     width: 4rem;
   list-style: none;
-  margin: 0.1rem;
-  margin-bottom: 0;
   background-color: #8080806d;
   padding: 0.3rem .3rem;
   font-weight: 600;
@@ -63,9 +61,10 @@ body.rtl .meno .btn div {
     .meno,
 .meno ul {
   flex-direction: row;
+  gap: 0.1rem;
 }
     .meno ul{
-        width: 72.8%;
+        width: 75%;
     }
     .meno .btn {
         width: 25%;
