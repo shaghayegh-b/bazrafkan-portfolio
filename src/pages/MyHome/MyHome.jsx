@@ -23,7 +23,7 @@ export default function MyHome() {
       <div
         className={`parentmeno fixed top-[0]
             ${
-          i18n.language === "fa" ? "left-[1.2rem]" : "right-[1.2rem]"
+          i18n.language === "fa" ? "left-[2rem]" : "right-[2rem]"
         }
         `}
       >

@@ -41,6 +41,7 @@ function Menocreate() {
             } `}
           >
             <li
+             title={t("Change Languagr")}
               className="btn group "
               onClick={() => {
                 setdd((prev) => !prev);
@@ -62,17 +63,17 @@ function Menocreate() {
                 <i className=" fa fa-home"></i>
               </NavLink>
             </li>
-            <li className="btn group " onClick={() => window.print()}>
-              p<span className="group-hover:block hidden">{t("print")}</span>
+            <li className="btn group " onClick={() => window.print()} title={t("print")}>
+              p
             </li>
             <li
+            title={t("Change Theme Mode")}
               className="btn group font-bold"
               onClick={() => setIsDark(!isDark)}
             >
               <button
                 className="w-[100%] h-[21px] md:h-[17px] m-auto transition-all duration-300
                  hover:rotate-180 ease-in-out"
-                title="تغییر مود"
               >
                 <i
                   className={`fas ${

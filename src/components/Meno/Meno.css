@@ -90,8 +90,9 @@ body.rtl .meno .btn div {
 
   .meno .btn span,
   .meno .btn div {
+    margin: unset;
     width: 100%;
-    right: -3%;
+    right: 0%;
     top: -99%;
   }
   .meno .btn div {
@@ -110,11 +111,19 @@ body.rtl .meno .btn div {
   body.rtl .meno .btn span,
   body.rtl .meno .btn div {
     left: unset;
-    right: -3%;
+    right: 0%;
   }
 }
+@media (max-width: 560px) {
+.meno .btn div button {
+    padding: 0 0.3rem;
+}
+.meno .btn div {
+    padding-right: unset;
+    padding-left: unset;
+}}
 @media (max-width: 320px) {
-  .meno .btn div {
-    padding: 0.2rem 0rem;
-  }
+    .meno .btn div button {
+        padding: 0;
+    }
 }

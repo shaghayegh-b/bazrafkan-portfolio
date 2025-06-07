@@ -1,4 +1,4 @@
-import { memo, useState,useEffect } from "react";
+import { memo, useState, useEffect } from "react";
 import "./Meno.css";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
@@ -41,6 +41,7 @@ function Meno() {
             } `}
           >
             <li
+             title={t("Change Languagr")}
               className="btn group "
               onClick={() => {
                 setdd((prev) => !prev);
@@ -57,24 +58,29 @@ function Meno() {
                 </button>
               </div>
             </li>
-            <li className="btn group font-bold">
-              <NavLink to="/bazrafkan-portfolio/CreatePortfolio" className="nav-link">+
-                <span className="group-hover:block hidden">
-                  {t("createporto")}
-                </span>
+            <li className="btn group font-bold" title={t("createporto")}>
+              <NavLink
+                to="/bazrafkan-portfolio/CreatePortfolio"
+                className="nav-link"
+              >
+                +
               </NavLink>
             </li>
-            <li className="btn group " onClick={()=>window.print()}>
-              p<span className="group-hover:block hidden">{t("print")}</span>
+            <li
+              className="btn group "
+              onClick={() => window.print()}
+              title={t("print")}
+            >
+              p
             </li>
             <li
+              title={t("Change Theme Mode")}
               className="btn group font-bold"
               onClick={() => setIsDark(!isDark)}
             >
               <button
                 className="w-[100%] h-[21px] md:h-[17px] m-auto transition-all duration-300
                  hover:rotate-180 ease-in-out"
-                title="تغییر مود"
               >
                 <i
                   className={`fas ${
