@@ -70,7 +70,7 @@ function Menocreate() {
               onClick={() => setIsDark(!isDark)}
             >
               <button
-                className="w-[100%] block h-[21px] md:h-[17px] m-auto transition-all duration-300
+                className="w-[100%] h-[21px] md:h-[17px] m-auto transition-all duration-300
                  hover:rotate-180 ease-in-out"
                 title="تغییر مود"
               >
