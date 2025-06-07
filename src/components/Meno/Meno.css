@@ -1,16 +1,15 @@
-
-body .meno{
-    direction: rtl;
-    font-size: 50%;
+body .meno {
+  direction: rtl;
+  font-size: 50%;
 }
 
 .meno .btn {
-    width: 4rem;
+  width: 4rem;
   list-style: none;
   background-color: #8080806d;
-  padding: 0.3rem .3rem;
+  padding: 0.3rem 0.3rem;
   font-weight: 600;
-  font-size:170%;
+  font-size: 170%;
   cursor: pointer;
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
@@ -20,7 +19,8 @@ body .meno{
   text-align: center;
   position: relative;
 }
-.meno .btn span ,.meno .btn div {
+.meno .btn span,
+.meno .btn div {
   position: absolute;
   right: 50%;
   top: 103%;
@@ -33,87 +33,88 @@ body .meno{
   width: max-content;
   border-start-start-radius: 0;
 }
-body.rtl .meno{
-    direction: ltr;
+.meno .btn div button {
+    padding: 0 1.3rem;
+  }
+  .meno .btn div button:hover {
+    background-color: #07070755;
+    color: rgb(221, 220, 220);
+  }
+/* فارسی */
+body.rtl .meno {
+  direction: ltr;
 }
 body.rtl .meno .btn span,
 body.rtl .meno .btn div {
   left: 96%;
   right: unset;
 }
+/* دارک مود */
+.dark .meno .btn ,.dark .meno .btn span,
+.dark .meno .btn div{
+    color: rgb(36, 36, 36);
+    background-color: rgba(226, 231, 235, 0.918);
+  }
+@media (max-width: 768px) {
+  .parentmeno {
+    bottom: 0px;
+    top: unset;
+    right: 0%;
+    width: 100%;
+  }
 
-.meno .btn div button {
-  padding: 0 1.3rem;
-}
-.meno .btn div button:hover {
-  background-color: #07070755;
-  color: rgb(221, 220, 220);
-}
-@media (max-width: 721px) {
-
-    .parentmeno{
-        bottom:0px;
-        top: unset;
-        right: 0%;
-        width: 100%;
-        }
-
-    .meno,
-.meno ul {
-  flex-direction: row;
-  gap: 0.1rem;
-}
-    .meno ul{
-        width: 75%;
-    }
-    .meno .btn {
-        width: 25%;
+  .meno,
+  .meno ul {
+    flex-direction: row;
+    gap: 0.1rem;
+  }
+  .meno ul {
+    width: 75%;
+  }
+  .meno .btn,  .meno ul .btn {
+    width: 25%;
+  }
+  .meno .btn,
+  .meno .btn span,
+  .meno .btn div {
+    font-size: .98rem;
+    color: white;
+    background-color: #000000d6;
     border-radius: unset;
     -webkit-border-radius: unset;
     -moz-border-radius: unset;
     -ms-border-radius: unset;
     -o-border-radius: unset;
     text-align: center;
-    color: white;
-    background-color: #000000d6;
-}
-.meno ul .btn{
-    width: 33.33%;
-}
+  }
 
-.meno .btn span, .meno .btn div {
-    color: white;
-    background-color: #000000d6;
+  .meno .btn span,
+  .meno .btn div {
     width: 100%;
-    /*  */
     right: -3%;
-    /*  */
     top: -99%;
-    border-radius: unset;
-    -webkit-border-radius: unset;
-    -moz-border-radius: unset;
-    -ms-border-radius: unset;
-    -o-border-radius: unset;
-}
-/*  */
-.meno .btn div{top: -164%;}
-.meno .btn div b{display: none;}
-/*  */
-.meno .btn div button:hover {
+  }
+  .meno .btn div {
+    top: -164%;
+  }
+  .meno .btn div b {
+    display: none;
+  }
+  .meno .btn div button:hover {
     background-color: #77777778;
   }
-  body.rtl .meno{
+  /* فارسی */
+  body.rtl .meno {
     direction: rtl;
-}
-body.rtl .meno .btn span,
-body.rtl .meno .btn div {
-  left: unset;
-  right: -3%;
-}
-
+  }
+  body.rtl .meno .btn span,
+  body.rtl .meno .btn div {
+    left: unset;
+    right: -3%;
+  }
 }
 @media (max-width: 320px) {
-    .meno .btn div{
-        padding: 0.2rem 0rem;
-    }
+  .meno .btn div {
+    padding: 0.2rem 0rem;
+  }
 }

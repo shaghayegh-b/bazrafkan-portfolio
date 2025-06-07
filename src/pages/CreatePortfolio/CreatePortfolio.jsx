@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
-import MainLocation from "./Location/MainLocation";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Menocreate from "./Menocreate/Menocreate";
+import Menocreate from "../../components/Menocreate/Menocreate";
 export default function CreatePortfolio() {
   const { t, i18n } = useTranslation();
   const [Selectaddress, setSelectaddress] = useState(false);
@@ -20,7 +19,7 @@ export default function CreatePortfolio() {
             ${i18n.language === "fa" ? "left-[1.2rem]" : "right-[1.2rem]"}
         `}
         >
-          <Menocreate></Menocreate>
+            <Menocreate></Menocreate>
         </div>
         <form>
           {/* first name */}
@@ -124,7 +123,7 @@ export default function CreatePortfolio() {
                   to="/bazrafkan-portfolio/SelectLocation"
                   onClick={() => setSelectaddress(true)}
                   type="button"
-                  className="h-[fit-content] tracking-tight text-center p-2 inline-block hover:bg-gray-500 bg-gray-400 rounded-lg  "
+                  className="h-[fit-content] tracking-tight text-center p-2 inline-block hover:bg-gray-500 dark:bg-gray-200 dark:text-black bg-gray-400 rounded-lg  "
                 >
                   {t("SelectLocation")}
                 </NavLink>

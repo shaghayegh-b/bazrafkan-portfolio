@@ -1,11 +1,29 @@
-import { memo, useState } from "react";
-import "../../../components/Meno/Meno.css";
+import { memo, useState, useEffect } from "react";
+import '../Meno/Meno.css'
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 function Menocreate() {
   const { t, i18n } = useTranslation();
   const [myClick, setMyClick] = useState(true);
   const [dd, setdd] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    return (
+      localStorage.getItem("theme") === "dark" ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+        !localStorage.getItem("theme"))
+    );
+  });
+  useEffect(() => {
+    const html = document.documentElement;
+    if (isDark) {
+      html.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      html.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDark]);
+
   return (
     <div className="">
       <div className="">
@@ -31,7 +49,7 @@ function Menocreate() {
               {t("lang")}
               <div className={`${dd ? "" : "hidden"}`}>
                 <button onClick={() => i18n.changeLanguage("fa")}>
-                  فارسی{" "}
+                  فارسی
                 </button>
                 <b>|</b>
                 <button onClick={() => i18n.changeLanguage("en")}>
@@ -40,15 +58,28 @@ function Menocreate() {
               </div>
             </li>
             <li className="btn group font-bold">
-              <NavLink to="/bazrafkan-portfolio/" className="nav-link">
-              <i className=" fa fa-home"></i>
-                <span className="group-hover:block hidden">
-                  Go To Home
-                </span>
+              <NavLink to="/bazrafkan-portfolio/" className="nav-link block">
+                <i className=" fa fa-home"></i>
               </NavLink>
             </li>
-            <li className="btn group " onClick={()=>window.print()}>
+            <li className="btn group " onClick={() => window.print()}>
               p<span className="group-hover:block hidden">{t("print")}</span>
+            </li>
+            <li
+              className="btn group font-bold"
+              onClick={() => setIsDark(!isDark)}
+            >
+              <button
+                className="w-[100%] block h-[21px] md:h-[17px] m-auto transition-all duration-300
+                 hover:rotate-180 ease-in-out"
+                title="تغییر مود"
+              >
+                <i
+                  className={`fas ${
+                    isDark ? "fa-sun" : "fa-moon"
+                  } text-[100%] transition-transform duration-500`}
+                ></i>
+              </button>
             </li>
           </ul>
         </div>

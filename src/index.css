@@ -29,6 +29,9 @@ section {
   background-color: rgb(205, 210, 214);
   z-index: 3;
 }
+.dark section{
+    box-shadow: 0 0 0.2rem rgb(118, 118, 118);
+}
 div.mycontainer {
   margin: 0.5rem auto;
   margin-bottom: 0;
