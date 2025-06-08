@@ -47,9 +47,8 @@ export default function MyHome() {
             spaceBetween={9}
             breakpoints={{
               1335: { slidesPerView: 4 },
-              1010: { slidesPerView: 3 },
-              768: { slidesPerView: 2 },
-              673: { slidesPerView: 2 },
+              985: { slidesPerView: 3 },
+              655: { slidesPerView: 2 },
               0: { slidesPerView: 1 },
             }}
           >

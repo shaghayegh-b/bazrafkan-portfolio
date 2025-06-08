@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
-// import './Myproject.css'
+import './Myproject.css'
 function Myproject({ img,id, mylink,skils }) {
     const {t}=useTranslation()
   const btnhandler = () => {

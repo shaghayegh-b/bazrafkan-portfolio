@@ -1,15 +1,37 @@
 @media (max-width: 1010px) {
   .caption {
-    height: 14rem;
+    height: 19rem;
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 984px) {
     .caption {
-        height: 17rem;
+        height: 16rem;
+      }
+}
+@media (max-width: 791px) {
+    .caption {
+        height: 19rem;
       }
 }
 @media (max-width: 768px) {
+    .mcontainer{
+        height: 30rem;
+    }
+}
+
+@media (max-width: 655px) {
+    .mcontainer{
+        height: 26rem;
+    }
     .caption {
-        height: 19rem;
+        height: 13rem;
+      }
+}
+@media (max-width: 514px) {
+    .mcontainer{
+        height: 30rem;
+    }
+    .caption {
+        height: 18rem;
       }
 }
