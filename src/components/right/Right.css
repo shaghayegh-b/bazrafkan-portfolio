@@ -6,7 +6,8 @@
   }
   .section2 h2.part1 i {
     margin: .4rem;
-    color: rgb(173, 121, 121);
+    /* color: rgb(173, 121, 121); */
+    color: rgb(182 84 84);
   }
   .section2 h4.part2 {
     margin: 1.4rem 0 1rem;
@@ -30,7 +31,8 @@
   .section3 h2.part1 i {
     font-size: 1.4rem;
     margin: .4rem;
-    color: rgb(173, 121, 121);
+    /* color: rgb(173, 121, 121); */
+    color: rgb(182 84 84);
   }
   .section3 p.part2 {
     font-size: 111%;
@@ -38,18 +40,21 @@
   .section3 div.part3 i {
     font-size: 1rem;
     margin: .4rem;
-    color: rgb(173, 121, 121);
+    /* color: rgb(173, 121, 121); */
+    color: rgb(182 84 84);
   }
   .section3 div.part3 h5.style {
-    color: rgb(173, 121, 121);
+    /* color: rgb(173, 121, 121); */
+    color: rgb(182 84 84);
     display: inline-block;
     font-weight: 700;
     margin: 0.5rem 0.1rem;
     font-size: 123%;
   }
   .section3 div.part3 h5.h52 {
-    background-color: rgb(173, 121, 121);
-    color: black;
+    /* background-color: rgb(173, 121, 121); */
+    background-color: rgb(182 84 84);
+    color: rgb(239, 239, 239);
     padding: 0.1rem 0.25rem;
     border-radius: 0.4rem;
     text-align: center;

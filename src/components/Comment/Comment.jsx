@@ -74,7 +74,7 @@ function Comment() {
           </div>
           {/* button */}
           <div>
-            <button type="submit"  className="bg-gray-400 text-right hover:bg-gray-500 pr-5 pl-4 py-2 rounded-lg m-2 cursor-pointer">{t("send")}
+            <button type="submit"  className="bg-[#d0d0d0] text-right hover:bg-gray-500 pr-5 pl-4 py-2 rounded-lg m-2 cursor-pointer">{t("send")}
                 <i className="fa-regular fa-paper-plane px-1"></i>
             </button>
           </div>

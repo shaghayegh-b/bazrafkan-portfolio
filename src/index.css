@@ -10,6 +10,7 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   overflow-x: hidden;
@@ -23,10 +24,15 @@ body {
 body.rtl {
   font-family: "Gill Sans";
 }
-
+h1,h2,h3,h4{
+    color: rgb(17 24 39);
+    opacity: .9;
+    font-weight: 600;
+}
+p{  color:rgb(31 41 55);}
 section {
   box-shadow: 0 0 0.2rem black;
-  background-color: rgb(205, 210, 214);
+  background-color: rgb(243 244 246);
   z-index: 3;
 }
 .dark section{

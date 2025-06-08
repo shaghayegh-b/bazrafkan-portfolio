@@ -11,8 +11,8 @@ function Buttonswiper() {
         </h2>
 
         <div className='Buttonswiper'>
-        <button className="px-[8px] pb-[3px] font-bold rounded-full bg-[#6d6d6d86] m-1" onClick={() => {swiper.slidePrev()}}>&lt;</button>
-        <button className="px-[8px] pb-[3px] font-bold rounded-full bg-[#6d6d6d86] m-1" onClick={() =>{ swiper.slideNext()}}>&gt;</button>
+        <button className="px-[8px] pb-[3px] font-bold rounded-full bg-[#d0d0d0] m-1" onClick={() => {swiper.slidePrev()}}>&lt;</button>
+        <button className="px-[8px] pb-[3px] font-bold rounded-full bg-[#d0d0d0] m-1" onClick={() =>{ swiper.slideNext()}}>&gt;</button>
         </div>
       </div>
     )

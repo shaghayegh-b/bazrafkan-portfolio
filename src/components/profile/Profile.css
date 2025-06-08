@@ -34,7 +34,7 @@
   /*  */
   .section1 .part2 {
     font-size: 90%;
-    padding: 1rem;
+    padding:0.5rem .7rem 1.2rem;
     text-align: justify;
   }
 
@@ -48,12 +48,13 @@
     font-size: 114%;
   }
   .section1 .part2 ul li a {
-    color: black;
+    color: rgb(17 24 39);
     text-decoration: none;
     cursor: pointer !important;
   }
   .section1 i.icon {
-    color: rgb(173, 121, 121);
+    /* color: rgb(173, 121, 121); */
+    color: rgb(182 84 84);
     margin: 0.4rem;
     font-size:109%;
   }
@@ -72,7 +73,8 @@
   .section1 .part2 p {
     display: inline-block;
     margin: 0.2rem ;
-    background-color:darkgray;
+    /* background-color:darkgray; */
+    background-color: #d9dada;
     padding: 0rem .8rem;
     border-radius:2rem ;
     -webkit-border-radius:2rem ;

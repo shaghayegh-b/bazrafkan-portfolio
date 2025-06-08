@@ -41,9 +41,10 @@ export default function MyHome() {
         data-aos-once="true"
         className=" section4 p-3 pb-11"
       >
-        <div className="shadow-2xl">
+        <div className="">
           <Swiper
             className="mySwiper flex flex-col-reverse"
+            loop="true"
             spaceBetween={9}
             breakpoints={{
               1335: { slidesPerView: 4 },
@@ -54,11 +55,13 @@ export default function MyHome() {
           >
             <Buttonswiper></Buttonswiper>
 
+            <div className="p-5">
             {projects.map((project) => (
               <SwiperSlide>
                 <Myproject {...project}></Myproject>
               </SwiperSlide>
             ))}
+            </div>
           </Swiper>
         </div>
       </section>

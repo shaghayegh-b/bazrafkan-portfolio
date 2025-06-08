@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 function Profile() {
-    const {t}=useTranslation()
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init();
   }, []);
@@ -26,35 +26,37 @@ function Profile() {
               className=" w-full h-auto"
             />
           </div>
-          <h2 className="tracking-tight">{t('name')}</h2>
+          <h2 className="tracking-tight">{t("name")}</h2>
         </div>
         <div className="information">
           <div
-            // data-aos="fade-up"
-            // data-aos-delay="40"
-            // data-aos-duration="2100"
-            // data-aos-once="true"
+          // data-aos="fade-up"
+          // data-aos-delay="40"
+          // data-aos-duration="2100"
+          // data-aos-once="true"
           >
             <hr className=" text-[#6d50505c] mx-9 " />
             <h3 className="p-3 px-8 ">
-              <i className="fa fa-briefcase icon"></i>{t('job')}
+              <i className="fa fa-briefcase icon"></i>
+              {t("job")}
             </h3>
             <hr className=" text-[#6d50505c] mx-9 " />
             <div className="part2">
-              <h3 className="text-xl font-medium">{t('Contact')}</h3>
               <ul className="break-words">
+                <li>
+                  <h3 className="text-xl font-medium">{t("Contact")}</h3>
+                </li>
                 <li>
                   <a
                     href="https://www.google.com/maps?q=Khuzestan,+Iran"
                     target="-blank"
                   >
-                    <i className="fa-solid  fa-map-location-dot icon"></i>iran khozestan
+                    <i className="fa-solid  fa-map-location-dot icon"></i>iran
+                    khozestan
                   </a>
                 </li>
                 <li>
-                  <a
-                    href={`mailto:${"bazrafkannjad.sh@gmail.com"}`}
-                  >
+                  <a href={`mailto:${"bazrafkannjad.sh@gmail.com"}`}>
                     <i className="fa fa-at icon"></i>bazrafkannjad.sh@gmail.com
                   </a>
                 </li>
@@ -70,38 +72,40 @@ function Profile() {
                 </li>
               </ul>
               <hr className=" text-[#6d50505c] mx-9 " />
-              <div className="py-2 text-[114%] font-medium">
+              <div className="px-3">
+              <h2 className="py-2 text-[114%] font-medium">
                 <i className="fas fa-stamp icon"></i>
-                {t('skills')}
-              </div>
+                {t("skills")}
+              </h2>
               <div>
                 <p>
-                  html ,css <span>| Basic</span>
+                  html ,css
                 </p>
                 <p>
-                  javascript <span>| Basic</span>
+                  javascript
                 </p>
                 <p>
-                  react <span>| Basic</span>
+                  react
                 </p>
                 <p>
-                  tailwind css <span>| Basic</span>
+                  tailwind css
                 </p>
                 <p>
-                  jQuery <span>| Basic</span>
+                  jQuery
                 </p>
                 <p>
-                  bootstrap <span>| Basic</span>
+                  bootstrap
                 </p>
                 <p>
-                  sass <span>| Basic</span>
+                  sass
                 </p>
                 <p>
-                  git <span>| Basic</span>
+                  git
                 </p>
                 <p>
-                  github <span>| Basic</span>
+                  github
                 </p>
+              </div>
               </div>
             </div>
           </div>
