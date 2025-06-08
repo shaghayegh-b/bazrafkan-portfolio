@@ -87,23 +87,6 @@ body.rtl .Buttonswiper{
     margin-top: 0rem;
     box-shadow: 0 0 0.2rem black;
   }
-  /* .parentmeno {
-    top: -1.75rem;
-    right: -1rem;
-  }
-  body.rtl .parentmeno {
-    top: -1.75rem;
-    right:unset;
-    left: -1rem;
-  } */
-  /* .meno .btn span, .meno .btn div{
-    right: 90% !important;
-    top:38% !important;
-  }
-  .meno,
-  .meno ul {
-    flex-direction: column;
-  } */
   .head {
     flex-direction: column;
   }

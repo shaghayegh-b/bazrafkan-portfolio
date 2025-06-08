@@ -1,0 +1,15 @@
+@media (max-width: 1010px) {
+  .caption {
+    height: 14rem;
+  }
+}
+@media (max-width: 880px) {
+    .caption {
+        height: 17rem;
+      }
+}
+@media (max-width: 768px) {
+    .caption {
+        height: 19rem;
+      }
+}

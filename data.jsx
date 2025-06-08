@@ -9,7 +9,7 @@ export const projects=[
     },
     {
         "id":"project2",
-      "img": "https://raw.githubusercontent.com/shaghayegh-b/bazrafkan-portfolio/refs/heads/main/src/assets/imag/14.webp",
+      "img": "https://raw.githubusercontent.com/shaghayegh-b/bazrafkan-portfolio/refs/heads/main/src/assets/imag/142.webp",
       "title": "Under Construction...",
       "text":"This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
     },
@@ -21,13 +21,13 @@ export const projects=[
     },
     {
         "id":"project4",
-        "img": "https://raw.githubusercontent.com/shaghayegh-b/bazrafkan-portfolio/refs/heads/main/src/assets/imag/14.webp",
+        "img": "https://raw.githubusercontent.com/shaghayegh-b/bazrafkan-portfolio/refs/heads/main/src/assets/imag/142.webp",
       "title": "Under Construction...",
       "text":"This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
     },
     {
         "id":"project5",
-        "img":"https://raw.githubusercontent.com/shaghayegh-b/bazrafkan-portfolio/refs/heads/main/src/assets/imag/14.webp",
+        "img":"https://raw.githubusercontent.com/shaghayegh-b/bazrafkan-portfolio/refs/heads/main/src/assets/imag/142.webp",
       "title": "Under Construction...",
       "text":"This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
     },
