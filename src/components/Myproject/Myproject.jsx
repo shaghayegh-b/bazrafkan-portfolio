@@ -13,7 +13,7 @@ function Myproject({ img,id, mylink,skils }) {
   return (
     <div className="Myproject">
       <div className="mcontainer bg-[#e7e8e9] flex flex-col justify-start items-center hover:shadow-lg rounded-[18px] p-2">
-        <img src={img} width="346px" height="184px" className="w-100% h-38" alt="hi friends" />
+        <img src={img} width="346px" height="184px" className="rounded-[10px] w-100% h-38" alt="hi friends" />
         <div className="caption px-4 my-3 grid gap-[.2rem]  grid-row-3 justify-items-start h-71">
           <h2 className="text-start text-[1.4rem] font-800 ">{t(`projects.${id}.title`)}</h2>
           <p className="text-start tracking-tight" >{t(`projects.${id}.des`)}

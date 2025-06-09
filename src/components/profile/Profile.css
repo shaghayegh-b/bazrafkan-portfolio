@@ -54,7 +54,8 @@
   }
   .section1 i.icon {
     /* color: rgb(173, 121, 121); */
-    color: rgb(182 84 84);
+    /* color: rgb(182 84 84); */
+    color: rgb(153 65 65);
     margin: 0.4rem;
     font-size:109%;
   }

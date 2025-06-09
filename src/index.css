@@ -1,12 +1,4 @@
 @import "tailwindcss";
-@font-face {
-  font-family: "vazir";
-  src: url("./assets/font/Lalezar-Regular.ttf");
-}
-@font-face {
-  font-family: "yekan";
-  src: url("./assets/font/Yekan.ttf");
-}
 * {
   box-sizing: border-box;
 }
@@ -18,11 +10,10 @@ body {
 body {
   background-color: rgb(183, 185, 187);
   font-size: 100%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Poppins','Inter', sans-serif;
 }
 body.rtl {
-  font-family: "Gill Sans";
+  font-family:'IRANYekan','Vazir', sans-serif;
 }
 h1,h2,h3,h4{
     color: rgb(17 24 39);
@@ -33,6 +24,7 @@ p{  color:rgb(31 41 55);}
 section {
   box-shadow: 0 0 0.2rem black;
   background-color: rgb(243 244 246);
+  /* background-color: rgb(208, 208, 209); */
   z-index: 3;
 }
 .dark section{

@@ -7,7 +7,7 @@ function Experince() {
       <div className="part3">
         <i className="fas fa-calendar-alt style"></i>
         <h5 className="style">{t("march2024-")}</h5>
-        <h5 className="style h52">{t("curent")}</h5>
+        <h5 className="style h52">{t("current")}</h5>
       </div>
       <p className="part2">{t('companyname')}</p>
 
