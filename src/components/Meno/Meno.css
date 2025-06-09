@@ -53,7 +53,7 @@ body.rtl .meno .btn div {
 .dark .meno .btn ,.dark .meno .btn span,
 .dark .meno .btn div{
     color: rgb(36, 36, 36);
-    background-color: rgba(226, 231, 235, 0.918);
+    background-color:rgb(127 128 130 / 95%);
   }
 @media (max-width: 768px) {
   .parentmeno {
@@ -79,7 +79,7 @@ body.rtl .meno .btn div {
   .meno .btn div {
     font-size: .98rem;
     color: white;
-    background-color: #000000d6;
+    background-color:rgb(97 98 98 / 94%);
     border-radius: unset;
     -webkit-border-radius: unset;
     -moz-border-radius: unset;

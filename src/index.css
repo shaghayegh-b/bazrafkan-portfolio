@@ -2,7 +2,6 @@
 * {
   box-sizing: border-box;
 }
-
 html,
 body {
   overflow-x: hidden;
@@ -10,26 +9,25 @@ body {
 body {
   background-color: rgb(183, 185, 187);
   font-size: 100%;
-  font-family: 'Poppins','Inter', sans-serif;
+  font-family: "Poppins", "Inter", sans-serif;
 }
-body.rtl {
-  font-family:'IRANYekan','Vazir', sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(17 24 39);
+  opacity: 0.9;
+  font-weight: 600;
 }
-h1,h2,h3,h4{
-    color: rgb(17 24 39);
-    opacity: .9;
-    font-weight: 600;
+p {
+  color: rgb(31 41 55);
 }
-p{  color:rgb(31 41 55);}
 section {
   box-shadow: 0 0 0.2rem black;
   background-color: rgb(243 244 246);
-  /* background-color: rgb(208, 208, 209); */
   z-index: 3;
 }
-.dark section{
-    box-shadow: 0 0 0.2rem rgb(118, 118, 118);
-}
+
 div.mycontainer {
   margin: 0.5rem auto;
   margin-bottom: 0;
@@ -55,33 +53,72 @@ div.mycontainer {
   width: 95%;
   margin: auto;
 }
-body.rtl .swiper-wrapper{
-    direction: ltr;
-}
-body.rtl .Myproject div div{
-    direction: rtl;
-}
-body.rtl .Buttonswiper{
-    direction: ltr;
-}
-.section5{
-    width: 95%;
-    margin: auto;
+.section5 {
+  width: 95%;
+  margin: auto;
 }
 .mySwiper {
   display: flex !important;
   flex-direction: column-reverse !important;
 }
+/* فارسی */
+body.rtl {
+  font-family: "IRANYekan", "Vazir", sans-serif;
+}
+body.rtl .swiper-wrapper {
+  direction: ltr;
+}
+body.rtl .Myproject div div {
+  direction: rtl;
+}
+body.rtl .Buttonswiper {
+  direction: ltr;
+}
+
+/* dark */
+
+.dark body {
+  background-color: rgb(18 18 20);
+}
+.dark section {
+  background-color: rgb(18 18 20);
+  box-shadow: 0 0 0.2rem rgb(118, 118, 118);
+}
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+  color:rgb(230 230 230);
+  opacity: 1;
+}
+.dark p {
+  color:rgb(160 160 170);
+  color: rgb(183 183 188);
+}
+.dark label{
+    color: rgb(183 183 188);
+    font-weight: 600;
+}
+.dark input:-ms-input-placeholder,
+.dark textarea:-ms-input-placeholder{
+color: #99a1af;
+}
+.dark input, .dark textarea{
+    color: rgb(209 213 220);
+}
+.dark footer{
+    background-color: #2b2e33;
+}
 @media print {
-    .parentmeno{
-        display:none !important;
-    }
+  .parentmeno {
+    display: none !important;
+  }
 }
 @media (max-width: 768px) {
   div.mycontainer {
     margin: 0.3rem;
   }
-  footer{
+  footer {
     margin-top: 0rem;
     box-shadow: 0 0 0.2rem black;
   }
@@ -94,7 +131,8 @@ body.rtl .Buttonswiper{
   .Profile {
     width: 100%;
   }
-  .section4 , .section5{
+  .section4,
+  .section5 {
     width: 100%;
   }
   .Myproject .mcontainer img {
@@ -108,8 +146,7 @@ body.rtl .Buttonswiper{
   }
   body.rtl .Profile .section1 .information {
     border-right: 1.5px solid black;
-    border-left:unset;
-
+    border-left: unset;
   }
   .section1 .part1 {
     padding: 1rem;
@@ -119,20 +156,20 @@ body.rtl .Buttonswiper{
   }
 }
 @media (max-width: 500px) {
-    .section1 {
-        border-radius: 0rem 0rem 0 0 !important;
-        -webkit-border-radius: 0rem 0rem 0 0 !important;
-        -moz-border-radius: 0rem 0rem 0 0 !important;
-        -ms-border-radius: 0rem 0rem 0 0 !important;
-        -o-border-radius: 0rem 0rem 0 0 !important;
-}
+  .section1 {
+    border-radius: 0rem 0rem 0 0 !important;
+    -webkit-border-radius: 0rem 0rem 0 0 !important;
+    -moz-border-radius: 0rem 0rem 0 0 !important;
+    -ms-border-radius: 0rem 0rem 0 0 !important;
+    -o-border-radius: 0rem 0rem 0 0 !important;
+  }
 
   /* .meno ,.meno ul{
     flex-direction: row;
     opacity: 1;
   } */
 
-    /* .meno .btn span, .meno .btn div{
+  /* .meno .btn span, .meno .btn div{
     left:unset !important;
     right: 50% !important;
     top: 103% !important;

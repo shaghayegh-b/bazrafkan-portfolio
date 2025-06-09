@@ -1,0 +1,7 @@
+.dark .Comment button{
+    color: #ebebebc9;
+    background-color: #454a55;
+}
+.dark .Comment button:hover{
+    background-color: #6a7282;
+}

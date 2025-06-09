@@ -18,13 +18,13 @@ function Myproject({ img,id, mylink,skils }) {
           <h2 className="text-start text-[1.4rem] font-800 ">{t(`projects.${id}.title`)}</h2>
           <p className="text-start tracking-tight" >{t(`projects.${id}.des`)}
             <br></br>
-          <span className={`h-[fit-content] ${!skils?"invisible":"tracking-tight text-center p-[.1rem]  my-[.3rem] rounded-[.3rem] bg-[#76757583]" }`}>{skils}</span>
+          <span className={` h-[fit-content] ${!skils?"invisible":"tracking-tight text-center p-[.1rem]  my-[.3rem] rounded-[.3rem] bg-[#76757583]" }`}>{skils}</span>
           </p>
           <button
             onClick={btnhandler}
             type="button"
-            className={`bg-[#945555] text-white font-700 px-5 py-1 rounded self-end ${
-                !mylink?" cursor-not-allowed bg-gray-500":''
+            className={`bg-[#945555] dark:bg-[#c03f3f] text-white font-700 px-5 py-1 rounded self-end ${
+                !mylink?" cursor-not-allowed bg-gray-500 dark:bg-gray-500":''
             }`}
           >
             <a href={mylink} target="-blank">

@@ -1,12 +1,13 @@
 import { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import './Comment.css'
 function Comment() {
   const { t } = useTranslation();
   const [message,setMessage]=useState("")
   const maxLength=500
   const ratio=message.length/maxLength
   return (
-    <div className=" px-4 py-10  ">
+    <div className="Comment px-4 py-10  ">
       <div>
         <h3 className="font-medium text-[1.7rem] mb-4">
           {t("touchtitle")}
@@ -74,7 +75,7 @@ function Comment() {
           </div>
           {/* button */}
           <div>
-            <button type="submit"  className="bg-[#d0d0d0] text-right hover:bg-gray-500 pr-5 pl-4 py-2 rounded-lg m-2 cursor-pointer">{t("send")}
+            <button type="submit"  className="bg-gray-400 text-right hover:bg-gray-500 pr-5 pl-4 py-2 rounded-lg m-2 cursor-pointer">{t("send")}
                 <i className="fa-regular fa-paper-plane px-1"></i>
             </button>
           </div>
