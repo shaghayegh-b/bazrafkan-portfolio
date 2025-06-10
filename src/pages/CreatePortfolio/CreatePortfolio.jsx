@@ -19,12 +19,15 @@ export default function CreatePortfolio() {
             ${i18n.language === "fa" ? "left-[2rem]" : "right-[2rem]"}
         `}
         >
-            <Menocreate></Menocreate>
+          <Menocreate></Menocreate>
         </div>
         <form>
           {/* first name */}
           <div className="p-2">
-            <label htmlFor="fnameuser" className="block mb-1 font-[600] text-gray-900">
+            <label
+              htmlFor="fnameuser"
+              className="block mb-1 font-[600] text-gray-900"
+            >
               {t("First Name")}
               <span className="text-red-500">*</span>
             </label>
@@ -39,7 +42,10 @@ export default function CreatePortfolio() {
           </div>
           {/*  Last Name */}
           <div className="p-2">
-            <label htmlFor="lnameuser" className="block mb-1 font-[600] text-gray-900">
+            <label
+              htmlFor="lnameuser"
+              className="block mb-1 font-[600] text-gray-900"
+            >
               {t("Last Name")}
               <span className="text-red-500">*</span>
             </label>
@@ -54,7 +60,10 @@ export default function CreatePortfolio() {
           </div>
           {/*  Job Title */}
           <div className="p-2">
-            <label htmlFor="Leveljob" className="block mb-1 font-[600] text-gray-900">
+            <label
+              htmlFor="Leveljob"
+              className="block mb-1 font-[600] text-gray-900"
+            >
               {t("Job Title")}
               <span className="text-red-500">*</span>
             </label>
@@ -69,7 +78,10 @@ export default function CreatePortfolio() {
           </div>
           {/* email */}
           <div className="p-2">
-            <label htmlFor="emailuser" className="block mb-1 font-[600] text-gray-900">
+            <label
+              htmlFor="emailuser"
+              className="block mb-1 font-[600] text-gray-900"
+            >
               {t("Email")}
               <span className="text-red-500">*</span>
             </label>
@@ -84,7 +96,10 @@ export default function CreatePortfolio() {
           </div>
           {/* git hub */}
           <div className="p-2">
-            <label htmlFor="githubuser" className="block mb-1 font-[600] text-gray-900">
+            <label
+              htmlFor="githubuser"
+              className="block mb-1 font-[600] text-gray-900"
+            >
               {t("Link Github")}
               <span className="text-red-500">*</span>
             </label>
@@ -99,7 +114,10 @@ export default function CreatePortfolio() {
           </div>
           {/* Phone Number */}
           <div className="p-2">
-            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600] text-gray-900">
+            <label
+              htmlFor="phoneNumberuser"
+              className="block mb-1 font-[600] text-gray-900"
+            >
               {t("Phone Number")}
               <span className="text-red-500">*</span>
             </label>
@@ -123,7 +141,7 @@ export default function CreatePortfolio() {
                   to="/bazrafkan-portfolio/SelectLocation"
                   onClick={() => setSelectaddress(true)}
                   type="button"
-                  className="h-[fit-content] tracking-tight text-center p-2 inline-block hover:bg-gray-500 dark:bg-gray-200 dark:text-black bg-gray-400 rounded-lg  "
+                  className="text-white bg-gray-500 hover:bg-gray-600 font-medium rounded-lg text-sm p-[.5rem] text-center inline-flex items-center me-2"
                 >
                   {t("SelectLocation")}
                 </NavLink>
@@ -159,7 +177,10 @@ export default function CreatePortfolio() {
           </div>
           {/* About Me */}
           <div className="p-2">
-            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600] text-gray-900">
+            <label
+              htmlFor="phoneNumberuser"
+              className="block mb-1 font-[600] text-gray-900"
+            >
               {t("Describe Yourself")}
               <span className="text-red-500">*</span>
             </label>
@@ -173,7 +194,10 @@ export default function CreatePortfolio() {
           </div>
           {/* Work Experince */}
           <div className="p-2">
-            <label htmlFor="phoneNumberuser" className="block mb-1 font-[600] text-gray-900">
+            <label
+              htmlFor="phoneNumberuser"
+              className="block mb-1 font-[600] text-gray-900"
+            >
               {t("Work Experince")}
             </label>
             <input
@@ -187,7 +211,8 @@ export default function CreatePortfolio() {
           <div>
             <button
               type="submit"
-              className="bg-gray-400 text-right hover:bg-gray-500 pr-5 pl-4 py-2 rounded-lg m-2 cursor-pointer"
+            //   className="bg-gray-400 hover:bg-gray-500 "
+              className="text-white bg-gray-500 hover:bg-gray-600 font-medium text-right  rounded-lg text-sm px-4 py-2 cursor-pointer text-center inline-flex items-center me-2"
             >
               {t("send")}
               <i className="fa-regular fa-paper-plane px-1"></i>
