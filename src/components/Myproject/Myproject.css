@@ -5,9 +5,7 @@
 .dark .mcontainer span{
     background-color: #5e5e5e8f;
 }
-.dark .mcontainer button{
-    /* background-color: #c03f3f; */
-}
+
 @media (max-width: 1010px) {
   .caption {
     height: 19rem;
