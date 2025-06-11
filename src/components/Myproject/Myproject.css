@@ -5,28 +5,31 @@
 .dark .mcontainer span{
     background-color: #5e5e5e8f;
 }
-
+/* breakpoint 1010 */
 @media (max-width: 1010px) {
   .caption {
     height: 19rem;
   }
 }
+/* breakpoint 984 */
 @media (max-width: 984px) {
     .caption {
         height: 16rem;
       }
 }
+/* breakpoint 791 */
 @media (max-width: 791px) {
     .caption {
         height: 19rem;
       }
 }
+/* breakpoint 768 */
 @media (max-width: 768px) {
     .mcontainer{
         height: 30rem;
     }
 }
-
+/* breakpoint 655 */
 @media (max-width: 655px) {
     .mcontainer{
         height: 26rem;
@@ -35,6 +38,7 @@
         height: 13rem;
       }
 }
+/* breakpoint 514 */
 @media (max-width: 514px) {
     .mcontainer{
         height: 30rem;

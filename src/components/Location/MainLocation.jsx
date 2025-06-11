@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import LocationMap from "./LocationMap";
 import { useState } from "react";
+// dark style
 import './MainLocation.css'
 export default function MainLocation() {
   const [location, setLocation] = useState(null);

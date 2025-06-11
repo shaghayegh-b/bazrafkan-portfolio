@@ -1,4 +1,5 @@
 @import "tailwindcss";
+/* استایل های عمومی */
 * {
   box-sizing: border-box;
 }
@@ -28,6 +29,7 @@ section {
   z-index: 3;
 }
 
+/* استایل به المان های خاص */
 div.mycontainer {
   margin: 0.5rem auto;
   margin-bottom: 0;
@@ -61,6 +63,8 @@ div.mycontainer {
   display: flex !important;
   flex-direction: column-reverse !important;
 }
+
+
 /* فارسی */
 body.rtl {
   font-family: "IRANYekan", "Vazir", sans-serif;
@@ -75,8 +79,8 @@ body.rtl .Buttonswiper {
   direction: ltr;
 }
 
-/* dark */
 
+/* dark */
 .dark body {
   background-color: rgb(18 18 20);
 }
@@ -109,11 +113,14 @@ color: #99a1af;
 .dark footer{
     background-color: #2b2e33;
 }
+
+/* میخوام وقتی روی parentmeno کلیک شد از صفحه پرینت بگیره */
 @media print {
   .parentmeno {
     display: none !important;
   }
 }
+/* breakpoint 768 */
 @media (max-width: 768px) {
   div.mycontainer {
     margin: 0.3rem;
@@ -155,6 +162,7 @@ color: #99a1af;
     font-size: 140% !important;
   }
 }
+/* breakpoint 500 */
 @media (max-width: 500px) {
   .section1 {
     border-radius: 0rem 0rem 0 0 !important;

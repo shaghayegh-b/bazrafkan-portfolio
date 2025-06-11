@@ -1,5 +1,6 @@
 import { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
+// dark style
 import './Comment.css'
 function Comment() {
   const { t } = useTranslation();

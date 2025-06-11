@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+// dark style
 import "./MyFooter.css";
 function MyFooter() {
   const { t } = useTranslation();

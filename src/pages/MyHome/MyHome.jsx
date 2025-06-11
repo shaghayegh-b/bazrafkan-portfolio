@@ -15,18 +15,20 @@ import Comment from "../../components/Comment/Comment";
 import MyFooter from "../../components/MyFooter/MyFooter.jsx";
 export default function MyHome() {
   const { i18n } = useTranslation();
+//   این useEffect برای تغیر زبان هست
   useEffect(() => {
     const dir = i18n.language === "fa" ? "rtl" : "ltr";
     document.documentElement.dir = dir;
     document.body.classList.toggle("rtl", dir === "rtl");
   }, [i18n.language]);
+//   sectionاسلایدر یک انیمیشن داره که نمیخوام در صفحه 768pxانیمیشن وجود داشته باشه
+// از خط25 تا42
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
   useEffect(() => {
     // تابع برای بررسی اندازه صفحه و آپدیت استیت
     const handleResize = () => {
       const isNowDesktop = window.innerWidth > 768;
       setIsDesktop(isNowDesktop);
-
       if (isNowDesktop) {
         AOS.init(); // می‌تونی duration یا config بدی
         AOS.refresh(); // برای اطمینان که انیمیشن‌ها دوباره لود بشن

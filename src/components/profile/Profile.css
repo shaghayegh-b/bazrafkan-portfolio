@@ -29,8 +29,6 @@
   display: inline-block;
   margin: 0.3rem;
 }
-
-/*  */
 .section1 .part2 {
   font-size: 90%;
   padding: 0.5rem 0.7rem 1.2rem;
@@ -52,8 +50,6 @@
   cursor: pointer !important;
 }
 .section1 i.icon {
-  /* color: rgb(173, 121, 121); */
-  /* color: rgb(182 84 84); */
   color: rgb(153 65 65);
   margin: 0.4rem;
   font-size: 109%;
@@ -73,7 +69,6 @@
 .section1 .part2 p {
   display: inline-block;
   margin: 0.2rem;
-  /* background-color:darkgray; */
   background-color: #d9dada;
   padding: 0rem 0.8rem;
   border-radius: 2rem;
@@ -85,6 +80,8 @@
 .section1 .part2 p span {
   all: unset;
 }
+
+
 /* dark */
 .dark .section1 i.icon {
   color:#c03f3f;

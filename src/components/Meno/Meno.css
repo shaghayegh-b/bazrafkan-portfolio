@@ -114,6 +114,7 @@ body.rtl .meno .btn div {
     right: 0%;
   }
 }
+/* breakpoint 560 */
 @media (max-width: 560px) {
 .meno .btn div button {
     padding: 0 0.3rem;
@@ -122,6 +123,7 @@ body.rtl .meno .btn div {
     padding-right: unset;
     padding-left: unset;
 }}
+/* breakpoint 320 */
 @media (max-width: 320px) {
     .meno .btn div button {
         padding: 0;
