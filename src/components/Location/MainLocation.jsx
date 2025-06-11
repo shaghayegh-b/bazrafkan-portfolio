@@ -12,9 +12,9 @@ export default function MainLocation() {
     }
   };
   return (
-    <div className="flex justify-center items-center p-3 pb-2 bg-[#f3f4f6] w-[100%] dark:bg-[#121214]">
+    <div className="p-3 pb-[50vh] bg-[#f3f4f6] w-[100%] dark:bg-[#121214]">
       <form onSubmit={handleSubmit}
-      className="w-[100%] ">
+      className="">
         {/* LocationMap */}
         <div className="p-2">
           <LocationMap onLocationChange={setLocation}></LocationMap>
