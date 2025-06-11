@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import LocationMap from "./LocationMap";
 import { useState } from "react";
-
+import './MainLocation.css'
 export default function MainLocation() {
   const [location, setLocation] = useState(null);
   const handleSubmit = (e) => {
@@ -12,7 +12,7 @@ export default function MainLocation() {
     }
   };
   return (
-    <div className="p-3 pb-[50vh] bg-[#f3f4f6] w-[100%] dark:bg-[#121214]">
+    <div className="MainLocation p-3 pb-[50vh] bg-[#f3f4f6] w-[100%] ">
       <form onSubmit={handleSubmit}
       className="">
         {/* LocationMap */}
