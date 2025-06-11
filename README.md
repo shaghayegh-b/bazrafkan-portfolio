@@ -34,21 +34,21 @@ vite-project/
 
 ├─── src/ # The main codes of the project
 
-│     ├── assets/ #Fonts, images
+│          ├── assets/ #Fonts, images
 
-│     ├── components/ #Reusable components
+│          ├── components/ #Reusable components
 
-│     ├── locales/ # Translations (i18n)
+│          ├── locales/ # Translations (i18n)
 
-│     ├── pages/ # Main pages (home,etc.)
+│          ├── pages/ # Main pages (home,etc.)
 
 │     ├── App.jsx
 
-│     ├── main.jsx
+│          ├── main.jsx
 
-│     ├── routes.jsx # React Router
+│          ├── routes.jsx # React Router
 
-│     └── index.css
+│          └── index.css
 
 ├── index.html # Basic HTML
 
