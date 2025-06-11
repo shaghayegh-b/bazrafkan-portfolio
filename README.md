@@ -28,19 +28,22 @@ This is a personal portfolio website built to showcase the work, skills, and con
 
 ## 📁 Folder Structure
 
+vite-project/
+├── public/ # Public files
+├── src/ # The main codes of the project
+│ ├── assets/ #Fonts, images
+│ ├── components/ #Reusable components
+│ ├── locales/ # Translations (i18n)
+│ ├── pages/ # Main pages (home,etc.)
+│ ├── App.jsx
+│ ├── main.jsx
+│ ├── routes.jsx # React Router
+│ └── index.css
+├── index.html # Basic HTML
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
 
-bazrafkan-portfolio/
-├── assets/
-│
-├── css/
-    │
-    ├── js/
-    │
-    └── images/
-├── index.html
-├── about.html
-├── projects.html
-└── contact.html
 
 
 ---
@@ -64,7 +67,7 @@ bash
 If you’d like to get in touch:
 
 - 📧 Email: bazrafkan.sh@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/shaghayegh-bazrafkannjad-523bb5301](https://www.linkedin.com/in/shaghayegh-bazrafkannjad-523bb5301)
+- 💼 LinkedIn: [linkedin.com/in/shaghayegh-bazrafkannjad](https://www.linkedin.com/in/shaghayegh-bazrafkannjad-523bb5301)
 
 ---
 
