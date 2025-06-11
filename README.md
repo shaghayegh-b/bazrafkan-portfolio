@@ -31,9 +31,12 @@ This is a personal portfolio website built to showcase the work, skills, and con
 
 bazrafkan-portfolio/
 ├── assets/
-│   ├── css/
-│   ├── js/
-│   └── images/
+│
+├── css/
+    │
+    ├── js/
+    │
+    └── images/
 ├── index.html
 ├── about.html
 ├── projects.html
@@ -60,8 +63,8 @@ bash
 
 If you’d like to get in touch:
 
-- 📧 Email: shaghayegh.bazrafkan[at]gmail.com
-- 💼 LinkedIn: [https://www.linkedin.com/in/shaghayegh-b](https://www.linkedin.com/in/shaghayegh-b)
+- 📧 Email: bazrafkan.sh@gmail.com
+- 💼 LinkedIn: [linkedin.com/in/shaghayegh-bazrafkannjad-523bb5301](https://www.linkedin.com/in/shaghayegh-bazrafkannjad-523bb5301)
 
 ---
 
