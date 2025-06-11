@@ -211,8 +211,7 @@ export default function CreatePortfolio() {
           <div>
             <button
               type="submit"
-            //   className="bg-gray-400 hover:bg-gray-500 "
-              className="text-white bg-gray-500 hover:bg-gray-600 font-medium text-right  rounded-lg text-sm px-4 py-2 cursor-pointer text-center inline-flex items-center me-2"
+              className="text-white bg-gray-500 hover:bg-gray-600 font-medium text-right  rounded-lg text-sm px-4 py-2 cursor-pointer  inline-flex items-center me-2"
             >
               {t("send")}
               <i className="fa-regular fa-paper-plane px-1"></i>

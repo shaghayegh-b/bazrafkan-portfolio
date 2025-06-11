@@ -4,12 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "../../i18next.jsx";
 import "swiper/css";
 import "swiper/css/navigation";
+import AOS from "aos";
 import Myproject from "../../components/Myproject/Myproject";
 import { projects } from "../../../data.jsx";
 import Buttonswiper from "../../components/buttonswiper/buttonswiper";
 import Meno from "../../components/Meno/Meno";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Comment from "../../components/Comment/Comment";
 import MyFooter from "../../components/MyFooter/MyFooter.jsx";
 export default function MyHome() {
@@ -19,6 +20,26 @@ export default function MyHome() {
     document.documentElement.dir = dir;
     document.body.classList.toggle("rtl", dir === "rtl");
   }, [i18n.language]);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+  useEffect(() => {
+    // تابع برای بررسی اندازه صفحه و آپدیت استیت
+    const handleResize = () => {
+      const isNowDesktop = window.innerWidth > 768;
+      setIsDesktop(isNowDesktop);
+
+      if (isNowDesktop) {
+        AOS.init(); // می‌تونی duration یا config بدی
+        AOS.refresh(); // برای اطمینان که انیمیشن‌ها دوباره لود بشن
+      }
+    };
+    // اجرا هنگام mount شدن
+    handleResize();
+    // گوش دادن به resize
+    window.addEventListener("resize", handleResize);
+    // پاک کردن event هنگام unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="mycontainer relative">
       <div
@@ -35,11 +56,13 @@ export default function MyHome() {
         <Right></Right>
       </div>
       <section
-        data-aos="fade-up"
-        data-aos-offset="70"
-        data-aos-delay="0"
-        data-aos-duration="1900"
-        data-aos-once="true"
+      {...(isDesktop && {
+        "data-aos": "fade-up",
+        "data-aos-offset": "70",
+        "data-aos-delay": "0",
+        "data-aos-duration": "1900",
+        "data-aos-once": "true",
+      })}
         className=" section4 p-3 pb-11"
       >
         <div className="">

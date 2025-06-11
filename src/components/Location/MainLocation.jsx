@@ -12,7 +12,7 @@ export default function MainLocation() {
     }
   };
   return (
-    <div className=" m-3 p-3 pb-2">
+    <div className="p-3 pb-2 bg-[#f3f4f6] w-[100%] dark:bg-[#121214]">
       <form onSubmit={handleSubmit}>
         {/* LocationMap */}
         <div className="p-2">
@@ -27,13 +27,13 @@ export default function MainLocation() {
             </>
           )}
 
-          <div className=" p-2 inline-block hover:bg-gray-500 m-2 bg-gray-400 rounded-lg  ">
+          <div className="">
           <NavLink
           to="/bazrafkan-portfolio/CreatePortfolio"
             type="submit"
             disabled={!location}
-            className= "cursor-pointer"
-          >
+            className="m-2 text-white bg-gray-500 hover:bg-gray-600 font-medium text-right  rounded-lg text-sm px-4 py-2 cursor-pointer  inline-flex items-center me-2"
+            >
             تایید و ادامه
             <i className="fa-regular fa-paper-plane px-1"></i>
           </NavLink>
