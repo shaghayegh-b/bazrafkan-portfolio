@@ -1,74 +1,87 @@
 {
   "name": "Shaghayegh Bazrafkan",
-  "job": "programes | Junior Front-End Developer",
-  "Contact":"Contact me",
-  "skills":"skills",
-  "ABOUT":"ABOUT ME",
-  "about":"I'm Shaghayegh Bazrafkan, a motivated front-end developer with a strong passion for creating modern and responsive user interfaces. Over the past year, I’ve been deeply focused on learning and practicing web development, gaining solid experience with technologies such as HTML, CSS, JavaScript, React.js, Tailwind CSS, Sass, jQuery, Git, and GitHub. I'm also familiar with API integration concepts using Fetch, Axios, Context API, and React Query, and have completed various practice projects in these areas. Currently, I'm working on personal projects to further enhance my practical skills, with the goal of becoming a freelance web designer and gaining real-world experience. I’m always eager to learn and grow, and I’m committed to developing into a skilled and professional front-end developer.",
-  "Work Experince":"Work Experince",
-  "current":"current",
-  "march2024-":"march2024-",
-  "companyname":"intern web designer/imen ertebat varan",
-  "fromdate":"1 year and 2 months iran kermanshah",
-  "titleprojects":"projects",
-  "visit website":"visit website",
-  "lang":"lang",
-  "createporto":"create a portfolio",
-  "print":"print",
-  "touchtitle":"Let’s stay in touch",
-  "touch":"Whether you have a project in mind, looking for a fresh collaboration, or just feel like saying hi—I’d love to hear fro  you. I’m always up for new experiences and gre conversations. Drop me a message, I’m all ears!",
-  "nameuser":"Name",
-  "emailuser":"Email",
-  "massageuser":"Massage",
-  "send":"send",
-  "placeholdername":"Your Name",
-  "placeholder massage":"I'd love to hear from you — whether it's an idea, a project, or just a quick hello.",
-  "projects":{
-    "project1":{
-        "title":"portfolio project",
-        "des":"In a portfolio page, the goal is to showcase your skills, projects, experiences, and contact information in a way that allows visitors—such as potential employers or clients—to quickly gain a clear understanding of your abilities."
+  "job": "programes | Front-End Developer",
+  "Contact": "Contact me",
+  "skills": "skills",
+  "ABOUT": "ABOUT ME",
+  "about": "I’m Shaghayegh Bazrafkan, a motivated Front-End Developer passionate about designing and building modern, user-friendly interfaces. I specialize in HTML, CSS, JavaScript, React.js, Tailwind CSS, Sass, jQuery, and Git, and I’m well-versed in API integration using Fetch, Axios, Context API, and React Query. I have experience working on a variety of projects, from practice exercises to advanced applications, which has strengthened my ability to design and implement responsive, interactive user interfaces. I’m always eager to learn new technologies and apply them in real-world projects, and I’m ready to contribute my skills and knowledge in professional, team-oriented environments.",
+  "Work Experince": "Work Experince",
+  "loc":"iran , khozestan",
+  "Experince1DataEnd": "current",
+  "Experince1DataStart": "march 2024-",
+  "companyname1": "intern web designer / imen ertebat varan",
+  "fromdate1": "1 year and 2 months / iran kermanshah",
+
+  "Experince2DataEnd": "april 2023",
+  "Experince2DataStart": "december 2021-",
+  "companyname2": "instagram admin / vainari page",
+  "fromdate2": "1 year and 2 months / iran ahvaz",
+
+  "Experince3DataEnd": "april 2021",
+  "Experince3DataStart": "april 2019-",
+  "companyname3": "instagram admin / panda boutique",
+  "fromdate3": "2 year and / iran ahvaz",
+
+  "titleprojects": "projects",
+  "visit website": "visit website",
+  "view repository": "view repository",
+  "lang": "lang",
+  "createporto": "create a portfolio",
+  "print": "print",
+  "touchtitle": "Let’s stay in touch",
+  "touch": "Whether you have a project in mind, looking for a fresh collaboration, or just feel like saying hi—I’d love to hear fro  you. I’m always up for new experiences and gre conversations. Drop me a message, I’m all ears!",
+  "nameuser": "Name",
+  "emailuser": "Email",
+  "massageuser": "Massage",
+  "send": "send",
+  "placeholdername": "Your Name",
+  "placeholder massage": "I'd love to hear from you — whether it's an idea, a project, or just a quick hello.",
+  "projects": {
+    "project1": {
+      "title": "portfolio project",
+      "des": "In a portfolio page, the goal is to showcase your skills, projects, experiences, and contact information in a way that allows visitors—such as potential employers or clients—to quickly gain a clear understanding of your abilities."
     },
-    "project2":{
-        "title":"Under Construction... ",
-        "des":"This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
+    "project2": {
+      "title": "Shaghayegh Store",
+      "des": "Shaghayegh is a lightweight and fast online store designed for businesses that want to start selling online without complexity. The project focuses on simplicity, speed, and a smooth mobile-first user experience, making it a smart starting point for building your digital presence and boosting your sales."
     },
-    "project3":{
-        "title":"Under Construction... ",
-        "des":"This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
+    "project3": {
+      "title": "Fotros Store",
+      "des": "Fotros is a professional and attractive online store that increases sales, strengthens your brand, and provides customers with a smooth and enjoyable shopping experience. A website ready for real growth and business success."
     },
-    "project4":{
-        "title":"Under Construction... ",
-        "des":"This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
+    "project4": {
+      "title": "Under Construction... ",
+      "des": "This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
     },
-    "project5":{
-        "title":"Under Construction... ",
-        "des":"This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
+    "project5": {
+      "title": "Under Construction... ",
+      "des": "This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
     },
-    "project6":{
-        "title":"Under Construction... ",
-        "des":"This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
+    "project6": {
+      "title": "Under Construction... ",
+      "des": "This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
     }
   },
-  "footerp1":"My portfolio is a reflection of my growth journey in the world of programming and design.",
-  "footerp2":"Built with React and Tailwind CSS, powered by Vite, and deployed via ",
-  "footerp3":"Designed and developed with a focus on speed, simplicity, and responsiveness using modern web technologies.",
-  "footerp4":"Every line of this site is a piece of my learning path — crafted with love and passion :)",
- "First Name":"First Name",
-  "Last Name":"Last Name",
-  "Job Title":"Job Title",
-  "Email":"Email",
-  "Link Github":"Link Github",
-  "Phone Number":"Phone Number",
-  "Address":"Address",
-  "Describe Yourself":"Describe Yourself",
-"shaghayegh":"shaghayegh",
-"bazrafkan":"bazrafkan",
-"SelectLocation":"Select address from map",
-"Country":"Country",
-"iran":"iran",
-"khozestan":"khozestan",
-"City":"City",
-"ahvaz":"dezful",
-"Change Theme Mode":"Change Theme Mode",
-"Change Languagr":"Change Languagr"
+  "footerp1": "My portfolio is a reflection of my growth journey in the world of programming and design.",
+  "footerp2": "Built with React and Tailwind CSS, powered by Vite, and deployed via ",
+  "footerp3": "Designed and developed with a focus on speed, simplicity, and responsiveness using modern web technologies.",
+  "footerp4": "Every line of this site is a piece of my learning path — crafted with love and passion :)",
+  "First Name": "First Name",
+  "Last Name": "Last Name",
+  "Job Title": "Job Title",
+  "Email": "Email",
+  "Link Github": "Link Github",
+  "Phone Number": "Phone Number",
+  "Address": "Address",
+  "Describe Yourself": "Describe Yourself",
+  "shaghayegh": "shaghayegh",
+  "bazrafkan": "bazrafkan",
+  "SelectLocation": "Select address from map",
+  "Country": "Country",
+  "iran": "iran",
+  "khozestan": "khozestan",
+  "City": "City",
+  "ahvaz": "dezful",
+  "Change Theme Mode": "Change Theme Mode",
+  "Change Languagr": "Change Languagr"
 }

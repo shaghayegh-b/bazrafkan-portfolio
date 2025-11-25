@@ -6,12 +6,12 @@ function Experince() {
     <div className="Experince" style={{ margin: "1.5rem 0" }}>
       <div className="part3">
         <i className="fas fa-calendar-alt style"></i>
-        <h5 className="style">{t("march2024-")}</h5>
-        <h5 className="style h52">{t("current")}</h5>
+        <h5 className="style">{t("Experince1DataStart")}</h5>
+        <h5 className="style h52">{t("Experince1DataEnd")}</h5>
       </div>
-      <p className="part2">{t('companyname')}</p>
+      <p className="part2">{t('companyname1')}</p>
 
-      <p className="part4">{t("fromdate")}</p>
+      <p className="part4">{t("fromdate1")}</p>
     </div>
   );
 }
