@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* استایل های عمومی */
 * {
   box-sizing: border-box;
@@ -12,184 +16,29 @@ body {
   font-size: 100%;
   font-family: "Poppins", "Inter", sans-serif;
 }
-h1,
-h2,
-h3,
-h4 {
-  color: rgb(17 24 39);
-  opacity: 0.9;
-  font-weight: 600;
-}
-p {
-  color: rgb(31 41 55);
-}
-section {
-  box-shadow: 0 0 0.2rem black;
-  background-color: rgb(243 244 246);
-  z-index: 3;
+
+/* تمرکز روی input */
+input:focus {
+  outline: unset;
 }
 
-/* استایل به المان های خاص */
-div.mycontainer {
-  margin: 0.5rem auto;
-  margin-bottom: 0;
-}
-.parentmeno {
-  z-index: 4;
-}
-.head {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Right {
-  align-self: end;
-  width: 60%;
-  z-index: 1;
-}
-.Profile {
-  width: 35%;
-  z-index: 2;
-}
-.section4 {
-  width: 95%;
-  margin: auto;
-}
-.section5 {
-  width: 95%;
-  margin: auto;
-}
-.mySwiper {
-  display: flex !important;
-  flex-direction: column-reverse !important;
+/* pointer */
+a,
+button {
+  cursor: pointer;
 }
 
-
-/* فارسی */
-body.rtl {
-  font-family: "IRANYekan", "Vazir", sans-serif;
-}
-body.rtl .swiper-wrapper {
-  direction: ltr;
-}
-body.rtl .Myproject div div {
-  direction: rtl;
-}
-body.rtl .Buttonswiper {
-  direction: ltr;
+/* سایه */
+.box-shadow {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.32);
 }
 
-
-/* dark */
-.dark body {
-  background-color: rgb(18 18 20);
-}
-.dark section {
-  background-color: rgb(18 18 20);
-  box-shadow: 0 0 0.2rem rgb(118, 118, 118);
-}
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4 {
-  color:rgb(230 230 230);
-  opacity: 1;
-}
-.dark p {
-  color:rgb(160 160 170);
-  color: rgb(183 183 188);
-}
-.dark label{
-    color: rgb(183 183 188);
-    font-weight: 600;
-}
-.dark input:-ms-input-placeholder,
-.dark textarea:-ms-input-placeholder{
-color: #99a1af;
-}
-.dark input, .dark textarea{
-    color: rgb(209 213 220);
-}
-.dark footer{
-    background-color: #2b2e33;
+/* انیمیشن نرم برای بخش فعال به صورت کوتاه مدت */
+.active-section {
+  @apply relative transform scale-102 shadow-xl bg-gray-100 transition-all duration-2000 ease-in-out;
 }
 
-/* میخوام وقتی روی parentmeno کلیک شد از صفحه پرینت بگیره */
-@media print {
-  .parentmeno {
-    display: none !important;
-  }
-}
-/* breakpoint 768 */
-@media (max-width: 768px) {
-  div.mycontainer {
-    margin: 0.3rem;
-  }
-  footer {
-    margin-top: 0rem;
-    box-shadow: 0 0 0.2rem black;
-  }
-  .head {
-    flex-direction: column;
-  }
-  .Right {
-    width: 100%;
-  }
-  .Profile {
-    width: 100%;
-  }
-  .section4,
-  .section5 {
-    width: 100%;
-  }
-  .Myproject .mcontainer img {
-    height: (var(--spacing) * 40);
-  }
-  .section1 {
-    display: flex;
-  }
-  .Profile .section1 .information {
-    border-left: 1.5px solid black;
-  }
-  body.rtl .Profile .section1 .information {
-    border-right: 1.5px solid black;
-    border-left: unset;
-  }
-  .section1 .part1 {
-    padding: 1rem;
-  }
-  .section1 .part1 h2 {
-    font-size: 140% !important;
-  }
-}
-/* breakpoint 500 */
-@media (max-width: 500px) {
-  .section1 {
-    border-radius: 0rem 0rem 0 0 !important;
-    -webkit-border-radius: 0rem 0rem 0 0 !important;
-    -moz-border-radius: 0rem 0rem 0 0 !important;
-    -ms-border-radius: 0rem 0rem 0 0 !important;
-    -o-border-radius: 0rem 0rem 0 0 !important;
-  }
-
-  /* .meno ,.meno ul{
-    flex-direction: row;
-    opacity: 1;
-  } */
-
-  /* .meno .btn span, .meno .btn div{
-    left:unset !important;
-    right: 50% !important;
-    top: 103% !important;
-  }
-    body.rtl .meno .btn span,body.rtl .meno .btn div{
-    right:unset !important;
-    left: 50% !important;
-  } */
-  .section1 {
-    flex-direction: column;
-  }
-  .Profile .section1 .information {
-    border-left: none;
-  }
+/* hover نرم روی کارت‌ها و مهارت‌ها */
+.group:hover {
+  @apply transform scale-105 transition-transform duration-300 ease-in-out;
 }
