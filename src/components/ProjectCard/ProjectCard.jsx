@@ -1,6 +1,8 @@
 import React from "react";
+import Fotros from "../../assets/imag/Fotros.jpg";
+import yelena from "../../assets/imag/yelena.jpg";
 
-export default function ProjectCard({ project, featured }) {
+export default function ProjectCard({ project, featured, setSelectedProject }) {
   return (
     <div
       className={`bg-white rounded-xl shadow p-6 ${
@@ -9,7 +11,9 @@ export default function ProjectCard({ project, featured }) {
     >
       <div>
         <h4 className="font-semibold text-lg">{project.title}</h4>
-        {project.subtitle &&( <p className="text-sm text-gray-500 mb-2">{project.subtitle}</p>)}
+        {project.subtitle && (
+          <p className="text-sm text-gray-500 mb-2">{project.subtitle}</p>
+        )}
 
         {/* Stack */}
         <div className="flex flex-wrap gap-2 mb-3">
@@ -30,20 +34,56 @@ export default function ProjectCard({ project, featured }) {
           ))}
         </ul>
         {project.id == 2 && (
-          <div className="bg-gray-100 rounded-lg h-48"></div>
+          <div className=" h-64 md:h-80 lg:h-96 mt-2 overflow-hidden">
+            <img
+              src={yelena}
+              alt=""
+              className="w-full h-full object-contain "
+            />
+          </div>
         )}
         {/* Actions */}
-        <div className="mt-4 flex gap-2">
-          <a href={project.mylink} className="box-shadow px-4 py-1.5 rounded bg-[#c94a4a] text-white text-sm">
-             View Case Study
+        <div className="mt-5 flex flex-wrap gap-3">
+          {project.caseStudy && (
+            <button
+              onClick={() => setSelectedProject(project)}
+              className="box-shadow px-4 py-1.5 rounded bg-[#c94a4a] text-white text-sm"
+            >
+              View Case Study
+            </button>
+          )}
+
+          <a
+            href={project.LinkRemote}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`box-shadow px-4 py-1.5 rounded text-sm ${
+              project.caseStudy ? "bg-gray-200" : "bg-[#c94a4a] text-white"
+            }`}
+          >
+            Live Demo
           </a>
-          <a href={project.repository} className="box-shadow px-4 py-1.5 rounded bg-gray-200 text-sm">
+
+          <a
+            href={project.repository}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="box-shadow px-4 py-1.5 rounded bg-gray-100 text-sm"
+          >
             GitHub
           </a>
         </div>
       </div>
 
-      {featured && <div className="bg-gray-100 rounded-lg h-48"></div>}
+      {featured && (
+        <div className="h-64 md:h-80 lg:h-96 mt-2 flex items-center justify-center">
+          <img
+            src={Fotros}
+            alt=""
+            className="max-w-full max-h-full object-contain"
+          />
+        </div>
+      )}
     </div>
   );
-} 
+}
