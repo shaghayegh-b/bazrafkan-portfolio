@@ -1,6 +1,8 @@
 import React from "react";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import { FaCheckCircle } from "react-icons/fa";
+
 const projects = [
   {
     id: 1,
@@ -15,21 +17,28 @@ const projects = [
       "Mock REST API",
     ],
     featured: true,
+    shortBullets: [
+      "Built a production-ready e-commerce front-end using React and Tailwind CSS",
+      "Implemented cart, wishlist, product variations, and user dashboard",
+      "Translated complex Figma designs into responsive, scalable UI components",
+    ],
+
     bullets: [
-      "Built a production-ready e-commerce front-end focused on real-world shopping experience and conversion-oriented UI",
+      "Built a production-ready e-commerce front-end focused on real-world shopping flows and conversion-oriented UI",
       "Converted advanced Figma designs into pixel-perfect, fully responsive interfaces",
       "Designed scalable and reusable React components suitable for real production use",
       "Implemented advanced features including cart, wishlist, product variations, and user dashboard",
       "Added light mode, dark mode, and system theme support to enhance user experience",
       "Simulated real backend behavior using custom mock REST APIs",
     ],
+
     caseStudy: {
       overview:
-        "Fotros is a production-ready e-commerce front-end application designed to simulate a real-world online clothing store. It focuses on scalability, performance, and conversion-oriented user experience.",
+        "Fotros is a production-ready e-commerce front-end application designed to simulate a real-world online clothing store, with a focus on scalability, performance, and conversion-focused UX.",
       problem:
-        "Most junior-level e-commerce demos lack real-world complexity such as user dashboards, product variations, and scalable UI architecture. The goal was to build a professional front-end that could be used in real business scenarios.",
+        "Many junior-level e-commerce demos lack real-world complexity such as user dashboards, product variations, and scalable UI architecture.",
       solution:
-        "I designed and implemented a complete front-end architecture using React and Tailwind CSS, translating complex Figma designs into pixel-perfect, responsive, and reusable components. Advanced features such as cart, wishlist, product variations, search, filtering, and a user dashboard were implemented. Light mode, dark mode, and system theme support were added. Mock REST APIs were used to simulate real backend behavior.",
+        "I designed and implemented a scalable front-end architecture using React and Tailwind CSS, translated complex Figma designs into responsive components, implemented full shopping features, and simulated backend behavior using mock REST APIs.",
     },
 
     LinkRemote: "https://shaghayegh-b.github.io/Fotros/",
@@ -41,21 +50,35 @@ const projects = [
     title: "Blockchain Web Application",
     subtitle: "Team Project",
     stack: ["React", "JavaScript", "REST API", "Git", "GitHub"],
+
+    shortBullets: [
+      "Worked as a front-end developer in a collaborative blockchain team project",
+      "Developed responsive UI components integrated with real backend APIs",
+      "Collaborated closely with backend developers to align UI with business logic",
+    ],
+
     bullets: [
       "Worked as a front-end developer in a collaborative team environment",
       "Developed responsive UI components based on shared and evolving requirements",
-      "Integrated real backend APIs and managed asynchronous data rendering",
-      "Contributed to UI/UX design to maintain visual consistency after design changes",
-      "Collaborated closely with backend developers to align front-end behavior with business logic",
+      "Integrated real backend APIs and handled asynchronous data rendering",
+      "Adapted UI and UX after the original designer left the project",
+      "Collaborated closely with backend developers to ensure consistency with blockchain logic",
     ],
+
     caseStudy: {
       overview:
-        "A collaborative team-based blockchain web application with front-end built in React. The project demonstrates ability to work in a team and integrate real APIs with complex UI.",
+        "A team-based blockchain web application demonstrating collaboration, real API integration, and scalable React UI architecture.",
       problem:
-        "The project required implementing responsive UI components that worked seamlessly with backend APIs and followed blockchain business logic. The original designer left midway, so continuity and consistency in UI were critical.",
+        "The project required maintaining UI consistency and responsiveness while integrating complex backend blockchain logic, especially after design ownership changed mid-project.",
       solution:
-        "I implemented multiple responsive UI sections, handled dynamic data rendering from backend APIs, and contributed to UI/UX decisions to maintain consistency. Collaborated closely with backend developers, ensuring front-end behavior aligned with the blockchain logic. Used React component architecture for scalability and maintainability.",
+        "I implemented multiple responsive UI sections, handled dynamic API-driven data rendering, and contributed to UI/UX decisions while collaborating closely with backend developers.",
+      teamSkills: [
+        "Collaborated with backend developers to align UI behavior with business logic",
+        "Adapted quickly to design changes after the original designer left the project",
+        "Communicated technical constraints and UI decisions within a cross-functional team",
+      ],
     },
+
     LinkRemote: "https://app.freebridge.ir/",
     repository: "https://github.com/shaghayegh-b/Yelena-F-public",
   },
@@ -65,13 +88,21 @@ const projects = [
     title: "Simple Clothing Store",
     subtitle: "Personal Project",
     stack: ["React", "Vite", "Tailwind CSS", "Mock API"],
+
+    shortBullets: [
+      "Built a mobile-first e-commerce application with core shopping features",
+      "Implemented cart, wishlist, authentication, and basic user dashboard",
+      "Used mock APIs to simulate real product and user data",
+    ],
+
     bullets: [
-      "Built a mobile-first e-commerce application focused on core shopping flows",
+      "Built a mobile-first e-commerce application focused on essential shopping flows",
       "Implemented cart, wishlist, authentication, and a basic user dashboard",
       "Optimized layouts for mobile and tablet devices",
       "Used mock APIs to simulate real product and user data",
       "Served as a foundation for developing a more advanced e-commerce project",
     ],
+
     LinkRemote: "https://shaghayegh-b.github.io/bazrafkan-store/",
     repository: "https://github.com/shaghayegh-b/bazrafkan-store",
   },
@@ -81,12 +112,20 @@ const projects = [
     title: "Personal Portfolio Website",
     subtitle: "Personal Project",
     stack: ["React", "Tailwind CSS", "Vite", "GitHub Pages"],
+
+    shortBullets: [
+      "Designed and developed a professional front-end portfolio website",
+      "Focused on performance, responsiveness, and clear project presentation",
+      "Deployed and maintained using GitHub Pages",
+    ],
+
     bullets: [
       "Designed and developed a professional personal portfolio to showcase front-end projects",
-      "Focused on performance, responsiveness, and clear project presentation",
+      "Focused on performance, responsiveness, and clean UI presentation",
       "Built with a scalable structure to support continuous improvements",
       "Deployed and maintained using GitHub Pages",
     ],
+
     LinkRemote: "https://shaghayegh-b.github.io/bazrafkan-portfolio/",
     repository: "https://github.com/shaghayegh-b/bazrafkan-portfolio",
   },
@@ -123,21 +162,20 @@ export default function Home() {
     email: "",
     message: "",
   });
- useEffect(() => {
-  if (showModal) {
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden"; // 👈 مهم
-  } else {
-    document.body.style.overflow = "auto";
-    document.documentElement.style.overflow = "auto";
-  }
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden"; // 👈 مهم
+    } else {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    }
 
-  return () => {
-    document.body.style.overflow = "auto";
-    document.documentElement.style.overflow = "auto";
-  };
-}, [showModal]);
-
+    return () => {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    };
+  }, [showModal]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -251,7 +289,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[#f5f6f980]"></div>
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 pt-8 pb-14 md:pt-14 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 items-center">
           {/* Image */}
           <div className="flex justify-center">
             <img
@@ -271,16 +309,16 @@ export default function Home() {
             </h3>
 
             <p className="mt-4 max-w-3xl leading-relaxed text-gray-700">
-              Front-End Developer who builds fast, responsive, and
-              production-ready web applications. Specialized in turning Figma
-              designs into clean, scalable interfaces for real-world projects,
-              startups, and e-commerce platforms.
+              Front-End Developer focused on building fast, scalable, and
+              production-ready web applications. Experienced in translating
+              complex Figma designs into clean, responsive React interfaces for
+              real-world products.
             </p>
 
             <p className="mt-3 max-w-3xl text-sm text-gray-600">
-              2+ years of hands-on experience building conversion-focused UIs,
-              reusable React components, and production-ready front-ends using
-              React and Tailwind CSS.
+              2+ years of hands-on experience developing conversion-focused UIs,
+              reusable React components, and modern front-ends using React and
+              Tailwind CSS.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -313,7 +351,32 @@ export default function Home() {
 
       {/* CONTENT */}
       <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
-        {/* PROJECTS */}
+        <div className="lg:hidden p-4">
+        <h3 className=" text-xl font-semibold ">Skills & Workflow</h3>
+        <div className="bg-white shadow p-6 mt-5 rounded-xl">
+          {skills.map((cat) => (
+            <div key={cat.category} className="mb-4">
+              <h4 className="font-semibold mb-2">{cat.category}</h4>
+              <div className="flex flex-wrap gap-2">
+                {cat.items.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="group relative px-3 py-1 rounded-full bg-gray-100 text-sm cursor-pointer hover:bg-[#c94a4a] hover:text-white transition"
+                  >
+                    {skill.name}
+                    {skill.projects.length > 0 && (
+                      <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded z-10 whitespace-nowrap">
+                        Used in: {skill.projects.join(", ")}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* PROJECTS */}
         <section
           id="projects"
           className={`relative lg:col-span-3 py-8 px-4 space-y-6 transition-all duration-700 ${
@@ -340,8 +403,8 @@ export default function Home() {
         </section>
 
         {/* SIDEBAR */}
-        <aside className="space-y-1 bg-white px-6">
-          <div className="px-1 py-6">
+        <aside className="space-y-1 bg-white px-6 flex flex-col-reverse md:flex-col">
+          <div className="px-1 py-6 hidden lg:block">
             <h3 className="text-xl font-semibold mb-4">Skills & Workflow</h3>
             {skills.map((cat) => (
               <div key={cat.category} className="mb-4">
@@ -364,9 +427,9 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <hr className="text-gray-300" />
+          <hr className="text-gray-300 hidden lg:block" />
           {/* Info */}
-          <div className="space-y-1 md:flex gap-[20px] lg:inline-block">
+          <div className="space-y-1 flex flex-col-reverse md:flex-row lg:flex-col gap-[20px] lg:inline-block">
             <div
               id="contact"
               className={`px-1 py-6 text-sm space-y-2 ${
@@ -471,7 +534,7 @@ export default function Home() {
           </div>
           <hr className="text-gray-300" />
           {/* کارت دانلود PDF */}
-          <div className="mt-6">
+          <div className="my-6">
             <div className="p-1 flex flex-col items-center text-center">
               <h4 className="font-semibold mb-2">Download My Resume</h4>
               <p className="text-sm text-gray-600 mb-3">
@@ -490,36 +553,30 @@ export default function Home() {
           </div>
         </aside>
       </main>
-      <footer className=" mt-3 bg-gray-400 px-4 py-10">
-        <div className="footer flex flex-col gap-[.5rem] items-center justify-between">
-          <p className="p-1 text-center ">
-            My portfolio is a reflection of my growth journey in the world of
-            programming and design.
-          </p>
-          <div className="p-1  text-.9rem text-center">
-            <p className="footer2 text-[.8rem]">
-              Built with React and Tailwind CSS, powered by Vite, and deployed
-              via "
-              <a
-                className="text-blue-900"
-                target="-blank"
-                href="https://github.com/shaghayegh-b/bazrafkan-portfolio"
-              >
-                GitHub Pages
-              </a>
-              .
-            </p>
-            <p className=" text-[.8rem] ">
-              Designed and developed with a focus on speed, simplicity, and
-              responsiveness using modern web technologies.
-            </p>
-          </div>
-          <p className="p-1 text-center">
-            Every line of this site is a piece of my learning path — crafted
-            with love and passion :)
-          </p>
-        </div>
-      </footer>
+      <footer className="bg-gray-400 px-4 py-4">
+  <div className="max-w-7xl mx-auto flex flex-col items-center gap-2 text-center">
+   <p className="text-sm">
+      My portfolio is a reflection of my growth journey in the world of programming and design.
+    </p>
+  <p className="text-xs ">
+      Every line of this site is a piece of my learning path — crafted with love and passion :)
+    </p>
+     <div className="flex gap-2 text-xs">
+      <a href="https://github.com/shaghayegh-b" target="_blank" className="hover:text-black">
+        <FaGithub />
+      </a>
+      <a href="https://www.linkedin.com/in/shaghayegh-bazrafkannjad-523bb5301" target="_blank" className="hover:text-blue-600">
+        <FaLinkedin />
+      </a>
+      <a href="mailto:bazrafkannjad.sh@gmail.com" className="hover:text-red-800">
+        <FaEnvelope />
+      </a>
+    </div>
+    <p className="text-[10px] mt-1">&copy; 2025 Shaghayegh Bazrafkan</p>
+  </div>
+</footer>
+
+
       {showModal && selectedProject && (
         <div
           onClick={closeModal}
@@ -568,13 +625,21 @@ export default function Home() {
                 <span className="text-lg font-[600]">solution : </span>
                 <span className=" ">{selectedProject.caseStudy.solution}</span>
               </p>
+            <ul className="list-none pl-0 mt-4 space-y-2">
+  {selectedProject.caseStudy.teamSkills.map((skill, i) => (
+    <li key={i} className="flex items-center gap-2 text-[#c94a4a]">
+      <FaCheckCircle /> {skill}
+    </li>
+  ))}
+</ul>
             </div>
             {/* Bullets */}
- <ul className="list-disc pl-5 space-y-2 text-gray-700">
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
               {selectedProject.bullets.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>
+
             {/* CTA */}
             <div className="mt-4 flex gap-4">
               <a
