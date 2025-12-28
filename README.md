@@ -1,78 +1,112 @@
-# Bazrafkan Portfolio
+# 🌐 Bazrafkan Portfolio
 
-This is a personal portfolio website built to showcase the work, skills, and contact information of Shaghayegh Bazrafkan, a front-end developer and UI/UX designer.
+This repository contains my **personal portfolio website**, designed and developed to showcase my **front-end development skills, real projects, and technical experience**.
 
-🌐 Live Site: [https://shaghayegh-b.github.io/bazrafkan-portfolio/](https://shaghayegh-b.github.io/bazrafkan-portfolio/)
+What initially started as a practice project has evolved into a **professional portfolio**, suitable for resumes, job applications, and technical reviews.
 
----
-
-## 🧩 Features
-
-- 💼 Project showcase with live links
-- 🧠 Skills and technologies section
-- 📝 Resume/CV download
-- 📱 Fully responsive design
-- 🎨 Smooth animations and clean UI
+🔗 **Live Website:** [https://shaghayegh-b.github.io/bazrafkan-portfolio/](https://shaghayegh-b.github.io/bazrafkan-portfolio/)
 
 ---
 
-## 🛠️ Tech Stack
+## 🎯 Purpose of This Project
 
-- HTML5
-- CSS3 (Flexbox & Grid)
-- JavaScript (Vanilla)
-- [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/)
-- GitHub Pages (for deployment)
-
----
-
-## 📁 Folder Structure
-
-vite-project/
-
-├── public/ # Public files
-
-├── src/ # The main codes of the project
-
-│     ├── assets/ #Fonts, images
-
-│     ├── components/ #Reusable components
-
-│     ├── locales/ # Translations (i18n)
-
-│     ├── pages/ # Main pages (home,etc.)
-
-│     ├── App.jsx
-
-│     ├── main.jsx
-
-│     ├── routes.jsx # React Router
-
-│     └── index.css
-
-├── index.html # Basic HTML
-
-├── tailwind.config.js
-
-├── vite.config.js
-
-└── README.md
-
-
+* Present my **real-world front-end projects** in a clean and professional way
+* Demonstrate my skills in **React, Vite, and Tailwind CSS**
+* Practice **modern UI development and component-based architecture**
+* Provide an easy way for recruiters and collaborators to review my work
 
 ---
 
-## 🚀 Getting Started (Local Development)
+## ✨ Features
 
-To run this project locally:
+* 💼 **Project showcase** with live demos and GitHub links
+* 🧠 **Skills & technologies** section
+* 📝 **Resume / CV download**
+* 🎨 Clean UI with smooth animations
+* 📱 Fully responsive design (mobile, tablet, desktop)
+* 🌙 Light / Dark theme support (if enabled)
+* 🌍 Multi-language support (i18n structure)
 
-1. Clone the repository:
+---
 
-bash
-   git clone https://github.com/shaghayegh-b/bazrafkan-portfolio.git
+## 🧠 Technical Highlights
 
-2. Open index.html in your browser
-   or use a live server extension in your code editor (like Live Server in VS Code).
+* Built with **React + Vite** for fast development and optimized builds
+* Styled using **Tailwind CSS** (utility-first & responsive)
+* Modular, reusable **component-based architecture**
+* Organized folder structure for scalability and maintainability
+* Ready to grow with more projects and features
+
+---
+
+## 🗂️ Project Structure
+
+```txt
+src/
+│── assets/        # Fonts, images, static files
+│── components/    # Reusable UI components
+│── locales/       # Translations (i18n)
+│── pages/         # Main pages (Home, About, etc.)
+│── routes.jsx     # Routing configuration
+│── App.jsx
+│── main.jsx
+│── index.css
+
+public/
+│── og-image.png
+
+index.html
+vite.config.js
+tailwind.config.js
+README.md
+```
+
+---
+
+## 🛠 Tech Stack
+
+| Technology        | Usage                       |
+| ----------------- | --------------------------- |
+| React.js          | UI & component logic        |
+| Vite              | Development & build tool    |
+| Tailwind CSS      | Styling & responsive design |
+| JavaScript (ES6+) | Application logic           |
+| i18n              | Multi-language structure    |
+| GitHub Pages      | Deployment                  |
+
+---
+
+## ⚙️ Getting Started (Local Development)
+
+```bash
+# Clone the repository
+git clone https://github.com/shaghayegh-b/bazrafkan-portfolio.git
+
+# Enter the project directory
+cd bazrafkan-portfolio
+
+# Install dependencies
+npm install
+
+# Run the project locally
+npm run dev
+```
+
+The app will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 👩‍💻 Author
+
+**Shaghayegh Bazrafkan**
+Front-End Developer (React)
+
+* GitHub: [https://github.com/shaghayegh-b](https://github.com/shaghayegh-b)
+* Portfolio: [https://shaghayegh-b.github.io/bazrafkan-portfolio/](https://shaghayegh-b.github.io/bazrafkan-portfolio/)
 
 ---
 
@@ -80,15 +114,15 @@ bash
 
 If you’d like to get in touch:
 
-- 📧 Email: bazrafkan.sh@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/shaghayegh-bazrafkannjad](https://www.linkedin.com/in/shaghayegh-bazrafkannjad-523bb5301)
+* 📧 Email: [bazrafkan.sh@gmail.com](mailto:bazrafkan.sh@gmail.com)
+* 💼 LinkedIn: [https://linkedin.com/in/shaghayegh-bazrafkannjad](https://linkedin.com/in/shaghayegh-bazrafkannjad)
 
 ---
 
-## 📄 License
+## 📜 License
 
-This project is open-source and available under the MIT License.
+This project is released under the **MIT License**.
 
 ---
 
-> Designed and developed with ❤️ by Shaghayegh Bazrafkan
+⭐ If you find this portfolio useful or inspiring, feel free to give it a star!
