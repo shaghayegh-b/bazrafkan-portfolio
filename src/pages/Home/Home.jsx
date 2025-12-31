@@ -1,8 +1,9 @@
 import React from "react";
+import { useRef } from "react";
 import { useState, useEffect } from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import { FaCheckCircle } from "react-icons/fa";
-
+import emailjs from "@emailjs/browser";
 const projects = [
   {
     id: 1,
@@ -150,6 +151,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 import ModalAlert from "../../components/ModalAlert/ModalAlert";
 import porof from "../../assets/imag/porof.png";
 export default function Home() {
+  const formRef = useRef();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
@@ -179,21 +181,37 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!formData.name || !formData.email || !formData.message) {
-      setModalMessage("Please fill in all fields.");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+      setModalMessage("Please enter a valid email address.");
       setIsModalOpen(true);
       return;
     }
-
     setFormStatus("sending");
 
-    setTimeout(() => {
-      setFormStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-      setModalMessage("Thanks! Your message has been sent successfully.");
-      setIsModalOpen(true);
-    }, 1000);
+    emailjs
+      .sendForm(
+        "service_u9lolxr",
+        "template_d4bnwa3",
+        formRef.current,
+        "rOjFwGiu24iaiLyIE"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent:", result.text);
+          setFormStatus("success");
+          setModalMessage("Thanks! Your message has been sent successfully.");
+          setIsModalOpen(true);
+          formRef.current.reset();
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error("Email error:", error.text);
+          setFormStatus("error");
+          setModalMessage("Oops! Something went wrong. Please try again.");
+          setIsModalOpen(true);
+        }
+      );
   };
 
   const openModal = (project) => {
@@ -352,31 +370,31 @@ export default function Home() {
       {/* CONTENT */}
       <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="lg:hidden p-4">
-        <h3 className=" text-xl font-semibold ">Skills & Workflow</h3>
-        <div className="bg-white shadow p-6 mt-5 rounded-xl">
-          {skills.map((cat) => (
-            <div key={cat.category} className="mb-4">
-              <h4 className="font-semibold mb-2">{cat.category}</h4>
-              <div className="flex flex-wrap gap-2">
-                {cat.items.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="group relative px-3 py-1 rounded-full bg-gray-100 text-sm cursor-pointer hover:bg-[#c94a4a] hover:text-white transition"
-                  >
-                    {skill.name}
-                    {skill.projects.length > 0 && (
-                      <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded z-10 whitespace-nowrap">
-                        Used in: {skill.projects.join(", ")}
-                      </div>
-                    )}
-                  </div>
-                ))}
+          <h3 className=" text-xl font-semibold ">Skills & Workflow</h3>
+          <div className="bg-white shadow p-6 mt-5 rounded-xl">
+            {skills.map((cat) => (
+              <div key={cat.category} className="mb-4">
+                <h4 className="font-semibold mb-2">{cat.category}</h4>
+                <div className="flex flex-wrap gap-2">
+                  {cat.items.map((skill) => (
+                    <div
+                      key={skill.name}
+                      className="group relative px-3 py-1 rounded-full bg-gray-100 text-sm cursor-pointer hover:bg-[#c94a4a] hover:text-white transition"
+                    >
+                      {skill.name}
+                      {skill.projects.length > 0 && (
+                        <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded z-10 whitespace-nowrap">
+                          Used in: {skill.projects.join(", ")}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-      {/* PROJECTS */}
+        {/* PROJECTS */}
         <section
           id="projects"
           className={`relative lg:col-span-3 py-8 px-4 space-y-6 transition-all duration-700 ${
@@ -486,10 +504,11 @@ export default function Home() {
                 response, clean code, and on-time delivery.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-3">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-3">
                 <input
                   className="w-full border rounded px-3 py-2"
                   placeholder="Your Name"
+                  name="name"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -501,6 +520,7 @@ export default function Home() {
                     setFormData({ ...formData, email: e.target.value })
                   }
                   type="email"
+                  name="email"
                   className="w-full border rounded px-3 py-2"
                   placeholder="Email"
                 />
@@ -508,6 +528,7 @@ export default function Home() {
                   className="w-full border rounded px-3 py-2"
                   rows={3}
                   placeholder="Message"
+                  name="message"
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
@@ -554,28 +575,40 @@ export default function Home() {
         </aside>
       </main>
       <footer className="bg-gray-400 px-4 py-4">
-  <div className="max-w-7xl mx-auto flex flex-col items-center gap-2 text-center">
-   <p className="text-sm">
-      My portfolio is a reflection of my growth journey in the world of programming and design.
-    </p>
-  <p className="text-xs ">
-      Every line of this site is a piece of my learning path — crafted with love and passion :)
-    </p>
-     <div className="flex gap-2 text-xs">
-      <a href="https://github.com/shaghayegh-b" target="_blank" className="hover:text-black">
-        <FaGithub />
-      </a>
-      <a href="https://www.linkedin.com/in/shaghayegh-bazrafkannjad-523bb5301" target="_blank" className="hover:text-blue-600">
-        <FaLinkedin />
-      </a>
-      <a href="mailto:bazrafkannjad.sh@gmail.com" className="hover:text-red-800">
-        <FaEnvelope />
-      </a>
-    </div>
-    <p className="text-[10px] mt-1">&copy; 2025 Shaghayegh Bazrafkan</p>
-  </div>
-</footer>
-
+        <div className="max-w-7xl mx-auto flex flex-col items-center gap-2 text-center">
+          <p className="text-sm">
+            My portfolio is a reflection of my growth journey in the world of
+            programming and design.
+          </p>
+          <p className="text-xs ">
+            Every line of this site is a piece of my learning path — crafted
+            with love and passion :)
+          </p>
+          <div className="flex gap-2 text-xs">
+            <a
+              href="https://github.com/shaghayegh-b"
+              target="_blank"
+              className="hover:text-black"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shaghayegh-bazrafkannjad-523bb5301"
+              target="_blank"
+              className="hover:text-blue-600"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="mailto:bazrafkannjad.sh@gmail.com"
+              className="hover:text-red-800"
+            >
+              <FaEnvelope />
+            </a>
+          </div>
+          <p className="text-[10px] mt-1">&copy; 2025 Shaghayegh Bazrafkan</p>
+        </div>
+      </footer>
 
       {showModal && selectedProject && (
         <div
@@ -625,13 +658,16 @@ export default function Home() {
                 <span className="text-lg font-[600]">solution : </span>
                 <span className=" ">{selectedProject.caseStudy.solution}</span>
               </p>
-            <ul className="list-none pl-0 mt-4 space-y-2">
-  {selectedProject.caseStudy.teamSkills.map((skill, i) => (
-    <li key={i} className="flex items-center gap-2 text-[#c94a4a]">
-      <FaCheckCircle /> {skill}
-    </li>
-  ))}
-</ul>
+              <ul className="list-none pl-0 mt-4 space-y-2">
+                {selectedProject.caseStudy.teamSkills?.map((skill, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-2 text-[#c94a4a]"
+                  >
+                    <FaCheckCircle /> {skill}
+                  </li>
+                ))}
+              </ul>
             </div>
             {/* Bullets */}
             <ul className="list-disc pl-5 space-y-2 text-gray-700">
