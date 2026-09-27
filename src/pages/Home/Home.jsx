@@ -2,131 +2,72 @@ import React from "react";
 import { useRef } from "react";
 import { useState, useEffect } from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaTelegram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-const projects = [
+import { useTranslation } from "react-i18next";
+import mvpBefore1 from "../../assets/imag/beforeafter/mvp-before-1.png";
+import mvpAfter1 from "../../assets/imag/beforeafter/mvp-after-1.png";
+import mvpBefore2 from "../../assets/imag/beforeafter/mvp-before-2.png";
+import mvpAfter2 from "../../assets/imag/beforeafter/mvp-after-2.png";
+import mvpBefore3 from "../../assets/imag/beforeafter/mvp-before-3.png";
+import mvpAfter3 from "../../assets/imag/beforeafter/mvp-after-3.png";
+import mvpBefore4 from "../../assets/imag/beforeafter/mvp-before-4.png";
+import mvpAfter4 from "../../assets/imag/beforeafter/mvp-after-4.png";
+
+const MVP_BEFORE_AFTER = [
+  { before: mvpBefore1, after: mvpAfter1 },
+  { before: mvpBefore2, after: mvpAfter2 },
+  { before: mvpBefore3, after: mvpAfter3 },
+  { before: mvpBefore4, after: mvpAfter4 },
+];
+const FEATURED_ORDER = [1, 5, 6, 7, 2];
+const OTHER_ORDER = [3, 4];
+
+const PROJECTS_META = [
   {
     id: 1,
-    title: "Fotros — Advanced Clothing Store",
-    subtitle: "Personal Project | Featured",
-    stack: [
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "Figma",
-      "E-commerce",
-      "Mock REST API",
-    ],
-    featured: true,
-    shortBullets: [
-      "Built a production-ready e-commerce front-end using React and Tailwind CSS",
-      "Implemented cart, wishlist, product variations, and user dashboard",
-      "Translated complex Figma designs into responsive, scalable UI components",
-    ],
-
-    bullets: [
-      "Built a production-ready e-commerce front-end focused on real-world shopping flows and conversion-oriented UI",
-      "Converted advanced Figma designs into pixel-perfect, fully responsive interfaces",
-      "Designed scalable and reusable React components suitable for real production use",
-      "Implemented advanced features including cart, wishlist, product variations, and user dashboard",
-      "Added light mode, dark mode, and system theme support to enhance user experience",
-      "Simulated real backend behavior using custom mock REST APIs",
-    ],
-
-    caseStudy: {
-      overview:
-        "Fotros is a production-ready e-commerce front-end application designed to simulate a real-world online clothing store, with a focus on scalability, performance, and conversion-focused UX.",
-      problem:
-        "Many junior-level e-commerce demos lack real-world complexity such as user dashboards, product variations, and scalable UI architecture.",
-      solution:
-        "I designed and implemented a scalable front-end architecture using React and Tailwind CSS, translated complex Figma designs into responsive components, implemented full shopping features, and simulated backend behavior using mock REST APIs.",
-    },
-
+    stack: ["React", "Vite", "Tailwind CSS", "Mock API"],
+    // Live site is embedded in a mini browser-preview instead of a static screenshot.
+    previewUrl: "https://shaghayegh-b.github.io/Fotros/",
     LinkRemote: "https://shaghayegh-b.github.io/Fotros/",
     repository: "https://github.com/shaghayegh-b/Fotros",
   },
-
   {
-    id: 2,
-    title: "Blockchain Web Application",
-    subtitle: "Team Project",
-    stack: ["React", "JavaScript", "REST API", "Git", "GitHub"],
-
-    shortBullets: [
-      "Worked as a front-end developer in a collaborative blockchain team project",
-      "Developed responsive UI components integrated with real backend APIs",
-      "Collaborated closely with backend developers to align UI with business logic",
-    ],
-
-    bullets: [
-      "Worked as a front-end developer in a collaborative team environment",
-      "Developed responsive UI components based on shared and evolving requirements",
-      "Integrated real backend APIs and handled asynchronous data rendering",
-      "Adapted UI and UX after the original designer left the project",
-      "Collaborated closely with backend developers to ensure consistency with blockchain logic",
-    ],
-
-    caseStudy: {
-      overview:
-        "A team-based blockchain web application demonstrating collaboration, real API integration, and scalable React UI architecture.",
-      problem:
-        "The project required maintaining UI consistency and responsiveness while integrating complex backend blockchain logic, especially after design ownership changed mid-project.",
-      solution:
-        "I implemented multiple responsive UI sections, handled dynamic API-driven data rendering, and contributed to UI/UX decisions while collaborating closely with backend developers.",
-      teamSkills: [
-        "Collaborated with backend developers to align UI behavior with business logic",
-        "Adapted quickly to design changes after the original designer left the project",
-        "Communicated technical constraints and UI decisions within a cross-functional team",
-      ],
-    },
-
-    LinkRemote: "https://app.freebridge.ir/",
-    repository: "https://github.com/shaghayegh-b/Yelena-F-public",
+    id: 6,
+    stack: ["WordPress", "Elementor", "WooCommerce", "Front-End"],
+    highlight: true,
+    previewUrl: "https://commagp.ir/",
+    LinkRemote: "https://commagp.ir/",
   },
-
+  {
+    id: 5,
+    stack: ["WordPress", "WooCommerce", "Elementor", "E-commerce"],
+    previewUrl: "https://peydashoop.ir/",
+    LinkRemote: "https://peydashoop.ir/",
+  },
   {
     id: 3,
-    title: "Simple Clothing Store",
-    subtitle: "Personal Project",
     stack: ["React", "Vite", "Tailwind CSS", "Mock API"],
-
-    shortBullets: [
-      "Built a mobile-first e-commerce application with core shopping features",
-      "Implemented cart, wishlist, authentication, and basic user dashboard",
-      "Used mock APIs to simulate real product and user data",
-    ],
-
-    bullets: [
-      "Built a mobile-first e-commerce application focused on essential shopping flows",
-      "Implemented cart, wishlist, authentication, and a basic user dashboard",
-      "Optimized layouts for mobile and tablet devices",
-      "Used mock APIs to simulate real product and user data",
-      "Served as a foundation for developing a more advanced e-commerce project",
-    ],
-
+    previewUrl: "https://shaghayegh-b.github.io/bazrafkan-store/",
     LinkRemote: "https://shaghayegh-b.github.io/bazrafkan-store/",
     repository: "https://github.com/shaghayegh-b/bazrafkan-store",
   },
-
+  {
+    id: 7,
+    stack: ["UI Redesign", "Front-End", "Responsive Design"],
+    status: "local",
+    videoUrl: `${import.meta.env.BASE_URL}videos/mvp-demo.mp4`,
+    beforeAfterImages: MVP_BEFORE_AFTER,
+  },
+  {
+    id: 2,
+    stack: ["React", "API", "Front-End"],
+    LinkRemote: "https://app.freebridge.ir/",
+    repository: "https://github.com/shaghayegh-b/Yelena-F-public",
+  },
   {
     id: 4,
-    title: "Personal Portfolio Website",
-    subtitle: "Personal Project",
     stack: ["React", "Tailwind CSS", "Vite", "GitHub Pages"],
-
-    shortBullets: [
-      "Designed and developed a professional front-end portfolio website",
-      "Focused on performance, responsiveness, and clear project presentation",
-      "Deployed and maintained using GitHub Pages",
-    ],
-
-    bullets: [
-      "Designed and developed a professional personal portfolio to showcase front-end projects",
-      "Focused on performance, responsiveness, and clean UI presentation",
-      "Built with a scalable structure to support continuous improvements",
-      "Deployed and maintained using GitHub Pages",
-    ],
-
     LinkRemote: "https://shaghayegh-b.github.io/bazrafkan-portfolio/",
     repository: "https://github.com/shaghayegh-b/bazrafkan-portfolio",
   },
@@ -150,7 +91,31 @@ import {
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import ModalAlert from "../../components/ModalAlert/ModalAlert";
 import porof from "../../assets/imag/porof.png";
+import WebsitePreview from "../../components/WebsitePreview/WebsitePreview";
+import VideoPreview from "../../components/VideoPreview/VideoPreview";
+
 export default function Home() {
+  const { t, i18n } = useTranslation();
+  const isFa = i18n.language === "fa";
+
+  const projects = PROJECTS_META.map((meta) => ({
+    ...meta,
+    ...t(`projects.${meta.id}`, { returnObjects: true }),
+  }));
+  const byId = (id) => projects.find((p) => p.id === id);
+  const heroProject = byId(FEATURED_ORDER[0]);
+  const featuredGridProjects = FEATURED_ORDER.slice(1).map(byId);
+  const otherProjects = OTHER_ORDER.map(byId);
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+    document.documentElement.dir = isFa ? "rtl" : "ltr";
+  }, [i18n.language, isFa]);
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(isFa ? "en" : "fa");
+  };
+
   const formRef = useRef();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
@@ -158,6 +123,7 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showModal, setShowModal] = useState(false); // نمایش واقعی مودال
   const [animate, setAnimate] = useState(false); // کنترل انیمیشن ورود/خروج
+  const [showBeforeAfter, setShowBeforeAfter] = useState(false); // نمایش گالری قبل/بعد
   const [formStatus, setFormStatus] = useState("idle");
   const [formData, setFormData] = useState({
     name: "",
@@ -194,7 +160,7 @@ export default function Home() {
         "service_u9lolxr",
         "template_d4bnwa3",
         formRef.current,
-        "rOjFwGiu24iaiLyIE"
+        "rOjFwGiu24iaiLyIE",
       )
       .then(
         (result) => {
@@ -210,50 +176,74 @@ export default function Home() {
           setFormStatus("error");
           setModalMessage("Oops! Something went wrong. Please try again.");
           setIsModalOpen(true);
-        }
+        },
       );
   };
 
   const openModal = (project) => {
     setSelectedProject(project);
     setShowModal(true);
+    setShowBeforeAfter(false);
     setTimeout(() => setAnimate(true), 10); // شروع انیمیشن ورود بعد از رندر
   };
 
   const closeModal = () => {
-    setAnimate(false); // شروع انیمیشن خروج
+    setAnimate(false);
     setTimeout(() => {
       setShowModal(false);
       setSelectedProject(null);
-    }, 300); // مدت زمان transition
+      setShowBeforeAfter(false);
+    }, 300);
   };
   const skills = [
     {
-      category: "Frontend",
+      category: "Front-End",
       items: [
-        { name: "React", projects: ["Fotros", "Bazrafkan Store", "Portfolio"] },
-        { name: "Next.js", projects: [] },
-        { name: "Tailwind", projects: ["Fotros", "Bazrafkan Store"] },
-        { name: "Bootstrap", projects: ["Portfolio"] },
-        { name: "Sass", projects: [] },
+        { name: "HTML", projects: ["All Projects"] },
+        { name: "CSS", projects: ["All Projects"] },
         { name: "JavaScript", projects: ["All Projects"] },
+        { name: "React", projects: ["Fotros", "Bazrafkan Store", "Portfolio"] },
+        { name: "React Router", projects: ["Portfolio"] },
       ],
     },
     {
-      category: "Tools & Workflow",
+      category: "UI & Styling",
+      items: [
+        {
+          name: "Tailwind CSS",
+          projects: ["Fotros", "Bazrafkan Store", "Portfolio"],
+        },
+        { name: "Sass", projects: [] },
+        { name: "Bootstrap", projects: ["Portfolio"] },
+        { name: "Responsive Design", projects: ["All Projects"] },
+      ],
+    },
+    {
+      category: "API & Data",
+      items: [
+        { name: "REST API", projects: ["Fotros", "Bazrafkan Store"] },
+        { name: "Axios", projects: ["Portfolio"] },
+        { name: "Fetch", projects: ["Fotros", "Bazrafkan Store"] },
+        { name: "React Query", projects: [] },
+      ],
+    },
+    {
+      category: "Development Tools",
       items: [
         { name: "Git", projects: ["All Projects"] },
         { name: "GitHub", projects: ["All Projects"] },
+        { name: "Git Flow", projects: [] },
         { name: "Vite", projects: ["All Projects"] },
         { name: "Figma", projects: ["Fotros"] },
-        { name: "Mock APIs", projects: ["Fotros", "Bazrafkan Store"] },
       ],
     },
     {
-      category: "Special Projects",
+      category: "WordPress",
       items: [
-        { name: "Blockchain", projects: ["Yekena"] },
-        { name: "AI-generated Assets", projects: ["Fotros"] },
+        { name: "WordPress", projects: ["Peyda", "Marketyar", "WebAray"] },
+        { name: "WooCommerce", projects: ["Peyda"] },
+        { name: "Elementor", projects: ["Peyda", "Marketyar", "WebAray"] },
+        { name: "PHP / Theme Customization", projects: ["Marketyar"] },
       ],
     },
   ];
@@ -273,24 +263,30 @@ export default function Home() {
       <header className="bg-[#0b0b0e] text-white">
         <div className="max-w-7xl mx-auto px-2 md:px-4 py-4 flex items-center justify-between">
           <h1 className="font-semibold tracking-wide">Shaghayegh-Bazrafkan</h1>
-          <nav className="flex gap-3 md:gap-8 text-sm text-gray-300">
+          <nav className="flex items-center gap-3 md:gap-8 text-sm text-gray-300">
             <button
               onClick={() => scrollToSection("about")}
               className="hover:text-[#a93a3a]"
             >
-              About
+              {t("nav.about")}
             </button>
             <button
               onClick={() => scrollToSection("projects")}
               className="hover:text-[#a93a3a]"
             >
-              Projects
+              {t("nav.projects")}
             </button>
             <button
               onClick={() => scrollToSection("contact")}
               className="hover:text-[#a93a3a]"
             >
-              Contact
+              {t("nav.contact")}
+            </button>
+            <button
+              onClick={toggleLanguage}
+              className="px-2 py-1 rounded border border-gray-500 text-xs hover:border-[#a93a3a] hover:text-[#a93a3a]"
+            >
+              {isFa ? "EN" : "فا"}
             </button>
           </nav>
         </div>
@@ -320,23 +316,22 @@ export default function Home() {
           {/* Text */}
           <div className="md:col-span-2">
             <h2 className="text-3xl md:text-4xl ">
-              <span className="font-bold">Shaghayegh</span> Bazrafkan
+              <span className="font-bold">{t("hero.name")}</span>
             </h2>
             <h3 className="mt-2 text-lg text-[#c94a4a] font-medium">
-              Front-End Developer
+              {t("hero.role")}
             </h3>
 
             <p className="mt-4 max-w-3xl leading-relaxed text-gray-700">
-              Front-End Developer focused on building fast, scalable, and
-              production-ready web applications. Experienced in translating
-              complex Figma designs into clean, responsive React interfaces for
-              real-world products.
+              {t("hero.bio1")}
             </p>
 
             <p className="mt-3 max-w-3xl text-sm text-gray-600">
-              2+ years of hands-on experience developing conversion-focused UIs,
-              reusable React components, and modern front-ends using React and
-              Tailwind CSS.
+              {t("hero.bio2")}
+            </p>
+
+            <p className="mt-3 max-w-3xl text-sm text-gray-600">
+              {t("hero.bio3")}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -344,7 +339,7 @@ export default function Home() {
                 onClick={() => scrollToSection("contact")}
                 className="px-6 py-2.5 rounded-lg bg-[#c94a4a] text-white text-sm font-medium hover:scale-105 transition-transform"
               >
-                Hire Me for Front-End Projects
+                {t("hero.hireBtn")}
               </button>
 
               <a
@@ -353,14 +348,14 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="px-5 py-2 rounded-lg bg-gray-200 text-sm flex items-center gap-2 hover:bg-gray-300 transition"
               >
-                <FiExternalLink size={14} /> Download Resume (PDF)
+                <FiExternalLink size={14} /> {t("hero.downloadResume")}
               </a>
 
               <a
                 href="https://github.com/shaghayegh-b"
                 className="px-5 py-2 rounded-lg bg-[#494c60] text-white text-sm flex items-center gap-2 hover:bg-[#62657d] transition"
               >
-                <FiGithub size={14} /> View GitHub Projects
+                <FiGithub size={14} /> {t("hero.viewGithub")}
               </a>
             </div>
           </div>
@@ -370,11 +365,15 @@ export default function Home() {
       {/* CONTENT */}
       <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="lg:hidden p-4">
-          <h3 className=" text-xl font-semibold ">Skills & Workflow</h3>
+          <h3 className=" text-xl font-semibold ">
+            {t("skillsSection.title")}
+          </h3>
           <div className="bg-white shadow p-6 mt-5 rounded-xl">
             {skills.map((cat) => (
               <div key={cat.category} className="mb-4">
-                <h4 className="font-semibold mb-2">{cat.category}</h4>
+                <h4 className="font-semibold mb-2">
+                  {t(`skillCategories.${cat.category}`)}
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {cat.items.map((skill) => (
                     <div
@@ -384,7 +383,8 @@ export default function Home() {
                       {skill.name}
                       {skill.projects.length > 0 && (
                         <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded z-10 whitespace-nowrap">
-                          Used in: {skill.projects.join(", ")}
+                          {t("skillsSection.usedIn")}{" "}
+                          {skill.projects.join(", ")}
                         </div>
                       )}
                     </div>
@@ -392,6 +392,9 @@ export default function Home() {
                 </div>
               </div>
             ))}
+            <p className="mt-2 text-xs text-gray-400 italic">
+              {t("skillsSection.aiNote")}
+            </p>
           </div>
         </div>
         {/* PROJECTS */}
@@ -401,32 +404,56 @@ export default function Home() {
             activeSection === "projects" ? "active-section" : ""
           }`}
         >
-          <h3 className="text-xl font-semibold">Projects</h3>
+          <h3 className="text-xl font-semibold">
+            {t("projectsSection.title")}
+          </h3>
 
-          {/* Featured */}
+          {/* Featured hero */}
           <ProjectCard
-            project={projects[0]}
+            project={heroProject}
             featured
             setSelectedProject={openModal}
           />
 
-          {/* Grid */}
+          {/* Featured grid — Peyda, Marketyar, MVP, Yelena, in that order */}
           <div className="grid md:grid-cols-2 gap-6">
-            <ProjectCard project={projects[1]} setSelectedProject={openModal} />
-            <div className="grid gap-6">
-              <ProjectCard project={projects[2]} />
-              <ProjectCard project={projects[3]} />
-            </div>
+            {featuredGridProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                highlight={project.highlight}
+                setSelectedProject={openModal}
+              />
+            ))}
+          </div>
+
+          {/* Other Projects — simpler, less prominent cards */}
+          <h3 className="text-xl font-semibold">
+            {t("projectsSection.otherProjectsTitle")}
+          </h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            {otherProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                compact
+                setSelectedProject={openModal}
+              />
+            ))}
           </div>
         </section>
 
         {/* SIDEBAR */}
         <aside className="space-y-1 bg-white px-6 flex flex-col-reverse md:flex-col">
           <div className="px-1 py-6 hidden lg:block">
-            <h3 className="text-xl font-semibold mb-4">Skills & Workflow</h3>
+            <h3 className="text-xl font-semibold mb-4">
+              {t("skillsSection.title")}
+            </h3>
             {skills.map((cat) => (
               <div key={cat.category} className="mb-4">
-                <h4 className="font-semibold mb-2">{cat.category}</h4>
+                <h4 className="font-semibold mb-2">
+                  {t(`skillCategories.${cat.category}`)}
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {cat.items.map((skill) => (
                     <div
@@ -436,7 +463,8 @@ export default function Home() {
                       {skill.name}
                       {skill.projects.length > 0 && (
                         <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded z-10 whitespace-nowrap">
-                          Used in: {skill.projects.join(", ")}
+                          {t("skillsSection.usedIn")}{" "}
+                          {skill.projects.join(", ")}
                         </div>
                       )}
                     </div>
@@ -444,6 +472,9 @@ export default function Home() {
                 </div>
               </div>
             ))}
+            <p className="mt-2 text-xs text-gray-400 italic">
+              {t("skillsSection.aiNote")}
+            </p>
           </div>
           <hr className="text-gray-300 hidden lg:block" />
           {/* Info */}
@@ -454,13 +485,13 @@ export default function Home() {
                 activeSection === "contact" ? "active-section" : ""
               }`}
             >
-              <h4 className="font-semibold mb-2">Contact Information</h4>
+              <h4 className="font-semibold mb-2">{t("contactInfo.title")}</h4>
               <a
                 href="https://www.google.com/maps?q=Khuzestan,+Iran"
                 target="-blank"
                 className="flex items-center gap-3"
               >
-                <FaMapMarkerAlt /> Iran, Khuzestan
+                <FaMapMarkerAlt /> {t("contactInfo.location")}
               </a>
               <a
                 className="flex items-center gap-3"
@@ -489,6 +520,15 @@ export default function Home() {
                 >
                   <FaLinkedin />
                 </a>
+                <a href="t.me/front_shaghayegh" className="hover:text-blue-900">
+                  <FaTelegram />
+                </a>
+                <a
+                  href="mailto:bazrafkannjad.sh@gmail.com"
+                  className="hover:text-red-800"
+                >
+                  <FaEnvelope />
+                </a>
               </section>
             </div>
             <hr className="text-gray-300" />
@@ -498,16 +538,15 @@ export default function Home() {
                 activeSection === "contact" ? "active-section" : ""
               }`}
             >
-              <h4 className="font-semibold mb-2">Work With Me</h4>
+              <h4 className="font-semibold mb-2">{t("workWithMe.title")}</h4>
               <p className="text-xs text-gray-500 mb-4">
-                Available for freelance and remote front-end projects. Quick
-                response, clean code, and on-time delivery.
+                {t("workWithMe.text")}
               </p>
 
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-3">
                 <input
                   className="w-full border rounded px-3 py-2"
-                  placeholder="Your Name"
+                  placeholder={t("workWithMe.namePlaceholder")}
                   name="name"
                   value={formData.name}
                   onChange={(e) =>
@@ -522,12 +561,12 @@ export default function Home() {
                   type="email"
                   name="email"
                   className="w-full border rounded px-3 py-2"
-                  placeholder="Email"
+                  placeholder={t("workWithMe.emailPlaceholder")}
                 />
                 <textarea
                   className="w-full border rounded px-3 py-2"
                   rows={3}
-                  placeholder="Message"
+                  placeholder={t("workWithMe.messagePlaceholder")}
                   name="message"
                   value={formData.message}
                   onChange={(e) =>
@@ -539,7 +578,9 @@ export default function Home() {
                   disabled={formStatus === "sending"}
                   className="w-full py-2 rounded bg-[#c94a4a] text-white"
                 >
-                  {formStatus === "sending" ? "Sending..." : "Send Message"}
+                  {formStatus === "sending"
+                    ? t("workWithMe.sending")
+                    : t("workWithMe.send")}
                 </button>
               </form>
 
@@ -557,10 +598,9 @@ export default function Home() {
           {/* کارت دانلود PDF */}
           <div className="my-6">
             <div className="p-1 flex flex-col items-center text-center">
-              <h4 className="font-semibold mb-2">Download My Resume</h4>
+              <h4 className="font-semibold mb-2">{t("resumeCard.title")}</h4>
               <p className="text-sm text-gray-600 mb-3">
-                Professional Front-End Developer Resume with skills, projects,
-                and contact info.
+                {t("resumeCard.text")}
               </p>
               <a
                 href="/bazrafkan-portfolio/ShBResume.pdf"
@@ -568,7 +608,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-[#c94a4a] text-white rounded-lg hover:scale-105 transition-transform"
               >
-                Download PDF
+                {t("resumeCard.button")}
               </a>
             </div>
           </div>
@@ -576,15 +616,9 @@ export default function Home() {
       </main>
       <footer className="bg-gray-400 px-4 py-4">
         <div className="max-w-7xl mx-auto flex flex-col items-center gap-2 text-center">
-          <p className="text-sm">
-            My portfolio is a reflection of my growth journey in the world of
-            programming and design.
-          </p>
-          <p className="text-xs ">
-            Every line of this site is a piece of my learning path — crafted
-            with love and passion :)
-          </p>
-          <div className="flex gap-2 text-xs">
+          <p className="text-sm">{t("footer.p1")}</p>
+          <p className="text-xs ">{t("footer.p2")}</p>
+          <div className="flex gap-2 text-lg">
             <a
               href="https://github.com/shaghayegh-b"
               target="_blank"
@@ -604,6 +638,9 @@ export default function Home() {
               className="hover:text-red-800"
             >
               <FaEnvelope />
+            </a>
+            <a href="t.me/front_shaghayegh" className="hover:text-blue-900">
+              <FaTelegram />
             </a>
           </div>
           <p className="text-[10px] mt-1">&copy; 2025 Shaghayegh Bazrafkan</p>
@@ -645,53 +682,185 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-gray-800 space-y-2 my-4">
-              <p>
-                <span className="text-lg font-[600]">overview : </span>
-                <span className=" ">{selectedProject.caseStudy.overview}</span>
-              </p>
-              <p>
-                <span className="text-lg font-[600]">problem : </span>
-                <span className=" ">{selectedProject.caseStudy.problem}</span>
-              </p>
-              <p>
-                <span className="text-lg font-[600]">solution : </span>
-                <span className=" ">{selectedProject.caseStudy.solution}</span>
-              </p>
-              <ul className="list-none pl-0 mt-4 space-y-2">
-                {selectedProject.caseStudy.teamSkills?.map((skill, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-2 text-[#c94a4a]"
-                  >
-                    <FaCheckCircle /> {skill}
-                  </li>
-                ))}
-              </ul>
+            <div className="text-gray-800 space-y-3 my-4">
+              {selectedProject.caseStudy?.intro && (
+                <p>
+                  <span className="text-lg font-[600]">
+                    {t("modal.intro")} :{" "}
+                  </span>
+                  <span> </span>
+                  {selectedProject.caseStudy.intro}
+                </p>
+              )}
+              {selectedProject.caseStudy?.role && (
+                <p>
+                  <span className="text-lg font-[600]">
+                    {t("modal.role")} :{" "}
+                  </span>
+                  <span> </span>
+                  {selectedProject.caseStudy.role}
+                </p>
+              )}
+              {selectedProject.caseStudy?.challenge && (
+                <p>
+                  <span className="text-lg font-[600]">
+                    {t("modal.challenge")} :{" "}
+                  </span>
+                  <span> </span>
+                  {selectedProject.caseStudy.challenge}
+                </p>
+              )}
+              {selectedProject.caseStudy?.solution && (
+                <p>
+                  <span className="text-lg font-[600]">
+                    {t("modal.solution")} :{" "}
+                  </span>
+                  <span> </span>
+                  {selectedProject.caseStudy.solution}
+                </p>
+              )}
+              {selectedProject.caseStudy?.teamSkills?.length > 0 && (
+                <ul className="list-none pl-0 space-y-2">
+                  {selectedProject.caseStudy.teamSkills.map((skill, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-[#c94a4a]"
+                    >
+                      <FaCheckCircle /> {skill}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
-            {/* Bullets */}
-            <ul className="list-disc pl-5 space-y-2 text-gray-700">
-              {selectedProject.bullets.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
+
+            {/* Technical Details */}
+            {selectedProject.caseStudy?.technicalBullets?.length > 0 && (
+              <div className="mb-4">
+                <span className="text-lg font-[600]">
+                  {t("modal.technical")}
+                </span>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 mt-2">
+                  {selectedProject.caseStudy.technicalBullets.map(
+                    (point, i) => (
+                      <li key={i}>{point}</li>
+                    ),
+                  )}
+                </ul>
+              </div>
+            )}
+
+            {/* Before / After */}
+            {selectedProject.beforeAfterImages?.length > 0 && (
+              <div className="mb-4">
+                <button
+                  onClick={() => setShowBeforeAfter((v) => !v)}
+                  className="px-4 py-2 rounded border border-[#c94a4a] text-[#c94a4a] text-sm font-medium hover:bg-[#c94a4a] hover:text-white transition"
+                >
+                  {showBeforeAfter
+                    ? t("modal.hideBeforeAfter")
+                    : t("modal.showBeforeAfter")}
+                </button>
+
+                {showBeforeAfter && (
+                  <div className="mt-4 space-y-6">
+                    {selectedProject.beforeAfterImages.map((pair, i) => (
+                      <div
+                        key={i}
+                        className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+                      >
+                        <div>
+                          <span className="block text-xs font-semibold text-gray-500 mb-1">
+                            {t("modal.before")}
+                          </span>
+                          <img
+                            src={pair.before}
+                            alt={`before-${i}`}
+                            className="w-full h-auto rounded-lg border border-gray-200"
+                          />
+                        </div>
+                        <div>
+                          <span className="block text-xs font-semibold text-gray-500 mb-1">
+                            {t("modal.after")}
+                          </span>
+                          <img
+                            src={pair.after}
+                            alt={`after-${i}`}
+                            className="w-full h-auto rounded-lg border border-gray-200"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Media / Preview */}
+            {(selectedProject.previewUrl ||
+              selectedProject.videoUrl ||
+              selectedProject.videoEmbedUrl) && (
+              <div className="mb-4">
+                {selectedProject.caseStudy?.beforeAfterTitle && (
+                  <span className="text-lg font-[600] block mb-2">
+                    {selectedProject.caseStudy.beforeAfterTitle}
+                  </span>
+                )}
+                {selectedProject.previewUrl ? (
+                  <WebsitePreview
+                    url={selectedProject.previewUrl}
+                    title={selectedProject.title}
+                    height="14rem"
+                  />
+                ) : (
+                  <VideoPreview
+                    src={selectedProject.videoUrl}
+                    embedUrl={selectedProject.videoEmbedUrl}
+                    title={selectedProject.title}
+                    height="14rem"
+                  />
+                )}
+              </div>
+            )}
 
             {/* CTA */}
-            <div className="mt-4 flex gap-4">
-              <a
-                href={selectedProject.LinkRemote}
-                target="_blank"
-                className="px-4 py-2 bg-[#c94a4a] text-white rounded hover:scale-105 transition-transform"
-              >
-                View Live
-              </a>
-              <a
-                href={selectedProject.repository}
-                target="_blank"
-                className="px-4 py-2 bg-gray-800 text-white rounded hover:scale-105 transition-transform"
-              >
-                GitHub
-              </a>
+            <div className="mt-4 flex flex-wrap gap-4">
+              {selectedProject.LinkRemote ? (
+                <a
+                  href={selectedProject.LinkRemote}
+                  target="_blank"
+                  className="px-4 py-2 bg-[#c94a4a] text-white rounded hover:scale-105 transition-transform"
+                >
+                  {selectedProject.linkLabel || t("modal.viewLive")}
+                </a>
+              ) : (
+                <>
+                  {(selectedProject.videoUrl ||
+                    selectedProject.videoEmbedUrl) && (
+                    <a
+                      href={
+                        selectedProject.videoUrl ||
+                        selectedProject.videoEmbedUrl
+                      }
+                      target="_blank"
+                      className="px-4 py-2 bg-[#c94a4a] text-white rounded hover:scale-105 transition-transform"
+                    >
+                      {t("projectsSection.watchVideo")}
+                    </a>
+                  )}
+                  <span className="px-4 py-2 bg-gray-100 text-gray-500 rounded border border-dashed border-gray-300">
+                    {t("projectsSection.localDemo")}
+                  </span>
+                </>
+              )}
+              {selectedProject.repository && (
+                <a
+                  href={selectedProject.repository}
+                  target="_blank"
+                  className="px-4 py-2 bg-gray-800 text-white rounded hover:scale-105 transition-transform"
+                >
+                  {t("modal.github")}
+                </a>
+              )}
             </div>
           </div>
         </div>

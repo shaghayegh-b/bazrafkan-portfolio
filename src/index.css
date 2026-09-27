@@ -3,6 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Vazir";
+  src: url("./assets/font/vazir.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html[lang="fa"] body {
+  font-family: "Vazir", "Poppins", sans-serif;
+}
+
 /* استایل های عمومی */
 * {
   box-sizing: border-box;

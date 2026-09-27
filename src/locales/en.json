@@ -1,87 +1,178 @@
 {
-  "name": "Shaghayegh Bazrafkan",
-  "job": "programes | Front-End Developer",
-  "Contact": "Contact me",
-  "skills": "skills",
-  "ABOUT": "ABOUT ME",
-  "about": "I’m Shaghayegh Bazrafkan, a motivated Front-End Developer passionate about designing and building modern, user-friendly interfaces. I specialize in HTML, CSS, JavaScript, React.js, Tailwind CSS, Sass, jQuery, and Git, and I’m well-versed in API integration using Fetch, Axios, Context API, and React Query. I have experience working on a variety of projects, from practice exercises to advanced applications, which has strengthened my ability to design and implement responsive, interactive user interfaces. I’m always eager to learn new technologies and apply them in real-world projects, and I’m ready to contribute my skills and knowledge in professional, team-oriented environments.",
-  "Work Experince": "Work Experince",
-  "loc":"iran , khozestan",
-  "Experince1DataEnd": "current",
-  "Experince1DataStart": "march 2024-",
-  "companyname1": "intern web designer / imen ertebat varan",
-  "fromdate1": "1 year and 2 months / iran kermanshah",
-
-  "Experince2DataEnd": "april 2023",
-  "Experince2DataStart": "december 2021-",
-  "companyname2": "instagram admin / vainari page",
-  "fromdate2": "1 year and 2 months / iran ahvaz",
-
-  "Experince3DataEnd": "april 2021",
-  "Experince3DataStart": "april 2019-",
-  "companyname3": "instagram admin / panda boutique",
-  "fromdate3": "2 year and / iran ahvaz",
-
-  "titleprojects": "projects",
-  "visit website": "visit website",
-  "view repository": "view repository",
-  "lang": "lang",
-  "createporto": "create a portfolio",
-  "print": "print",
-  "touchtitle": "Let’s stay in touch",
-  "touch": "Whether you have a project in mind, looking for a fresh collaboration, or just feel like saying hi—I’d love to hear fro  you. I’m always up for new experiences and gre conversations. Drop me a message, I’m all ears!",
-  "nameuser": "Name",
-  "emailuser": "Email",
-  "massageuser": "Massage",
-  "send": "send",
-  "placeholdername": "Your Name",
-  "placeholder massage": "I'd love to hear from you — whether it's an idea, a project, or just a quick hello.",
-  "projects": {
-    "project1": {
-      "title": "portfolio project",
-      "des": "In a portfolio page, the goal is to showcase your skills, projects, experiences, and contact information in a way that allows visitors—such as potential employers or clients—to quickly gain a clear understanding of your abilities."
-    },
-    "project2": {
-      "title": "Shaghayegh Store",
-      "des": "Shaghayegh is a lightweight and fast online store designed for businesses that want to start selling online without complexity. The project focuses on simplicity, speed, and a smooth mobile-first user experience, making it a smart starting point for building your digital presence and boosting your sales."
-    },
-    "project3": {
-      "title": "Fotros Store",
-      "des": "Fotros is a professional and attractive online store that increases sales, strengthens your brand, and provides customers with a smooth and enjoyable shopping experience. A website ready for real growth and business success."
-    },
-    "project4": {
-      "title": "Under Construction... ",
-      "des": "This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
-    },
-    "project5": {
-      "title": "Under Construction... ",
-      "des": "This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
-    },
-    "project6": {
-      "title": "Under Construction... ",
-      "des": "This section of the portfolio is currently being designed and developed. Full details and project information will be available here soon. Thank you for your patience and support — please stay tuned."
-    }
+  "nav": { "about": "About", "projects": "Projects", "contact": "Contact" },
+  "hero": {
+    "name": "shaghayegh bazrafannjad",
+    "role": "Front-End Developer",
+    "bio1": "Front-End Developer focused on building fast, scalable, and production-ready web applications. Experienced in translating complex Figma designs into clean, responsive React interfaces for real-world products.",
+    "bio2": "2+ years of hands-on experience developing conversion-focused UIs, reusable React components, and modern front-ends using React and Tailwind CSS.",
+    "bio3": "Alongside Front-End development, I also have hands-on experience customizing WordPress/Elementor themes and building WooCommerce stores on real, existing codebases.",
+    "hireBtn": "Work With Me",
+    "downloadResume": "Download Resume (PDF)",
+    "viewGithub": "View GitHub Projects"
   },
-  "footerp1": "My portfolio is a reflection of my growth journey in the world of programming and design.",
-  "footerp2": "Built with React and Tailwind CSS, powered by Vite, and deployed via ",
-  "footerp3": "Designed and developed with a focus on speed, simplicity, and responsiveness using modern web technologies.",
-  "footerp4": "Every line of this site is a piece of my learning path — crafted with love and passion :)",
-  "First Name": "First Name",
-  "Last Name": "Last Name",
-  "Job Title": "Job Title",
-  "Email": "Email",
-  "Link Github": "Link Github",
-  "Phone Number": "Phone Number",
-  "Address": "Address",
-  "Describe Yourself": "Describe Yourself",
-  "shaghayegh": "shaghayegh",
-  "bazrafkan": "bazrafkan",
-  "SelectLocation": "Select address from map",
-  "Country": "Country",
-  "iran": "iran",
-  "khozestan": "khozestan",
-  "City": "City",
-  "ahvaz": "dezful",
-  "Change Theme Mode": "Change Theme Mode",
-  "Change Languagr": "Change Languagr"
+  "skillsSection": {
+    "title": "Skills & Workflow",
+    "usedIn": "Used in:",
+    "aiNote": "AI-assisted Development"
+  },
+  "skillCategories": {
+    "Front-End": "Front-End",
+    "UI & Styling": "UI & Styling",
+    "API & Data": "API & Data",
+    "Development Tools": "Development Tools",
+    "WordPress": "WordPress"
+  },
+  "projectsSection": {
+    "title": "Projects",
+    "otherProjectsTitle": "Other Projects",
+    "viewCaseStudy": "View Case Study",
+    "liveDemo": "Live Demo",
+    "localDemo": "Local / Not Deployed",
+    "highlightLabel": "Highlighted Project",
+    "videoComingSoon": "Demo video coming soon",
+    "watchVideo": "Watch Video",
+    "github": "GitHub"
+  },
+  "contactInfo": {
+    "title": "Contact Information",
+    "location": "Iran, Khuzestan"
+  },
+  "workWithMe": {
+    "title": "Work With Me",
+    "text": "Available for freelance and remote front-end projects. Quick response, clean code, and on-time delivery.",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Message",
+    "send": "Send Message",
+    "sending": "Sending..."
+  },
+  "resumeCard": {
+    "title": "Download My Resume",
+    "text": "Professional Front-End Developer Resume with skills, projects, and contact info.",
+    "button": "Download PDF"
+  },
+  "footer": {
+    "p1": "My portfolio is a reflection of my growth journey in the world of programming and design.",
+    "p2": "Every line of this site is a piece of my learning path — crafted with love and passion :)"
+  },
+  "modal": {
+    "overview": "Overview",
+    "intro": "Introduction",
+    "role": "My Role",
+    "problem": "Problem",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "technical": "Technical Details",
+    "beforeAfter": "Before / After",
+    "showBeforeAfter": "Show Before / After",
+    "hideBeforeAfter": "Hide Before / After",
+    "before": "Before",
+    "after": "After",
+    "viewLive": "View Live",
+    "github": "GitHub"
+  },
+  "projects": {
+    "1": {
+      "title": "فطروس — Fotros",
+      "subtitle": "E-commerce Front-End · Personal Project",
+      "description": "An e-commerce interface built with React and Vite, focused on realistic shopping flows and responsive UI.",
+      "caseStudy": {
+        "intro": "Fotros is a complete e-commerce interface built with React and Vite, focused on implementing realistic online shopping flows. The project includes product browsing, product details and variations, cart, wishlist, user account, and dashboard features. Reusable components and a structured React architecture were used to build and manage the different parts of the interface. The UI was developed with Tailwind CSS and supports Light, Dark, and System themes. The store data is simulated using a Mock API, and the main features have been fully tested and are ready to use.",
+        "role": "My Role: Front-End Development, UI Implementation, and implementation of core e-commerce flows",
+        "challenge": "The goal was to build an e-commerce interface beyond simple product display and implement realistic shopping flows, from product selection and variations to cart, wishlist, and user account features.",
+        "solution": "I built the store interface with React using reusable components and structured state management for different parts of the application. Store data was simulated with a Mock API, while the responsive UI was developed with Tailwind CSS. Light, Dark, and System themes were also implemented.",
+        "technicalBullets": [
+          "Implemented the e-commerce store interface with React and Vite",
+          "Implemented product, product variations, cart, wishlist, and user account features",
+          "Designed reusable components and structured the project",
+          "Connected the interface to a Mock API to simulate store data",
+          "Implemented responsive design with Tailwind CSS",
+          "Implemented Light, Dark, and System themes",
+          "Tested and reviewed the functionality of the project's main sections"
+        ]
+      }
+    },
+    "2": {
+      "title": "یلنا — Yelena",
+      "subtitle": "Blockchain-themed Web Application · Team Learning Project / Prototype",
+      "description": "A team learning project focused on building a blockchain-themed web application and integrating the front end with APIs.",
+      "caseStudy": {
+        "intro": "Yelena was a team project created to practice developing a web application with a blockchain-themed concept. The project was collaboratively developed across UI, front-end, and back-end, with a focus on gaining experience with a real project structure and connecting different parts of the application. The project was developed as a prototype and was not continued beyond that stage.",
+        "role": "Front-End Development & API Integration"
+      }
+    },
+    "3": {
+      "title": "فروشگاه لباس — Clothing Store",
+      "subtitle": "Personal Practice Project",
+      "description": "A simple e-commerce interface focused on responsive design and mobile user experience."
+    },
+    "5": {
+      "title": "پیدا — Peyda",
+      "subtitle": "E-commerce / WooCommerce · Personal Business Project",
+      "description": "A real e-commerce store for practical home and kitchen products, built and customized with WordPress and WooCommerce.",
+      "linkLabel": "Visit Store",
+      "caseStudy": {
+        "intro": "Peyda is a real e-commerce store for practical home and kitchen products, built and customized for my own business. The store is based on the Marketyar theme. I handled the customization of the homepage, About and Contact pages, product content and images, store structure, and WooCommerce settings. I also handled the practical setup required to launch the store, including obtaining the eNAMAD trust seal, tax code, and setting up the payment gateway.",
+        "role": "Full Store Setup & Customization",
+        "challenge": "The goal was to build a real e-commerce store for a small business, allowing users to browse products, find what they need, access their account, and place orders. Alongside the visual design, the page structure and shopping flow also needed to be customized to the business requirements.",
+        "solution": "I built the store structure with WordPress and WooCommerce and customized the UI based on the business requirements and visual identity. I implemented the main store pages, product and category pages, user account, cart, and checkout, and configured the ordering and payment flow based on the store's requirements. I also focused on responsive layouts, the user journey throughout the shopping process, and making the store manageable for everyday use by the business owner.",
+        "technicalBullets": [
+          "Customized the Marketyar theme and store interface",
+          "Implemented and configured WooCommerce features",
+          "Fully prepared product and category content",
+          "Set up cart, user account, checkout, and order placement",
+          "Set up the payment gateway, eNAMAD trust seal, and tax code",
+          "Prepared and tested the store for real-world use"
+        ]
+      }
+    },
+    "6": {
+      "title": "مارکت یار — Marketyar",
+      "subtitle": "WordPress E-commerce Theme · Team & Commercial Project",
+      "description": "A commercial e-commerce theme for WordPress and Elementor, developed as a team project.",
+      "linkLabel": "View & Buy Theme",
+      "caseStudy": {
+        "intro": "Marketyar is a commercial e-commerce theme for WordPress and Elementor, developed as a team project. I was responsible for designing the UI, creating and preparing content, implementing the front-end, and contributing to different parts of the theme. I also defined and coordinated team tasks and helped align team members to move development forward.",
+        "role": "UI Design, Front-End Development & Team Coordination",
+        "challenge": "The goal was to develop and complete a commercial e-commerce theme for WordPress and Elementor, providing a range of features within a structured and reusable system. One of the main challenges was coordinating different development areas and dividing features among team members to keep parallel development organized and avoid conflicts.",
+        "solution": "I worked with the existing WordPress and PHP codebase and contributed to different front-end areas and theme features. Alongside development, I prepared product and publishing content and coordinated the team by defining, assigning, and tracking tasks across different parts of the project.",
+        "technicalBullets": [
+          "Developed and customized various sections of the WordPress/Elementor e-commerce theme",
+          "Implemented and developed store UI and different theme pages",
+          "Worked with 29 Elementor widgets and a range of theme features",
+          "Supported multiple product display structures and store layouts",
+          "Used Ajax in areas like the product archive for faster user interaction",
+          "Implemented and customized theme headers, mega menu, and footers",
+          "Contributed to features such as SMS login, search, cart, Q&A, and product comparison",
+          "Worked with RTL structures and the Persian user interface",
+          "Worked with the existing WordPress/PHP codebase and developed features based on project patterns",
+          "Defined, divided, and tracked team members' tasks and coordinated development progress"
+        ]
+      }
+    },
+    "7": {
+      "title": "MVP",
+      "subtitle": "Client Project / MVP",
+      "description": "A client MVP focused on UI redesign and front-end development, from an AI-assisted initial concept to the final interface.",
+      "caseStudy": {
+        "intro": "This project was created based on a client's requirements, with the initial UI concept generated using AI tools. I redesigned the interface based on my front-end experience and implemented the final version.",
+        "role": "UI Redesign & Front-End Development",
+        "challenge": "The initial UI concept was created with the help of AI tools, but it needed further refinement to achieve a more consistent and usable interface. The main challenge was turning the initial concept into a practical, structured, and implementable interface following front-end practices.",
+        "solution": "I redesigned the initial interface and improved the visual structure, layout, and details of its different sections. I then implemented the final interface based on the project requirements, focusing on creating a consistent and usable result in both visual design and front-end structure.",
+        "technicalBullets": [
+          "Redesigned the initial interface and improved the visual structure",
+          "Turned the initial concept into a responsive, implementable interface",
+          "Implemented the front-end based on project requirements",
+          "Improved layout, visual hierarchy, and interface details",
+          "Collaborated with Alireza to prepare the final version of the project"
+        ],
+        "beforeAfterTitle": "UI Redesign from Initial Concept to Final Implementation"
+      }
+    },
+    "4": {
+      "title": "Portfolio شخصی — Personal Portfolio",
+      "subtitle": "Personal Project",
+      "description": "My personal portfolio for showcasing my projects, skills, and experience in front-end development and UI implementation."
+    }
+  }
 }
